@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 
 import { GlobalContext } from '../context/GlobalState'
 
-export function Projects() {
+export function About() {
 
-	const { state: { panels: { projects } } } = useContext(GlobalContext)
+	const { state: { panels: { about } } } = useContext(GlobalContext)
 
 	return (
-		<div className={`projects panel${projects ? '' : ' hide_panel'}`}>
+		<div className={`about panel${about ? '' : ' hide_panel'}`}>
 			<div className="container flex-ui">
 
 			</div>

@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { GlobalContext } from '../context/GlobalState'
+
+import { FaChevronDown } from 'react-icons/fa'
 
 export function Home() {
+
+	const { state: { panels: { home } } } = useContext(GlobalContext)
+
 	return (
-		<div className="home panel">
+		<div className={`home panel${home ? '' : ' hide_panel'}`}>
 			<div className="container flex-ui">
+
 				<div className="card">
 
 					<div className="aboutme card-ui">
@@ -14,7 +22,7 @@ export function Home() {
 						<div className="aboutme_image flex-ui">
 							<div className="profile-picture">
 								<img
-									src="images/travis.jpg"
+									src="../images/travis.jpg"
 									alt="profile"
 								/>
 							</div>
@@ -39,6 +47,14 @@ export function Home() {
 						</div>
 					</div>
 				</div>
+
+				<div className="show_projects flex-ui">
+					<button className="projects_btn">
+						See projects
+						<FaChevronDown />
+					</button>
+				</div>
+
 			</div>
 		</div>
 	)
