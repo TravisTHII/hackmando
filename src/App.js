@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import { Header } from './components/Header'
 import { Home } from './components/Home'
@@ -9,9 +10,11 @@ import './style/App.css'
 function App() {
 	return (
 		<div className="App">
-			<Header />
-			<Home />
-			<Projects />
+			<Router>
+				<Header />
+				<Home />
+				<Projects />
+			</Router>
 		</div>
 	);
 }

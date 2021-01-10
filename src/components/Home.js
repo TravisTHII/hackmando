@@ -3,7 +3,7 @@ import React from 'react'
 export function Home() {
 	return (
 		<div className="home panel">
-			<div className="container">
+			<div className="container flex-ui">
 				<div className="card">
 
 					<div className="aboutme card-ui">
@@ -11,7 +11,7 @@ export function Home() {
 							<h1>Travis Hackney</h1>
 							<p>Javascript Developer</p>
 						</div>
-						<div className="aboutme_image">
+						<div className="aboutme_image flex-ui">
 							<div className="profile-picture">
 								<img
 									src="images/travis.jpg"
@@ -31,7 +31,7 @@ export function Home() {
 								developing and building full stack applications.
 							</p>
 							<p>
-								I love programming and the challenges that come with it
+								I love programming and the challenges that come with it.
 							</p>
 						</div>
 						<div className="info_footer">

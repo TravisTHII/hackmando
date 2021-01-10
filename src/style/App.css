@@ -16,12 +16,35 @@
 	position: fixed;
 	width: 100%;
 	height: 90px;
-	background-color: green;
 	z-index: 10;
 }
 
 .header .header_container {
 	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.header .logo {
+	padding: 15px;
+}
+
+.header .icons_container {
+	display: flex;
+	height: 100%;
+}
+
+.header .icons_container .icon {
+	color: #fff;
+	font-size: 2rem;
+	width: 100px;
+	cursor: pointer;
+}
+
+.icon:not(:last-child) {
+	margin-right: 5px;
 }
 
 .home {
@@ -35,9 +58,6 @@
 }
 
 .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	width: 100%;
 	height: 100%;
 }
@@ -57,9 +77,6 @@
 }
 
 .aboutme_image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 30px;
 }
 
@@ -87,4 +104,10 @@
 .info_footer {
 	padding: 5px;
 	box-sizing: border-box;
+}
+
+.flex-ui {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
