@@ -7,7 +7,7 @@ export function Projects() {
 	const { state: { panels: { projects } } } = useContext(GlobalContext)
 
 	return (
-		<div className={`projects panel${projects ? '' : ' hide_panel'}`}>
+		<div className={`projects panel${projects.state ? '' : ' hide_panel'}`}>
 			<div className="container flex-ui">
 
 			</div>

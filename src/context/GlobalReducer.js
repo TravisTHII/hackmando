@@ -4,17 +4,17 @@ export default (state, action) => {
 	const { type, payload } = action
 
 	if (type === GLOBAL.ORDER_PANELS) {
-		console.log(state.currentPanel)
-
 		const panels = { ...state.panels }
 
-		for (const i of Object.keys(panels)) {
-			panels[state.currentPanel] = true
-			panels[i] = false
+		const s = panels[state.currentPanel].stack
+
+		for (const i of Object.values(panels)) {
+			i.state = (i.stack === s || i.stack < s) ? true : false
 		}
 
 		return {
 			...state,
+			currentPanel: payload.panel,
 			panels
 		}
 	}

@@ -1,32 +1,20 @@
-import React, { useContext, useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
-
-import { GlobalContext } from './context/GlobalState'
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { Header } from './components/Header'
 import { Menu } from './components/Menu'
-import { Home } from './components/Home'
-import { Projects } from './components/Projects'
-import { About } from './components/About'
+
+import { Panels } from './components/Panels'
 
 import './style/App.css'
 
 function App() {
-
-	const { state: { currentPanel }, opderPanels } = useContext(GlobalContext)
-
-	useEffect(() => {
-		opderPanels()
-	}, [currentPanel])
-
 	return (
 		<div className="App">
 			<Router>
 				<Header />
 				<Menu />
-				<Home />
-				<Projects />
-				<About />
+				<Route path="/:_panel(|home|projects|about)" component={Panels} />
 			</Router>
 		</div>
 	);

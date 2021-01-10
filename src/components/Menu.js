@@ -1,34 +1,19 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { GlobalContext } from '../context/GlobalState'
+import MenuLink from './includes/MenuLinks'
 
 export function Menu() {
-
-	const { updatePanel } = useContext(GlobalContext)
-
 	return (
 		<div className="menu">
 			<div className="menu_container">
 				<ul className="menu_list">
 					<li className="menu_item">
-						<Link
-							to="/home"
-							className="menu_link menu_active"
-							onClick={() => updatePanel('home')}
-						>
-							Home
-						</Link>
+						<MenuLink name="Home" />
 					</li>
 					<li className="menu_item sub_menu">
 						<span>
-							<Link
-								to="/projects"
-								className="menu_link"
-								onClick={() => updatePanel('projects')}
-							>
-								Projects
-							</Link>
+							<MenuLink name="Projects" />
 						</span>
 						<ul className="projects_list sub_list">
 							<li>
@@ -66,13 +51,7 @@ export function Menu() {
 						</ul>
 					</li>
 					<li className="menu_item">
-						<Link
-							to="/about"
-							className="menu_link"
-							onClick={() => updatePanel('about')}
-						>
-							About
-						</Link>
+						<MenuLink name="About" />
 					</li>
 				</ul>
 			</div>

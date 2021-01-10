@@ -7,9 +7,9 @@ import { GLOBAL } from './actions'
 const initialState = {
 	currentPanel: 'home',
 	panels: {
-		home: true,
-		projects: true,
-		about: true
+		home: { state: true, stack: 9 },
+		projects: { state: true, stack: 8 },
+		about: { state: true, stack: 7 },
 	}
 }
 
@@ -20,8 +20,23 @@ export const GlobalProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(GlobalReducer, initialState)
 
 	const opderPanels = () => {
+
+		let panel
+
+		const location = window.location.pathname
+		const path = location.match(/home|projects|about/)
+
+		if (path) {
+			panel = path[0]
+		} else {
+			panel = 'home'
+		}
+
 		dispatch({
-			type: GLOBAL.ORDER_PANELS
+			type: GLOBAL.ORDER_PANELS,
+			payload: {
+				panel
+			}
 		})
 	}
 
