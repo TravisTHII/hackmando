@@ -2,9 +2,8 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { Header } from './components/Header'
-import { Menu } from './components/Menu'
-
 import { Panels } from './components/Panels'
+import { NotFound } from './components/NotFound'
 
 import './style/App.css'
 
@@ -13,11 +12,11 @@ function App() {
 		<div className="App">
 			<Router>
 				<Header />
-				<Menu />
 				<Route path="/:_panel(|home|projects|about)" component={Panels} />
+				<Route component={NotFound} />
 			</Router>
 		</div>
-	);
+	)
 }
 
-export default App;
+export default App

@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 
 import { GlobalContext } from '../context/GlobalState'
 
+import { Menu } from './Menu'
 import { Home } from './Home'
 import { Projects } from './Projects'
 import { Queue } from './Queue'
@@ -19,6 +20,7 @@ export function Panels() {
 
 	return (
 		<>
+			<Menu />
 			<Home />
 			<Projects />
 			<Queue />

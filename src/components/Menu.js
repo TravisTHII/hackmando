@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import MenuLink from './includes/MenuLinks'
 
@@ -9,49 +8,29 @@ export function Menu() {
 			<div className="menu_container">
 				<ul className="menu_list">
 					<li className="menu_item">
-						<MenuLink name="Home" />
+						<MenuLink name="Home" slug="home" />
 					</li>
 					<li className="menu_item sub_menu">
 						<span>
-							<MenuLink name="Projects" />
+							<MenuLink name="Projects" slug="projects" url="projects/comments" double={true} />
 						</span>
 						<ul className="projects_list sub_list">
 							<li>
-								<Link
-									to="/projects/comments"
-									className="menu_link"
-								>
-									Comments
-								</Link>
+								<MenuLink name="Comments" slug="projects" url="projects/comments" />
 							</li>
 							<li>
-								<Link
-									to="/projects/search"
-									className="menu_link"
-								>
-									Search
-								</Link>
+								<MenuLink name="Search" slug="search" url="projects/search" />
 							</li>
 							<li>
-								<Link
-									to="/projects/queue"
-									className="menu_link"
-								>
-									Queue
-								</Link>
+								<MenuLink name="Queue" slug="queue" url="projects/queue" />
 							</li>
 							<li>
-								<Link
-									to="/projects/discover"
-									className="menu_link"
-								>
-									Discover
-								</Link>
+								<MenuLink name="Discover" slug="discover" url="projects/discover" />
 							</li>
 						</ul>
 					</li>
 					<li className="menu_item">
-						<MenuLink name="About" />
+						<MenuLink name="About" slug="about" />
 					</li>
 				</ul>
 			</div>

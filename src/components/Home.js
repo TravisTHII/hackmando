@@ -8,8 +8,8 @@ export function Home() {
 
 	const { state: { panels: { home } }, updatePanel } = useContext(GlobalContext)
 
-	const updateUrl = () => {
-		window.history.pushState({ panel: 'projects' }, '', '/projects')
+	const seeProjects = () => {
+		window.history.pushState({ panel: 'projects' }, '', '/projects/comments')
 		updatePanel('projects')
 	}
 
@@ -56,7 +56,7 @@ export function Home() {
 				<div className="show_projects flex-ui">
 					<button
 						className="projects_btn"
-						onClick={() => updateUrl()}
+						onClick={() => seeProjects()}
 					>
 						See projects
 						<FaChevronDown />

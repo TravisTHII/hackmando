@@ -30,27 +30,28 @@ export const GlobalProvider = ({ children }) => {
 		const path = location.match(/home|projects|about/)
 
 		if (path) {
+
 			panel = path[0]
 
 			if (panel === 'projects') {
+
 				const x = location.match(/comments|search|queue|discover/)
 
 				if (x) {
+
 					panel = x[0]
 
-					if (panel === 'comments') {
-						panel = 'projects'
-					}
+					if (panel === 'comments') panel = 'projects'
 
 				}
 
 			}
 
 		} else {
-			panel = 'home'
-		}
 
-		console.log(panel)
+			panel = 'home'
+
+		}
 
 		dispatch({
 			type: GLOBAL.ORDER_PANELS,
