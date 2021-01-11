@@ -4,6 +4,9 @@ import { GlobalContext } from '../context/GlobalState'
 
 import { Home } from './Home'
 import { Projects } from './Projects'
+import { Queue } from './Queue'
+import { Search } from './Search'
+import { Discover } from './Discover'
 import { About } from './About'
 
 export function Panels() {
@@ -18,6 +21,9 @@ export function Panels() {
 		<>
 			<Home />
 			<Projects />
+			<Queue />
+			<Search />
+			<Discover />
 			<About />
 		</>
 	)

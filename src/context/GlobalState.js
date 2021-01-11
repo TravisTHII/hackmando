@@ -9,7 +9,10 @@ const initialState = {
 	panels: {
 		home: { state: true, stack: 9 },
 		projects: { state: true, stack: 8 },
-		about: { state: true, stack: 7 },
+		search: { state: true, stack: 7 },
+		queue: { state: true, stack: 6 },
+		discover: { state: true, stack: 5 },
+		about: { state: true, stack: 4 },
 	}
 }
 
@@ -28,9 +31,26 @@ export const GlobalProvider = ({ children }) => {
 
 		if (path) {
 			panel = path[0]
+
+			if (panel === 'projects') {
+				const x = location.match(/comments|search|queue|discover/)
+
+				if (x) {
+					panel = x[0]
+
+					if (panel === 'comments') {
+						panel = 'projects'
+					}
+
+				}
+
+			}
+
 		} else {
 			panel = 'home'
 		}
+
+		console.log(panel)
 
 		dispatch({
 			type: GLOBAL.ORDER_PANELS,

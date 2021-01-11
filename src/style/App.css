@@ -118,9 +118,24 @@
 	z-index: 8;
 }
 
+.search {
+	background-color: rgb(255, 0, 140);
+	z-index: 7;
+}
+
+.queue {
+	background-color: rgb(12, 192, 42);
+	z-index: 6;
+}
+
+.discover {
+	background-color: rgb(154, 9, 9);
+	z-index: 5;
+}
+
 .about {
 	background-color: rgb(255, 140, 0);
-	z-index: 7;
+	z-index: 4;
 }
 
 .container {

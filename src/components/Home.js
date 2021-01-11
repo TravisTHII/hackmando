@@ -6,7 +6,12 @@ import { FaChevronDown } from 'react-icons/fa'
 
 export function Home() {
 
-	const { state: { panels: { home } } } = useContext(GlobalContext)
+	const { state: { panels: { home } }, updatePanel } = useContext(GlobalContext)
+
+	const updateUrl = () => {
+		window.history.pushState({ panel: 'projects' }, '', '/projects')
+		updatePanel('projects')
+	}
 
 	return (
 		<div className={`home panel${home.state ? '' : ' hide_panel'}`}>
@@ -49,7 +54,10 @@ export function Home() {
 				</div>
 
 				<div className="show_projects flex-ui">
-					<button className="projects_btn">
+					<button
+						className="projects_btn"
+						onClick={() => updateUrl()}
+					>
 						See projects
 						<FaChevronDown />
 					</button>

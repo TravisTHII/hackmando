@@ -9,7 +9,7 @@ export function Projects() {
 	return (
 		<div className={`projects panel${projects.state ? '' : ' hide_panel'}`}>
 			<div className="container flex-ui">
-
+				<h1>Comments</h1>
 			</div>
 		</div>
 	)
