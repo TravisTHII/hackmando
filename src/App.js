@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { Header } from './components/Header'
 import { Panels } from './components/Panels'
@@ -12,8 +12,11 @@ function App() {
 		<div className="App">
 			<Router>
 				<Header />
-				<Route path="/:_panel(|home|projects|about)" component={Panels} />
-				<Route component={NotFound} />
+				<Switch>
+					<Route path="/:_panel(|home|about)" component={Panels} />
+					<Route path="/:_panel(projects)/(comments|search|queue|discover)" component={Panels} />
+					<Route component={NotFound} />
+				</Switch>
 			</Router>
 		</div>
 	)

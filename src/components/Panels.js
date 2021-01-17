@@ -21,12 +21,14 @@ export function Panels() {
 	return (
 		<>
 			<Menu />
-			<Home />
-			<Projects />
-			<Queue />
-			<Search />
-			<Discover />
-			<About />
+			<div id="Panels">
+				<Home />
+				<Projects />
+				<Queue />
+				<Search />
+				<Discover />
+				<About />
+			</div>
 		</>
 	)
 }

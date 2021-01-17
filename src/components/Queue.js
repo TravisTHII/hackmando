@@ -2,15 +2,15 @@ import React, { useContext } from 'react'
 
 import { GlobalContext } from '../context/GlobalState'
 
+import { Wrapper } from './Wrapper'
+
 export function Queue() {
 
 	const { state: { panels: { queue } } } = useContext(GlobalContext)
 
 	return (
-		<div className={`queue panel${queue.state ? '' : ' hide_panel'}`}>
-			<div className="container flex-ui">
-				<h1>Queue</h1>
-			</div>
-		</div>
+		<Wrapper name="queue" state={queue.state}>
+			<h1>Queue</h1>
+		</Wrapper>
 	)
 }
