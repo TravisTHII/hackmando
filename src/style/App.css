@@ -179,7 +179,7 @@ Panels
 	font-weight: 700;
 }
 
-.projects {
+.comments {
 	background-color: var(--purple);
 	z-index: 8;
 }
@@ -206,7 +206,7 @@ Panels
 
 /*
 =============== 
-Not found
+Not found page
 ===============
 */
 
@@ -231,7 +231,23 @@ Card
 	grid-template-columns: repeat(2, 600px);
 	grid-column-gap: 50px;
 	width: 1250px;
-	height: 400px;
+	height: 500px;
+}
+
+.grid-normal {
+	grid-template-areas: 'col1 col2'
+}
+
+.grid-reverse {
+	grid-template-areas: 'col2 col1'
+}
+
+.grid_content {
+	grid-area: col1;
+}
+
+.grid_info {
+	grid-area: col2;
 }
 
 .card-ui {

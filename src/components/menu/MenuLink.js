@@ -3,26 +3,22 @@ import { Link } from 'react-router-dom'
 
 import { GlobalContext } from '../../context/GlobalState'
 
-export default function MenuLink({ name, slug, url, double }) {
+export function MenuLink({ name, slug, url, active }) {
 
 	const { state: { currentPanel }, updatePanel } = useContext(GlobalContext)
 
-	const compoundUrl = window.location.pathname.includes(slug)
-
-	const update = (e) => {
-
+	const newPanel = (e) => {
 		if (/menu_active/.test(e.target.className))
 			e.preventDefault()
 
 		updatePanel(slug)
-
 	}
 
 	return (
 		<Link
-			to={`/${url || slug}`}
-			className={`menu_link ${((double && compoundUrl) || (currentPanel === slug)) ? 'menu_active' : ''}`}
-			onClick={update}
+			to={url}
+			className={`menu_link ${(currentPanel === slug || active) ? 'menu_active' : ''}`}
+			onClick={newPanel}
 		>
 			{name}
 		</Link>

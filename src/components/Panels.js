@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from 'react'
 
 import { GlobalContext } from '../context/GlobalState'
 
-import { Menu } from './Menu'
+import { Menu } from './menu/Menu'
 import { Home } from './Home'
-import { Projects } from './Projects'
+import { Comments } from './Comments'
 import { Queue } from './Queue'
 import { Search } from './Search'
 import { Discover } from './Discover'
@@ -23,7 +23,7 @@ export function Panels() {
 			<Menu />
 			<div id="Panels">
 				<Home />
-				<Projects />
+				<Comments />
 				<Queue />
 				<Search />
 				<Discover />

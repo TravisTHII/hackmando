@@ -8,7 +8,7 @@ const initialState = {
 	currentPanel: 'home',
 	panels: {
 		home: { state: true, stack: 9 },
-		projects: { state: true, stack: 8 },
+		comments: { state: true, stack: 8 },
 		search: { state: true, stack: 7 },
 		queue: { state: true, stack: 6 },
 		discover: { state: true, stack: 5 },
@@ -40,8 +40,6 @@ export const GlobalProvider = ({ children }) => {
 				if (x) {
 
 					panel = x[0]
-
-					if (panel === 'comments') panel = 'projects'
 
 				}
 

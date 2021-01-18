@@ -3,6 +3,7 @@ import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
 import { Wrapper } from './Wrapper'
+import { Card } from './Card'
 
 import { FaChevronDown } from 'react-icons/fa'
 
@@ -19,8 +20,8 @@ export function Home() {
 	return (
 		<Wrapper name="home" state={home.state}>
 
-			<div className="card">
-				<div className="aboutme card-ui">
+			<Card inverted={false}>
+				<div className="grid_content aboutme card-ui">
 					<div className="aboutme_header">
 						<h1>Travis Hackney</h1>
 						<p>Javascript Developer</p>
@@ -35,7 +36,7 @@ export function Home() {
 					</div>
 				</div>
 
-				<div className="info card-ui">
+				<div className="grid_info info card-ui">
 					<div className="info_header">
 						<h2>Hello, I'm Travis</h2>
 					</div>
@@ -52,7 +53,7 @@ export function Home() {
 
 					</div>
 				</div>
-			</div>
+			</Card>
 
 			<div className="show_projects flex-ui">
 				<button
