@@ -12,9 +12,9 @@ export function Home() {
 	const { state: { panels: { home } }, updatePanel } = useContext(GlobalContext)
 
 	const seeProjects = () => {
-		window.history.pushState({ panel: 'projects' }, '', '/projects/comments')
+		window.history.pushState({ panel: 'comments' }, '', '/projects/comments')
 
-		updatePanel('projects')
+		updatePanel('comments')
 	}
 
 	return (
