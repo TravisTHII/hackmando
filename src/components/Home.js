@@ -5,8 +5,8 @@ import { GlobalContext } from '../context/GlobalState'
 import { Wrapper } from './Wrapper'
 import { Card } from './Card'
 
-import { FaChevronDown, FaCss3, FaPhp, FaReact } from 'react-icons/fa'
-import { SiGraphql, SiJavascript, SiMysql } from 'react-icons/si'
+import { FaChevronDown, FaCss3, FaNodeJs, FaReact } from 'react-icons/fa'
+import { SiGraphql, SiJavascript, SiRedux } from 'react-icons/si'
 import { AiFillHtml5 } from 'react-icons/ai'
 
 export function Home() {
@@ -61,8 +61,8 @@ export function Home() {
 							<FaCss3 className="skill_icon" title="CSS" />
 							<SiJavascript className="skill_icon" title="Javascript" />
 							<FaReact className="skill_icon" title="React" />
-							<FaPhp className="skill_icon" title="PHP" />
-							<SiMysql className="skill_icon" title="MySQL" />
+							<SiRedux className="skill_icon" title="Redux" />
+							<FaNodeJs className="skill_icon" title="Node.js" />
 							<SiGraphql className="skill_icon" title="GraphQL" />
 						</div>
 					</div>

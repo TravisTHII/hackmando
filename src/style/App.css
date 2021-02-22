@@ -190,7 +190,7 @@ Panels
 }
 
 .queue {
-	background-color: var(--green);
+	background-color: var(--orange);
 	z-index: 6;
 }
 
@@ -200,7 +200,7 @@ Panels
 }
 
 .about {
-	background-color: var(--orange);
+	background-color: var(--gray);
 	z-index: 4;
 }
 
@@ -271,11 +271,35 @@ Card
 	margin-bottom: 15px;
 }
 
+.content_header h1 {
+	margin-bottom: 5px;
+}
+
 .card_content {
 	padding: 15px 0;
 	text-align: left;
 	font-size: 20px;
 	margin-bottom: 30px;
+}
+
+.view_project {
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.view_project .view_project-link {
+	width: 100px;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 5px;
+	display: block;
+	margin: 0 auto;
+	line-height: 25px;
+}
+
+.view_project-link:hover {
+	color: #1a1a1a;
+	background-color: #fff;
 }
 
 .card_content > p:not(:last-child) {
@@ -318,10 +342,6 @@ Common classes
 Individual cards
 ===============
 */
-
-.home-card {
-	margin-top: 50px;
-}
 
 .home-card .card_header h2 {
 	text-align: left;
