@@ -275,6 +275,7 @@ Card
 	padding: 15px 0;
 	text-align: left;
 	font-size: 20px;
+	margin-bottom: 30px;
 }
 
 .card_content > p:not(:last-child) {

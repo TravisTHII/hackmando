@@ -6,7 +6,7 @@ import { Wrapper } from './Wrapper'
 import { Card } from './Card'
 
 import { FaChevronDown, FaCss3, FaPhp, FaReact } from 'react-icons/fa'
-import { SiJavascript } from 'react-icons/si'
+import { SiGraphql, SiJavascript, SiMysql } from 'react-icons/si'
 import { AiFillHtml5 } from 'react-icons/ai'
 
 export function Home() {
@@ -41,11 +41,11 @@ export function Home() {
 				<div className="grid-box-two info card-ui">
 					<div className="home-card">
 						<div className="card_header">
-							<h2>Hello</h2>
+							<h2>Hello,</h2>
 						</div>
 						<div className="card_content">
 							<p>
-								I've been learning web development since as early as 2015
+								I have been learning web development since as early as 2015.
 								developing and building full stack applications.
 							</p>
 							<p>
@@ -57,11 +57,13 @@ export function Home() {
 							</p>
 						</div>
 						<div className="card_skills flex-ui">
-							<FaReact className="skill_icon" />
-							<FaPhp className="skill_icon" />
-							<SiJavascript className="skill_icon" />
-							<FaCss3 className="skill_icon" />
-							<AiFillHtml5 className="skill_icon" />
+							<AiFillHtml5 className="skill_icon" title="HTML" />
+							<FaCss3 className="skill_icon" title="CSS" />
+							<SiJavascript className="skill_icon" title="Javascript" />
+							<FaReact className="skill_icon" title="React" />
+							<FaPhp className="skill_icon" title="PHP" />
+							<SiMysql className="skill_icon" title="MySQL" />
+							<SiGraphql className="skill_icon" title="GraphQL" />
 						</div>
 					</div>
 				</div>
