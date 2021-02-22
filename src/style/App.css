@@ -40,7 +40,7 @@
 }
 
 /*
-=============== 
+===============
 Header
 ===============
 */
@@ -81,7 +81,7 @@ Header
 }
 
 /*
-=============== 
+===============
 Menu
 ===============
 */
@@ -148,7 +148,7 @@ Menu
 }
 
 /*
-=============== 
+===============
 Panels
 ===============
 */
@@ -205,7 +205,7 @@ Panels
 }
 
 /*
-=============== 
+===============
 Not found page
 ===============
 */
@@ -221,16 +221,16 @@ Not found page
 }
 
 /*
-=============== 
+===============
 Card
 ===============
 */
 
 .card {
 	display: grid;
-	grid-template-columns: repeat(2, 600px);
+	grid-template-columns: repeat(2, 500px);
 	grid-column-gap: 50px;
-	width: 1250px;
+	width: 1050px;
 	height: 500px;
 }
 
@@ -242,11 +242,11 @@ Card
 	grid-template-areas: 'col2 col1'
 }
 
-.grid_content {
+.grid-box-one {
 	grid-area: col1;
 }
 
-.grid_info {
+.grid-box-two {
 	grid-area: col2;
 }
 
@@ -256,38 +256,40 @@ Card
 	text-align: center;
 }
 
-.aboutme_image {
+.content_image {
 	padding: 30px;
 }
 
-.profile-picture {
+.content-picture {
 	width: 200px;
 	height: 200px;
 	border-radius: 100%;
 	overflow: hidden;
 }
 
-.info_header {
+.card_header {
 	margin-bottom: 15px;
 }
 
-.info_content {
+.card_content {
 	padding: 15px 0;
 	text-align: left;
 	font-size: 20px;
 }
 
-.info_content > p:not(:last-child) {
-	margin-bottom: 5px;
+.card_content > p:not(:last-child) {
+	margin-bottom: 15px;
 }
 
-.info_footer {
+.card_skills {
 	padding: 5px;
+	height: 70px;
+	color: #fff;
 	box-sizing: border-box;
 }
 
 /*
-=============== 
+===============
 Common classes
 ===============
 */
@@ -296,4 +298,30 @@ Common classes
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.skill_icon {
+	font-size: 3rem;
+	padding: 5px;
+	box-sizing: border-box;
+	width: 50px;
+	height: 50px;
+}
+
+.skill_icon:not(:last-child) {
+	margin-right: 15px;
+}
+
+/*
+===============
+Individual cards
+===============
+*/
+
+.home-card {
+	margin-top: 50px;
+}
+
+.home-card .card_header h2 {
+	text-align: left;
 }

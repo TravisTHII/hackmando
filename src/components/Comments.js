@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 
 import { GlobalContext } from '../context/GlobalState'
-import { Card } from './Card'
 
 import { Wrapper } from './Wrapper'
+import { Card } from './Card'
 
 export function Comments() {
 
@@ -12,16 +12,14 @@ export function Comments() {
 	return (
 		<Wrapper name="comments" state={comments.state}>
 			<Card inverted={true}>
-				<div className="grid_content card-ui">
-					<h2>React Commenting system</h2>
-					<p>
-						A thread & comment system built with React.
-
-						Post and reply to comments
-					</p>
+				<div className="grid-box-one card-ui">
+					<div className="content_header">
+						<h1>Comments</h1>
+						<p>Feature rich commenting to engage with your community</p>
+					</div>
 				</div>
-				<div className="grid_info card-ui">
-					<h1>World</h1>
+				<div className="grid-box-two card-ui">
+					<h2>Image</h2>
 				</div>
 			</Card>
 		</Wrapper>
