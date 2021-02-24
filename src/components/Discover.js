@@ -14,7 +14,8 @@ export function Discover() {
 
 	return (
 		<Wrapper name="discover" state={discover.state}>
-			<Card inverted={false}>
+
+			<Card inverted={true}>
 				<div className="grid-box-one card-ui">
 					<div className="content_header">
 						<h1>Discover</h1>
@@ -42,6 +43,7 @@ export function Discover() {
 					<h2>Image</h2>
 				</div>
 			</Card>
+			
 		</Wrapper>
 	)
 }

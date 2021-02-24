@@ -14,6 +14,7 @@ export function Queue() {
 
 	return (
 		<Wrapper name="queue" state={queue.state}>
+
 			<Card inverted={true}>
 				<div className="grid-box-one card-ui">
 					<div className="content_header">
@@ -42,6 +43,7 @@ export function Queue() {
 					<h2>Image</h2>
 				</div>
 			</Card>
+			
 		</Wrapper>
 	)
 }

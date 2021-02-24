@@ -14,6 +14,7 @@ export function Search() {
 
 	return (
 		<Wrapper name="search" state={search.state}>
+
 			<Card inverted={false}>
 				<div className="grid-box-one card-ui">
 					<div className="content_header">
@@ -44,6 +45,7 @@ export function Search() {
 					<h2>Image</h2>
 				</div>
 			</Card>
+			
 		</Wrapper>
 	)
 }

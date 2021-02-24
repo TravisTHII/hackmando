@@ -80,6 +80,21 @@ Header
 	margin-right: 5px;
 }
 
+.header .hamburger_menu {
+	width: 50px;
+	height: 100%;
+	display: none;
+}
+
+.header .hamburger_menu .burg_menu {
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+}
+
 /*
 ===============
 Menu
@@ -109,6 +124,11 @@ Menu
 	align-items: center;
 	min-height: 40px;
 	text-align: left;
+}
+
+.menu_link-sub .menu_link{
+	line-height: 25px;
+	width: 80px;
 }
 
 .menu_active,
@@ -218,6 +238,41 @@ Not found page
 
 .go-home {
 	color: var(--red);
+}
+
+/*
+===============
+About page
+===============
+*/
+
+.about_panel {
+	position: relative;
+	width: 900px;
+	height: 500px;
+}
+
+.about_panel .am_container {
+	display: flex;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.am_link {
+	color: #fff;
+	text-align: center;
+	width: 250px;
+	font-size: 9rem;
+}
+
+.aml_text {
+	font-size: 1.5rem;
+}
+
+.tag-line {
+	color: #fff;
+	position: absolute;
+	bottom: 50px;
 }
 
 /*
@@ -345,4 +400,63 @@ Individual cards
 
 .home-card .card_header h2 {
 	text-align: left;
+}
+
+/*
+===============
+Responsiveness
+===============
+*/
+
+@media only screen and (max-width: 600px) {
+  .card {
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 1050px) {
+  .card {
+		width: 50%;
+		margin: 0 auto;
+		display: flex;
+    flex-direction: column;
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 1500px) {
+	.header {
+		width: 100%;
+		position: initial;
+		background-color: var(--blue);
+	}
+	.header .icons_container {
+		display: none
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.panel {
+		position: initial;
+		height: auto;
+	}
+
+	.show_projects {
+		display: none;
+	}
+
+	.about_panel {
+		width: 100%;
+	}
+
+	.about_panel .am_container {
+		width: 100%;
+	}
+
+	.am_link {
+		width: 50%;
+		font-size: 5rem;
+	}
 }

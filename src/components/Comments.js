@@ -14,7 +14,8 @@ export function Comments() {
 
 	return (
 		<Wrapper name="comments" state={comments.state}>
-			<Card inverted={true}>
+
+			<Card inverted={false}>
 				<div className="grid-box-one card-ui">
 					<div className="content_header">
 						<h1>Comments</h1>
@@ -42,6 +43,7 @@ export function Comments() {
 					<h2>Image</h2>
 				</div>
 			</Card>
+			
 		</Wrapper>
 	)
 }
