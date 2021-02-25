@@ -13,7 +13,8 @@ const initialState = {
 		queue: { state: true, stack: 6 },
 		discover: { state: true, stack: 5 },
 		about: { state: true, stack: 4 },
-	}
+	},
+	menuIsOpen: false
 }
 
 export const GlobalContext = createContext(initialState)
@@ -68,11 +69,21 @@ export const GlobalProvider = ({ children }) => {
 		})
 	}
 
+	const openMenu = (open) => {
+		dispatch({
+			type: GLOBAL.OPEN_MENU,
+			payload: {
+				open: !state.menuIsOpen
+			}
+		})
+	}
+
 	return (
 		<GlobalContext.Provider value={{
 			state,
 			opderPanels,
-			updatePanel
+			updatePanel,
+			openMenu
 		}}>
 			{children}
 		</GlobalContext.Provider>

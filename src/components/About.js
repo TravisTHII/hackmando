@@ -16,22 +16,32 @@ export function About() {
 			<div className="about_panel flex-ui">
 
 				<div className="am_container">
-					<a href="#" className="am_link">
+					<a
+						className="am_link"
+						href="https://www.linkedin.com/in/travis-hackney-8b7805207/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<FaLinkedin />
 						<p className="aml_text">LinkedIn</p>
 					</a>
-					<a href="#" className="am_link">
+					<a
+						className="am_link"
+						href="#"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<ImFileText2 />
 						<p className="aml_text">Resume</p>
 					</a>
 				</div>
 
-				<div className="tag-line">
-					<p title="HackManDo, portfolio">
-						{`HackManDo © ${new Date().getFullYear()}`}
-					</p>
-				</div>
+			</div>
 
+			<div className="tag-line">
+				<p title="HackManDo, portfolio">
+					{`HackManDo © ${new Date().getFullYear()}`}
+				</p>
 			</div>
 		</Wrapper>
 	)

@@ -10,9 +10,11 @@ import { Search } from './Search'
 import { Discover } from './Discover'
 import { About } from './About'
 
+import { MobileMenu } from './includes/MobileMenu'
+
 export function Panels() {
 
-	const { state: { currentPanel }, opderPanels } = useContext(GlobalContext)
+	const { state: { currentPanel, menuIsOpen }, opderPanels } = useContext(GlobalContext)
 
 	useEffect(() => {
 		opderPanels()
@@ -29,6 +31,7 @@ export function Panels() {
 				<Discover />
 				<About />
 			</div>
+			{menuIsOpen && <MobileMenu />}
 		</>
 	)
 }

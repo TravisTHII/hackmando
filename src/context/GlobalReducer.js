@@ -26,6 +26,13 @@ const GlobalReducer = (state, action) => {
 		}
 	}
 
+	if (type == GLOBAL.OPEN_MENU) {
+		return {
+			...state,
+			menuIsOpen: payload.open
+		}
+	}
+
 	return state
 }
 
