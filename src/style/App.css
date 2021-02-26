@@ -86,7 +86,7 @@ Menu
 */
 
 .menu {
-	position: fixed;
+	position: absolute;
 	width: 250px;
 	top: 30%;
 	left: 0;
@@ -399,8 +399,42 @@ Responsiveness
 	}
 }
 
+@media only screen and (min-width: 1920px) {
+	#root {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		background-color: var(--gray);
+	}
+
+	.App {
+		position: relative;
+		background-color: var(--gray);
+		width: 100%;
+		max-width: 1920px;
+		height: 100vh;
+		max-height: 1080px;
+	}
+
+	#Panels {
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
 /* Smaller than */
+@media only screen and (max-width: 400px) {
+	.header .icons_container .icon {
+		width: 40px;
+	}
+}
+
 @media only screen and (max-width: 600px) {
+	.header .logo {
+		padding: 0;
+	}
+
   .card {
 		width: 100% !important;
 	}
