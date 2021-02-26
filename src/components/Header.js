@@ -1,16 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { GlobalContext } from '../context/GlobalState'
-
 import { FaCode, FaGithub } from 'react-icons/fa'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { CgClose } from 'react-icons/cg'
 
 export function Header() {
-
-	const { state: { menuIsOpen }, openMenu } = useContext(GlobalContext)
-
 	return (
 		<header className="header">
 			<div className="header_container flex-ui">
@@ -36,17 +29,6 @@ export function Header() {
 					>
 						<FaCode />
 					</a>
-				</div>
-				<div className="hamburger_menu flex-ui">
-					<button
-						className="burg_menu flex-ui"
-						onClick={() => openMenu()}
-					>
-						{menuIsOpen
-							? <CgClose />
-							: <GiHamburgerMenu />
-						}
-					</button>
 				</div>
 			</div>
 		</header>
