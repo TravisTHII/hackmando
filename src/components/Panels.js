@@ -3,12 +3,13 @@ import React, { useContext, useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
 import { Menu } from './menu/Menu'
-import { Home } from './Home'
-import { Comments } from './Comments'
-import { Queue } from './Queue'
-import { Search } from './Search'
-import { Discover } from './Discover'
-import { About } from './About'
+
+import { Home } from './panels/Home'
+import { Comments } from './panels/Comments'
+import { Queue } from './panels/Queue'
+import { Search } from './panels/Search'
+import { Discover } from './panels/Discover'
+import { About } from './panels/About'
 
 export function Panels() {
 

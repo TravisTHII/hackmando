@@ -1,6 +1,6 @@
 import { GLOBAL } from './actions'
 
-const GlobalReducer = (state, action) => {
+export const GlobalReducer = (state, action) => {
 	const { type, payload } = action
 
 	if (type === GLOBAL.ORDER_PANELS) {
@@ -28,5 +28,3 @@ const GlobalReducer = (state, action) => {
 
 	return state
 }
-
-export { GlobalReducer }

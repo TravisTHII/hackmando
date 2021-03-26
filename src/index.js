@@ -1,15 +1,6 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 
-import { GlobalProvider } from './context/GlobalState'
+import { App } from './App'
 
-import App from './App'
-
-import './style/index.css'
-
-ReactDOM.render(
-	<GlobalProvider>
-		<App />
-	</GlobalProvider>,
-	document.getElementById('root')
-)
+render(<App />, document.getElementById('root'))
