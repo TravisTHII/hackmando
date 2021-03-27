@@ -28,9 +28,14 @@ export function Comments() {
 						</p>
 						</div>
 						<div className="view_project">
-							<a href="#" className="view_project-link">
+							<a
+								href="https://react-comments.netlify.app"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="view_project-link"
+							>
 								View Project
-						</a>
+							</a>
 						</div>
 						<div className="card_skills flex-ui">
 							<FaReact className="skill_icon" title="React" />
@@ -39,12 +44,18 @@ export function Comments() {
 						</div>
 					</div>
 
-					<div className="grid-box-two card-ui">
-						<h2>Image</h2>
+					<div className="grid-box-two">
+						<div
+							className="card-image"
+							role="img" 
+							aria-label="react comments project"
+							style={{ backgroundImage: 'url(../images/react-comments.png)' }}
+						>
+						</div>
 					</div>
 
 				</Card>
-				
+
 			</div>
 		</div>
 	)

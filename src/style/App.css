@@ -209,22 +209,6 @@ Panels
 
 /*
 ===============
-Not found page
-===============
-*/
-
-.not-found-message {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-}
-
-.go-home {
-	color: var(--red);
-}
-
-/*
-===============
 About page
 ===============
 */
@@ -256,6 +240,22 @@ About page
 	color: #fff;
 	position: absolute;
 	bottom: 50px;
+}
+
+/*
+===============
+Not found page
+===============
+*/
+
+.not-found-message {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.go-home {
+	color: var(--red);
 }
 
 /*
@@ -303,6 +303,12 @@ Card
 	height: 200px;
 	border-radius: 100%;
 	overflow: hidden;
+}
+
+.card-image {
+	height: 100%;
+  background-size: 100%;
+	cursor: pointer;
 }
 
 .card_header {
@@ -353,6 +359,17 @@ Card
 
 /*
 ===============
+Individual cards
+===============
+*/
+
+.home-card .card_header h2 {
+	text-align: left;
+}
+
+
+/*
+===============
 Common classes
 ===============
 */
@@ -375,14 +392,18 @@ Common classes
 	margin-right: 15px;
 }
 
-/*
-===============
-Individual cards
-===============
-*/
-
-.home-card .card_header h2 {
-	text-align: left;
+/* text select color */
+::selection {
+	background-color: #fff; 
+	color: #0a0a0a; 
+}
+::-moz-selection { 
+	background-color: #fff; 
+	color: #0a0a0a; 
+}
+::-webkit-selection { 
+	background-color: #fff; 
+	color: #0a0a0a; 
 }
 
 /*
