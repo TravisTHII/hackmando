@@ -45,7 +45,7 @@ Header
 */
 
 .header {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 90px;
 	z-index: 10;
@@ -306,9 +306,7 @@ Card
 }
 
 .card-image {
-	height: 100%;
-  background-size: 100%;
-	cursor: pointer;
+	display: block;
 }
 
 .card_header {
@@ -319,16 +317,30 @@ Card
 	margin-bottom: 5px;
 }
 
+.content_header {
+	margin-bottom: 10px;
+}
+
 .card_content {
-	padding: 15px 0;
 	text-align: left;
 	font-size: 20px;
-	margin-bottom: 30px;
+}
+
+.card_content ul {
+	list-style: inherit;
+	padding: 0 30px;
+}
+
+.card_content ul li:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.card_content .center-text {
+	text-align: center;
 }
 
 .view_project {
 	padding: 10px;
-	margin-bottom: 15px;
 }
 
 .view_project .view_project-link {
@@ -352,7 +364,7 @@ Card
 
 .card_skills {
 	padding: 5px;
-	height: 70px;
+	height: 50px;
 	color: #fff;
 	box-sizing: border-box;
 }
@@ -365,6 +377,9 @@ Individual cards
 
 .home-card .card_header h2 {
 	text-align: left;
+}
+.home-card .card_content {
+	margin-bottom: 30px;
 }
 
 
@@ -390,6 +405,14 @@ Common classes
 
 .skill_icon:not(:last-child) {
 	margin-right: 15px;
+}
+
+.text-ui {
+	color: #fff;
+}
+
+.hide-overflow {
+	overflow: hidden;
 }
 
 /* text select color */
@@ -421,7 +444,7 @@ Responsiveness
 }
 
 @media only screen and (min-width: 1920px) {
-	#root {
+	#HackManDo {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -452,6 +475,10 @@ Responsiveness
 }
 
 @media only screen and (max-width: 600px) {
+	#Panels .panel {
+		padding: 10px;
+	}
+
 	.header .logo {
 		padding: 0;
 	}
@@ -470,7 +497,7 @@ Responsiveness
 
 @media only screen and (max-width: 1050px) {
   .card {
-		width: 50%;
+		width: 80%;
 		margin: 0 auto;
 		display: flex;
     flex-direction: column;
@@ -501,6 +528,8 @@ Responsiveness
 	.panel {
 		position: initial;
 		height: auto;
+		padding: 50px;
+    box-sizing: border-box;
 	}
 
 	.show_projects {

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { FaChevronDown, FaCss3, FaNodeJs, FaReact } from 'react-icons/fa'
-import { SiGraphql, SiJavascript, SiRedux } from 'react-icons/si'
+import { SiGraphql, SiJavascript, SiPhp, SiRedux } from 'react-icons/si'
 import { AiFillHtml5 } from 'react-icons/ai'
 
 import { GlobalContext } from '../../context/GlobalState'
@@ -60,6 +60,7 @@ export function Home() {
 								<AiFillHtml5 className="skill_icon" title="HTML" />
 								<FaCss3 className="skill_icon" title="CSS" />
 								<SiJavascript className="skill_icon" title="Javascript" />
+								<SiPhp className="skill_icon" title="PHP" />
 								<FaReact className="skill_icon" title="React" />
 								<SiRedux className="skill_icon" title="Redux" />
 								<FaNodeJs className="skill_icon" title="Node.js" />

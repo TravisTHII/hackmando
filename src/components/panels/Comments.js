@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
-import { SiJavascript } from 'react-icons/si'
+import { SiMongodb } from 'react-icons/si'
 
 import { GlobalContext } from '../../context/GlobalState'
 
@@ -18,14 +18,23 @@ export function Comments() {
 
 					<div className="grid-box-one card-ui">
 						<div className="content_header">
-							<h1>Comments</h1>
-							<p>Simple commenting application</p>
+							<h1>React Comments</h1>
+							<p>Dynamic commenting application</p>
 						</div>
-						<div className="card_content">
-							<p>
+						<div className="card_content text-ui">
+							<p className="center-text">
 								light weight, Fully functional, dynamic comments built with react.
 								engage with users, comment on posts and enjoy fun conversations.
-						</p>
+							</p>
+							<ul>
+								<li>Multiple threads to organize discussions</li>
+								<li>Post & Reply to comments</li>
+								<li>Pin comments to top of threads</li>
+								<li>Cursor based pagination</li>
+								<li>Choose from multiple users</li>
+								<li>Jwt for simple authentication, No cookies</li>
+								<li>MongoDB, NoSQL backend</li>
+							</ul>
 						</div>
 						<div className="view_project">
 							<a
@@ -39,19 +48,20 @@ export function Comments() {
 						</div>
 						<div className="card_skills flex-ui">
 							<FaReact className="skill_icon" title="React" />
-							<SiJavascript className="skill_icon" title="Javascript" />
+							<SiMongodb className="skill_icon" title="MongoDB" />
 							<FaNodeJs className="skill_icon" title="Node.js" />
 						</div>
 					</div>
 
-					<div className="grid-box-two">
-						<div
+					<div className="grid-box-two hide-overflow">
+						<a
 							className="card-image"
-							role="img" 
-							aria-label="react comments project"
-							style={{ backgroundImage: 'url(../images/react-comments.png)' }}
+							href="/images/react-comments.png"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
-						</div>
+							<img src="../images/react-comments.png" alt="react comments project" />
+						</a>
 					</div>
 
 				</Card>

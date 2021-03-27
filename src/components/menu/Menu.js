@@ -39,9 +39,8 @@ export function Menu() {
 
 						<ul className="projects_list sub_list">
 							{sub.map((s, i) => (
-								<li className="menu_link-sub">
+								<li key={i} className="menu_link-sub">
 									<MenuLink
-										key={i}
 										name={s.name}
 										slug={s.slug}
 										url={s.url}
