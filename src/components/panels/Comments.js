@@ -23,7 +23,7 @@ export function Comments() {
 						</div>
 						<div className="card_content text-ui">
 							<p className="center-text">
-								light weight, Fully functional, dynamic comments built with react.
+								Simple, Fully featured, comments built with react.
 								engage with users, comment on posts and enjoy fun conversations.
 							</p>
 							<ul>
@@ -32,36 +32,29 @@ export function Comments() {
 								<li>Pin comments to top of threads</li>
 								<li>Cursor based pagination</li>
 								<li>Choose from multiple users</li>
-								<li>Jwt for simple authentication, No cookies</li>
+								<li>Jwt for simple authentication</li>
 								<li>MongoDB, NoSQL backend</li>
 							</ul>
 						</div>
-						<div className="view_project">
+						<div>
+							<div className="flex-ui">
+								<FaReact className="skill_icon" title="React" />
+								<SiMongodb className="skill_icon" title="MongoDB" />
+								<FaNodeJs className="skill_icon" title="Node.js" />
+							</div>
+						</div>
+					</div>
+
+					<div className="grid-box-two">
+						<div className="project-image">
 							<a
 								href="https://react-comments.netlify.app"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="view_project-link"
 							>
-								View Project
+								<img src="../images/react-comments.png" alt="react comments project" />
 							</a>
 						</div>
-						<div className="card_skills flex-ui">
-							<FaReact className="skill_icon" title="React" />
-							<SiMongodb className="skill_icon" title="MongoDB" />
-							<FaNodeJs className="skill_icon" title="Node.js" />
-						</div>
-					</div>
-
-					<div className="grid-box-two hide-overflow">
-						<a
-							className="card-image"
-							href="/images/react-comments.png"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src="../images/react-comments.png" alt="react comments project" />
-						</a>
 					</div>
 
 				</Card>

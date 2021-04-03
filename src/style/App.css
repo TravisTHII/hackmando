@@ -50,7 +50,6 @@ Header
 	height: 90px;
 	z-index: 10;
 }
-
 .header .header_container {
 	display: flex;
 	justify-content: space-between;
@@ -58,23 +57,19 @@ Header
 	height: 100%;
 	margin: 0 auto;
 }
-
 .header .logo {
 	padding: 15px;
 }
-
 .header .icons_container {
 	display: flex;
 	height: 100%;
 }
-
 .header .icons_container .icon {
 	color: #fff;
 	font-size: 1.5rem;
 	width: 70px;
 	cursor: pointer;
 }
-
 .icon:not(:last-child) {
 	margin-right: 5px;
 }
@@ -92,60 +87,48 @@ Menu
 	left: 0;
 	z-index: 10;
 }
-
 .menu .menu_container {
 	color: rgba(255, 255, 255, .5);
 	font-size: 2rem;
 }
-
 .menu_list {
 	padding-left: 35px;
 }
-
 .menu_item {
 	display: flex;
 	align-items: center;
 	min-height: 40px;
 	text-align: left;
 }
-
 .menu_link-sub .menu_link{
 	line-height: 25px;
 	width: 80px;
 }
-
 .menu_active,
 .menu_link:hover {
 	color: #fff;
 }
-
 .menu_item:not(:last-child) {
 	margin-bottom: 9px;
 }
-
 .sub_menu {
 	display: block;
 }
-
 .sub_menu > span {
 	display: block;
 	margin-bottom: 5px;
 }
-
 .projects_list {
 	padding-left: 15px;
 }
-
 .sub_list {
 	font-size: 1rem;
 }
-
 .sub_list > li {
 	height: 30px;
 	display: flex;
 	align-items: center;
 }
-
 .sub_list > li:not(:last-child) {
 	margin-bottom: 5px;
 }
@@ -168,7 +151,6 @@ Panels
 	bottom: 0;
 	color: #fff;
 }
-
 .projects_btn {
 	background: transparent;
 	height: 40px;
@@ -218,24 +200,20 @@ About page
 	width: 900px;
 	height: 500px;
 }
-
 .about_panel .am_container {
 	display: grid;
 	justify-content: center;
 	grid-template-columns: repeat(2, 200px);
 	grid-column-gap: 50px;
 }
-
 .am_link {
 	color: #fff;
 	text-align: center;
 	font-size: 9rem;
 }
-
 .aml_text {
 	font-size: 1.5rem;
 }
-
 .tag-line {
 	color: #fff;
 	position: absolute;
@@ -253,7 +231,6 @@ Not found page
 	flex-direction: column;
 	text-align: center;
 }
-
 .go-home {
 	color: var(--red);
 }
@@ -275,15 +252,12 @@ Card
 .grid-normal {
 	grid-template-areas: 'col1 col2'
 }
-
 .grid-reverse {
 	grid-template-areas: 'col2 col1'
 }
-
 .grid-box-one {
 	grid-area: col1;
 }
-
 .grid-box-two {
 	grid-area: col2;
 }
@@ -292,81 +266,50 @@ Card
 	padding: 15px;
 	box-sizing: border-box;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
-
 .content_image {
 	padding: 30px;
 }
-
 .content-picture {
 	width: 200px;
 	height: 200px;
 	border-radius: 100%;
 	overflow: hidden;
 }
-
 .card-image {
 	display: block;
 }
-
 .card_header {
 	margin-bottom: 15px;
 }
-
 .content_header h1 {
 	margin-bottom: 5px;
 }
-
-.content_header {
-	margin-bottom: 10px;
-}
-
 .card_content {
 	text-align: left;
 	font-size: 20px;
 }
-
 .card_content ul {
 	list-style: inherit;
-	padding: 0 30px;
+	margin: 0 30px;
 }
-
 .card_content ul li:not(:last-child) {
 	margin-bottom: 5px;
 }
-
 .card_content .center-text {
 	text-align: center;
+	margin-bottom: 25px;
 }
 
-.view_project {
-	padding: 10px;
+.project-image {
+	overflow: hidden;
+	height: 500px;
 }
-
-.view_project .view_project-link {
-	width: 100px;
-	color: #fff;
-	border: 1px solid #fff;
-	padding: 5px;
-	display: block;
-	margin: 0 auto;
-	line-height: 25px;
-}
-
-.view_project-link:hover {
-	color: #1a1a1a;
-	background-color: #fff;
-}
-
-.card_content > p:not(:last-child) {
-	margin-bottom: 15px;
-}
-
-.card_skills {
-	padding: 5px;
-	height: 50px;
-	color: #fff;
-	box-sizing: border-box;
+.project-image img {
+	height: initial;
 }
 
 /*
@@ -382,7 +325,6 @@ Individual cards
 	margin-bottom: 30px;
 }
 
-
 /*
 ===============
 Common classes
@@ -396,23 +338,19 @@ Common classes
 }
 
 .skill_icon {
+	color: #fff;
 	font-size: 3rem;
-	padding: 5px;
-	box-sizing: border-box;
 	width: 50px;
 	height: 50px;
+	padding: 5px;
+	box-sizing: border-box;
 }
-
 .skill_icon:not(:last-child) {
-	margin-right: 15px;
+	margin-right: 20px;
 }
 
 .text-ui {
 	color: #fff;
-}
-
-.hide-overflow {
-	overflow: hidden;
 }
 
 /* text select color */

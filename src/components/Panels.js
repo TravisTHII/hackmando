@@ -17,6 +17,8 @@ export function Panels() {
 
 	useEffect(() => {
 		opderPanels()
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentPanel, window.location.pathname])
 
 	return (
