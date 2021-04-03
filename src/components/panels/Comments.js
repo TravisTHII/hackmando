@@ -16,7 +16,7 @@ export function Comments() {
 
 				<Card inverted={false}>
 
-					<div className="grid-box-one card-ui">
+					<div className="grid-box-one card-ui flex-column">
 						<div className="content_header">
 							<h1>React Comments</h1>
 							<p>Dynamic commenting application</p>

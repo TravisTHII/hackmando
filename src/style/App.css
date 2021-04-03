@@ -266,9 +266,6 @@ Card
 	padding: 15px;
 	box-sizing: border-box;
 	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 .content_image {
 	padding: 30px;
@@ -365,6 +362,12 @@ Common classes
 ::-webkit-selection { 
 	background-color: #fff; 
 	color: #0a0a0a; 
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 /*

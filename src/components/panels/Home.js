@@ -23,7 +23,7 @@ export function Home() {
 
 				<Card inverted={false}>
 
-					<div className="grid-box-one aboutme card-ui">
+					<div className="grid-box-one card-ui">
 						<div className="content_header">
 							<h1>Travis Hackney</h1>
 							<p>Javascript Developer</p>
@@ -38,7 +38,7 @@ export function Home() {
 						</div>
 					</div>
 
-					<div className="grid-box-two info card-ui">
+					<div className="grid-box-two card-ui">
 						<div className="home-card">
 							<div className="card_header">
 								<h2>Hello,</h2>
@@ -56,7 +56,7 @@ export function Home() {
 									I love how programming enables me to solve problems.
 								</p>
 							</div>
-							<div className="card_skills flex-ui">
+							<div className="flex-ui">
 								<AiFillHtml5 className="skill_icon" title="HTML" />
 								<FaCss3 className="skill_icon" title="CSS" />
 								<SiJavascript className="skill_icon" title="Javascript" />
