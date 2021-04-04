@@ -12,11 +12,11 @@ export function Search() {
 
 	return (
 		<div className={`search panel${search.state ? '' : ' hide_panel'}`}>
-			<div className="container flex-ui">
+			<div className="container flex_ui">
 
 				<Card inverted={false}>
 
-					<div className="grid-box-one card-ui">
+					<div className="grid_one card_ui">
 						<div className="content_header">
 							<h1>Search</h1>
 							<p>Dynamic search with infinite scroll</p>
@@ -34,14 +34,14 @@ export function Search() {
 								View Project
 						</a>
 						</div>
-						<div className="card_skills flex-ui">
+						<div className="card_skills flex_ui">
 							<FaReact className="skill_icon" title="React" />
 							<SiJavascript className="skill_icon" title="Javascript" />
 							<FaNodeJs className="skill_icon" title="Node.js" />
 						</div>
 					</div>
 
-					<div className="grid-box-two card-ui">
+					<div className="grid_two card_ui">
 						<h2>Image</h2>
 					</div>
 

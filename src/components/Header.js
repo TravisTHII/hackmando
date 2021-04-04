@@ -6,7 +6,7 @@ import { FaCode, FaGithub } from 'react-icons/fa'
 export function Header() {
 	return (
 		<header className="header">
-			<div className="header_container flex-ui">
+			<div className="header_container flex_ui">
 				<div className="logo">
 					<Link to="/">
 						<h1>HackManDo</h1>
@@ -14,7 +14,7 @@ export function Header() {
 				</div>
 				<div className="icons_container">
 					<a
-						className="icon flex-ui"
+						className="icon flex_ui"
 						href="https://github.com/TravisTHII"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -22,7 +22,7 @@ export function Header() {
 						<FaGithub />
 					</a>
 					<a
-						className="icon flex-ui"
+						className="icon flex_ui"
 						href="https://github.com/TravisTHII/hackmando"
 						target="_blank"
 						rel="noopener noreferrer"

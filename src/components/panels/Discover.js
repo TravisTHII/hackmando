@@ -12,11 +12,11 @@ export function Discover() {
 
 	return (
 		<div className={`discover panel${discover.state ? '' : ' hide_panel'}`}>
-			<div className="container flex-ui">
+			<div className="container flex_ui">
 
 				<Card inverted={true}>
 
-					<div className="grid-box-one card-ui">
+					<div className="grid_one card_ui">
 						<div className="content_header">
 							<h1>Discover</h1>
 							<p>Sort and filter content to your specifications</p>
@@ -32,14 +32,14 @@ export function Discover() {
 								View Project
 						</a>
 						</div>
-						<div className="card_skills flex-ui">
+						<div className="card_skills flex_ui">
 							<FaReact className="skill_icon" title="React" />
 							<SiJavascript className="skill_icon" title="Javascript" />
 							<FaNodeJs className="skill_icon" title="Node.js" />
 						</div>
 					</div>
 
-					<div className="grid-box-two card-ui">
+					<div className="grid_two card_ui">
 						<h2>Image</h2>
 					</div>
 

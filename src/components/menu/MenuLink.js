@@ -8,7 +8,9 @@ export function MenuLink({ name, slug, url, active }) {
 	const { state: { currentPanel }, updatePanel } = useContext(GlobalContext)
 
 	const newPanel = (e) => {
-		if (/menu_active/.test(e.target.className))
+		const r = new RegExp(`${url}`)
+
+		if (r.test(window.location.pathname))
 			e.preventDefault()
 
 		updatePanel(slug)
@@ -17,7 +19,7 @@ export function MenuLink({ name, slug, url, active }) {
 	return (
 		<Link
 			to={url}
-			className={`menu_link ${(currentPanel === slug || active) ? 'menu_active' : ''}`}
+			className={`menu_link${(currentPanel === slug || active) ? ' menu_active' : ''}`}
 			onClick={newPanel}
 		>
 			{name}

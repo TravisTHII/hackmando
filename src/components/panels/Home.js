@@ -19,17 +19,17 @@ export function Home() {
 
 	return (
 		<div className={`home panel${home.state ? '' : ' hide_panel'}`}>
-			<div className="container flex-ui">
+			<div className="container flex_ui">
 
 				<Card inverted={false}>
 
-					<div className="grid-box-one card-ui">
+					<div className="grid_one card_ui">
 						<div className="content_header">
 							<h1>Travis Hackney</h1>
 							<p>Javascript Developer</p>
 						</div>
-						<div className="content_image flex-ui">
-							<div className="content-picture">
+						<div className="content_image flex_ui">
+							<div className="content_picture">
 								<img
 									src="../images/travis.jpg"
 									alt="profile"
@@ -38,12 +38,12 @@ export function Home() {
 						</div>
 					</div>
 
-					<div className="grid-box-two card-ui">
-						<div className="home-card">
+					<div className="grid_two card_ui">
+						<div className="home_card">
 							<div className="card_header">
 								<h2>Hello,</h2>
 							</div>
-							<div className="card_content">
+							<div className="home_content">
 								<p>
 									I have been learning web development since as early as 2015,
 									developing and building full stack applications.
@@ -56,7 +56,7 @@ export function Home() {
 									I love how programming enables me to solve problems.
 								</p>
 							</div>
-							<div className="flex-ui">
+							<div className="card_tech flex_ui">
 								<AiFillHtml5 className="skill_icon" title="HTML" />
 								<FaCss3 className="skill_icon" title="CSS" />
 								<SiJavascript className="skill_icon" title="Javascript" />
@@ -71,7 +71,7 @@ export function Home() {
 
 				</Card>
 
-				<div className="show_projects flex-ui">
+				<div className="show_projects flex_ui">
 					<button
 						className="projects_btn"
 						onClick={() => seeProjects()}

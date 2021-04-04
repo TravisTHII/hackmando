@@ -10,9 +10,9 @@ export function About() {
 
 	return (
 		<div className={`about panel${about.state ? '' : ' hide_panel'}`}>
-			<div className="container flex-ui">
+			<div className="container flex_ui">
 
-				<div className="about_panel flex-ui">
+				<div className="about_panel flex_ui">
 
 					<div className="am_container">
 						<a
