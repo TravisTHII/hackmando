@@ -196,28 +196,27 @@ About page
 */
 
 .about_panel {
-	flex-direction: column;
 	width: 900px;
 	height: 500px;
+	flex-direction: column;
 }
-.about_panel .am_container {
+.about_content {
 	display: grid;
 	justify-content: center;
 	grid-template-columns: repeat(2, 200px);
-	grid-column-gap: 50px;
+	grid-gap: 50px;
 }
-.am_link {
+.about_content a {
 	color: #fff;
 	text-align: center;
 	font-size: 9rem;
 }
-.aml_text {
+.about_content p {
 	font-size: 1.5rem;
 }
 .tag-line {
 	color: #fff;
-	position: absolute;
-	bottom: 50px;
+	margin-top: 50px;
 }
 
 /*
@@ -434,11 +433,9 @@ Responsiveness
 		padding: 0;
 	}
 
-	.about_panel .am_container {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-    height: 300px;
+	.about_panel .about_content {
+		grid-template-rows: repeat(2, auto);
+		grid-template-columns: none;
 	}
 
 	.home_card {
@@ -488,6 +485,7 @@ Responsiveness
 @media only screen and (max-width: 1500px) {
 	.about_panel {
 		width: 100%;
+		height: 900px;
 	}
 
 	.am_link {
@@ -514,5 +512,9 @@ Responsiveness
 
 	.show_projects {
 		display: none;
+	}
+
+	.home .card .card_ui {
+		min-height: initial;
 	}
 }

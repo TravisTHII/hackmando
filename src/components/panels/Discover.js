@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
-import { SiJavascript } from 'react-icons/si'
+import { SiMongodb } from 'react-icons/si'
 
 import { GlobalContext } from '../../context/GlobalState'
 
@@ -16,31 +16,47 @@ export function Discover() {
 
 				<Card inverted={true}>
 
-					<div className="grid_one card_ui">
+					<div className="grid_one card_ui flex-column">
 						<div className="content_header">
-							<h1>Discover</h1>
-							<p>Sort and filter content to your specifications</p>
+							<h1>React Comments</h1>
+							<p>Dynamic commenting application</p>
 						</div>
-						<div className="card_content">
-							<p>
-								Discover what your're looking for by filtering
-								content by various tags.
-						</p>
+						<div className="card_content text_ui">
+							<p className="center_text">
+								Simple, Fully featured, comments built with react.
+								engage with users, comment on posts and enjoy fun conversations.
+							</p>
+							<div className="content_list">
+								<ul>
+									<li>Multiple threads to organize discussions</li>
+									<li>Post & Reply to comments</li>
+									<li>Pin comments to top of threads</li>
+									<li>Cursor based pagination</li>
+									<li>Order comments by old or new</li>
+									<li>Choose from multiple users</li>
+									<li>Jwt for simple authentication</li>
+								</ul>
+							</div>
 						</div>
-						<div className="view_project">
-							<a href="#" className="view_project-link">
-								View Project
-						</a>
-						</div>
-						<div className="card_skills flex_ui">
-							<FaReact className="skill_icon" title="React" />
-							<SiJavascript className="skill_icon" title="Javascript" />
-							<FaNodeJs className="skill_icon" title="Node.js" />
+						<div>
+							<div className="flex_ui">
+								<FaReact className="skill_icon" title="React" />
+								<SiMongodb className="skill_icon" title="MongoDB" />
+								<FaNodeJs className="skill_icon" title="Node.js" />
+							</div>
 						</div>
 					</div>
 
-					<div className="grid_two card_ui">
-						<h2>Image</h2>
+					<div className="grid_two">
+						<div className="project_image">
+							<a
+								href="https://react-comments.netlify.app"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src="../images/react-comments.png" alt="react comments project" />
+							</a>
+						</div>
 					</div>
 
 				</Card>
