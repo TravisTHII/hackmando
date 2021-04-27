@@ -54,7 +54,7 @@ export function Queue() {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<img src="../images/react-comments.png" alt="react comments project" />
+								<img src="../images/comments.png" alt="react comments project" />
 							</a>
 						</div>
 					</div>

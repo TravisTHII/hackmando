@@ -6,6 +6,49 @@
 	--red: #9a0909;
 	--orange: #d67500;
 	--gray: #1a1a1a;
+	--white: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+p {
+	color: var(--white);
+	margin: 0;
+}
+
+button {
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+*:focus {
+	outline-color: var(--white);
 }
 
 .App {
@@ -65,7 +108,7 @@ Header
 	height: 100%;
 }
 .header .icons_container .icon {
-	color: #fff;
+	color: var(--white);
 	font-size: 1.5rem;
 	width: 70px;
 	cursor: pointer;
@@ -106,7 +149,7 @@ Menu
 }
 .menu_active,
 .menu_link:hover {
-	color: #fff;
+	color: var(--white);
 }
 .menu_item:not(:last-child) {
 	margin-bottom: 9px;
@@ -149,13 +192,13 @@ Panels
 	height: 50px;
 	position: absolute;
 	bottom: 0;
-	color: #fff;
+	color: var(--white);
 }
 .projects_btn {
 	background: transparent;
 	height: 40px;
 	width: 150px;
-	color: #fff;
+	color: var(--white);
 	font-size: 1rem;
 	display: flex;
 	flex-direction: column;
@@ -201,7 +244,7 @@ Panels
 	grid-gap: 50px;
 }
 .about_content a {
-	color: #fff;
+	color: var(--white);
 	text-align: center;
 	font-size: 9rem;
 }
@@ -209,7 +252,7 @@ Panels
 	font-size: 1.5rem;
 }
 .tag-line {
-	color: #fff;
+	color: var(--white);
 	margin-top: 50px;
 }
 
@@ -347,7 +390,7 @@ Common classes
 }
 
 .skill_icon {
-	color: #fff;
+	color: var(--white);
 	font-size: 3rem;
 	width: 50px;
 	height: 50px;
@@ -359,20 +402,20 @@ Common classes
 }
 
 .text_ui {
-	color: #fff;
+	color: var(--white);
 }
 
 /* text select color */
 ::selection {
-	background-color: #fff; 
+	background-color: var(--white); 
 	color: #0a0a0a; 
 }
 ::-moz-selection { 
-	background-color: #fff; 
+	background-color: var(--white); 
 	color: #0a0a0a; 
 }
 ::-webkit-selection { 
-	background-color: #fff; 
+	background-color: var(--white); 
 	color: #0a0a0a; 
 }
 
