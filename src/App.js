@@ -7,7 +7,7 @@ import { Header } from './components/Header'
 import { Panels } from './components/Panels'
 import { NotFound } from './components/NotFound'
 
-import './style/app.css'
+import './style/App.css'
 
 export function App() {
 	return (
