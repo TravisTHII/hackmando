@@ -24,7 +24,7 @@ export function About() {
 							<p>LinkedIn</p>
 						</a>
 						<a
-							href="#"
+							href="https://www.linkedin.com/in/travis-hackney-8b7805207/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
