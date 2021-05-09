@@ -11,15 +11,14 @@ import { Search } from './panels/Search'
 import { Discover } from './panels/Discover'
 import { About } from './panels/About'
 
-export function Panels() {
+export function Panels({ location: { pathname } }) {
 
 	const { state: { currentPanel }, opderPanels } = useContext(GlobalContext)
 
 	useEffect(() => {
 		opderPanels()
-
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [currentPanel, window.location.pathname])
+	}, [currentPanel, pathname])
 
 	return (
 		<>
