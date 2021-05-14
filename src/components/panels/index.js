@@ -1,4 +1,4 @@
-export { Main } from './Main'
+export { Panels } from './Panels'
 export { Home } from './Home'
 export { Comments } from './Comments'
 export { Search } from './Search'

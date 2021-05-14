@@ -4,9 +4,9 @@ import { useGlobalContext } from '../../context/Global'
 
 import { Menu } from '../Menu'
 
-import { Home, Comments, Queue, Search, Discover, About } from '.'
+import { Home, Comments, Queue, Search, Discover, About } from './'
 
-export function Main({ location: { pathname } }) {
+export function Panels({ location: { pathname } }) {
 
   const { state: { currentPanel }, opderPanels } = useGlobalContext()
 
