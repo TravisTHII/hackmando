@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { FaLinkedin } from 'react-icons/fa'
 import { ImFileText2 } from 'react-icons/im'
 
-import { GlobalContext } from '../../context/GlobalState'
+import { useGlobalContext } from '../../context/Global'
 
 export function About() {
 
-  const { state: { panels: { about } } } = useContext(GlobalContext)
+  const { state: { panels: { about } } } = useGlobalContext()
 
   return (
     <div className={`about panel${about.state ? '' : ' hide_panel'}`}>

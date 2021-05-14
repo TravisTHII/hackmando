@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useContext, useReducer } from 'react'
 
 import { GlobalReducer } from './GlobalReducer'
 
@@ -17,6 +17,8 @@ const initialState = {
 }
 
 export const GlobalContext = createContext(initialState)
+
+export const useGlobalContext = () => useContext(GlobalContext)
 
 export const GlobalProvider = ({ children }) => {
 

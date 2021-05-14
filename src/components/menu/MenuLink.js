@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { GlobalContext } from '../../context/GlobalState'
+import { useGlobalContext } from '../../context/Global'
 
 export function MenuLink({ name, slug, url, active }) {
 
-  const { state: { currentPanel }, updatePanel } = useContext(GlobalContext)
+  const { state: { currentPanel }, updatePanel } = useGlobalContext()
 
   const newPanel = (e) => {
     const r = new RegExp(`${url}`)

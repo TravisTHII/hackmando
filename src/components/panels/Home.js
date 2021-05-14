@@ -1,15 +1,15 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { FaChevronDown, FaCss3, FaNodeJs, FaReact } from 'react-icons/fa'
 import { SiGraphql, SiJavascript, SiPhp, SiRedux } from 'react-icons/si'
 import { AiFillHtml5 } from 'react-icons/ai'
 
-import { GlobalContext } from '../../context/GlobalState'
+import { useGlobalContext } from '../../context/Global'
 
 import { Card } from '../Card'
 
 export function Home() {
 
-  const { state: { panels: { home } }, updatePanel } = useContext(GlobalContext)
+  const { state: { panels: { home } }, updatePanel } = useGlobalContext()
 
   const seeProjects = () => {
     window.history.pushState({ panel: 'comments' }, '', '/projects/comments')

@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
 import { SiMongodb } from 'react-icons/si'
 
-import { GlobalContext } from '../../context/GlobalState'
+import { useGlobalContext } from '../../context/Global'
 
 import { Card } from '../Card'
 
 export function Search() {
 
-  const { state: { panels: { search } } } = useContext(GlobalContext)
+  const { state: { panels: { search } } } = useGlobalContext()
 
   return (
     <div className={`search panel${search.state ? '' : ' hide_panel'}`}>

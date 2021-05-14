@@ -1,14 +1,14 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
-import { GlobalContext } from '../context/GlobalState'
+import { useGlobalContext } from '../../context/Global'
 
-import { Menu } from './Menu'
+import { Menu } from '../Menu'
 
-import { Home, Comments, Queue, Search, Discover, About } from './panels'
+import { Home, Comments, Queue, Search, Discover, About } from './'
 
 export function Panels({ location: { pathname } }) {
 
-  const { state: { currentPanel }, opderPanels } = useContext(GlobalContext)
+  const { state: { currentPanel }, opderPanels } = useGlobalContext()
 
   useEffect(() => {
     opderPanels()

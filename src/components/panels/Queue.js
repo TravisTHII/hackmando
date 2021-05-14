@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
 import { SiMongodb } from 'react-icons/si'
 
-import { GlobalContext } from '../../context/GlobalState'
+import { useGlobalContext } from '../../context/Global'
 
 import { Card } from '../Card'
 
 export function Queue() {
 
-  const { state: { panels: { queue } } } = useContext(GlobalContext)
+  const { state: { panels: { queue } } } = useGlobalContext()
 
   return (
     <div className={`queue panel${queue.state ? '' : ' hide_panel'}`}>

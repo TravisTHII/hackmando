@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
 import { SiMongodb } from 'react-icons/si'
 
-import { GlobalContext } from '../../context/GlobalState'
+import { useGlobalContext } from '../../context/Global'
 
 import { Card } from '../Card'
 
 export function Discover() {
 
-  const { state: { panels: { discover } } } = useContext(GlobalContext)
+  const { state: { panels: { discover } } } = useGlobalContext()
 
   return (
     <div className={`discover panel${discover.state ? '' : ' hide_panel'}`}>
