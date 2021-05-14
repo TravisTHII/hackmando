@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import { GlobalProvider } from './context/Global'
+import { GlobalProvider } from '../../context/Global'
 
-import { Header } from './components/Header'
-import { Panels } from './components/Panels'
-import { NotFound } from './components/NotFound'
+import { Header } from '../Header'
+import { Panels } from '../Panels'
+import { NotFound } from '../NotFound'
 
-import './style/App.css'
+import '../../style/App.css'
 
 export function App() {
   return (

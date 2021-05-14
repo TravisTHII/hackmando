@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 
-import { useGlobalContext } from '../../context/Global'
+import { useGlobalContext } from '../context/Global'
 
-import { Menu } from '../Menu'
+import { Menu } from './Menu'
 
-import { Home, Comments, Queue, Search, Discover, About } from './'
+import { Home, Comments, Queue, Search, Discover, About } from '../components/Panels/index'
 
 export function Panels({ location: { pathname } }) {
 
