@@ -6,7 +6,7 @@ import { Menu } from '../Menu'
 
 import { Home, Comments, Queue, Search, Discover, About } from '.'
 
-export function Panels({ location: { pathname } }) {
+export function Main({ location: { pathname } }) {
 
   const { state: { currentPanel }, opderPanels } = useGlobalContext()
 
