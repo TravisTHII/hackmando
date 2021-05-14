@@ -21,8 +21,8 @@ export function Panels({ location: { pathname } }) {
       <div id="Panels">
         <Home />
         <Comments />
-        <Queue />
         <Search />
+        <Queue />
         <Discover />
         <About />
       </div>

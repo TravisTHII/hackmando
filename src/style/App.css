@@ -334,6 +334,7 @@ Card
 .card_content {
   text-align: left;
   font-size: 20px;
+  min-height: 300px;
 }
 .content_list {
   margin: 0 30px;
