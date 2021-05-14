@@ -2,14 +2,9 @@ import React, { useEffect } from 'react'
 
 import { useGlobalContext } from '../../context/Global'
 
-import { Menu } from '../Menu'
+import { Menu } from '../menu'
 
-import { Home } from './Home'
-import { Comments } from './Comments'
-import { Search } from './Search'
-import { Queue } from './Queue'
-import { Discover } from './Discover'
-import { About } from './About'
+import { Home, Comments, Search, Queue, Discover, About } from './'
 
 export function Panels({ location: { pathname } }) {
 
