@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { GlobalProvider } from '../../context/Global'
 
 import { Header } from '../Header'
-import { Panels } from '../../components/Panels'
+import { Panels } from '../Panels'
 import { NotFound } from '../NotFound'
 
 import '../../style/App.css'
