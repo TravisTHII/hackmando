@@ -451,10 +451,6 @@ Responsiveness
 	.App {
 		position: relative;
 		background-color: var(--gray);
-		width: 100%;
-		max-width: 1920px;
-		height: 100vh;
-		max-height: 1080px;
 	}
 
 	#Panels {
