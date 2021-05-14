@@ -1,0 +1,6 @@
+export { Home } from './Home'
+export { Comments } from './Comments'
+export { Queue } from './Queue'
+export { Search } from './Search'
+export { Discover } from './Discover'
+export { About } from './About'

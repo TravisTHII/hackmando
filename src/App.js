@@ -10,18 +10,18 @@ import { NotFound } from './components/NotFound'
 import './style/App.css'
 
 export function App() {
-	return (
-		<GlobalProvider>
-			<div className="App">
-				<Router>
-					<Header />
-					<Switch>
-						<Route path="/:_panel(|home|about)" component={Panels} />
-						<Route path="/:_panel(projects)/(comments|search|queue|discover)" component={Panels} />
-						<Route component={NotFound} />
-					</Switch>
-				</Router>
-			</div>
-		</GlobalProvider>
-	)
+  return (
+    <GlobalProvider>
+      <div className="App">
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/:_panel(|home|about)" component={Panels} />
+            <Route path="/:_panel(projects)/(comments|search|queue|discover)" component={Panels} />
+            <Route component={NotFound} />
+          </Switch>
+        </Router>
+      </div>
+    </GlobalProvider>
+  )
 }
