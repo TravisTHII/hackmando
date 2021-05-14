@@ -1,4 +1,4 @@
-export { Panels as Entry } from './Panels'
+export { Panels } from './Panels.container'
 export { Home } from './Home'
 export { Comments } from './Comments'
 export { Search } from './Search'
