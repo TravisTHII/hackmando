@@ -187,6 +187,11 @@ Panels
   z-index: 9;
 }
 
+.card_tech {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .show_projects {
   width: 100%;
   height: 50px;
@@ -390,16 +395,13 @@ Common classes
   align-items: center;
 }
 
-.skill_icon {
+.tech_icon {
   color: var(--white);
   font-size: 3rem;
   width: 50px;
   height: 50px;
   padding: 5px;
   box-sizing: border-box;
-}
-.skill_icon:not(:last-child) {
-  margin-right: 20px;
 }
 
 .text_ui {

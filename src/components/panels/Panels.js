@@ -4,7 +4,9 @@ import { useGlobalContext } from '../../context/Global'
 
 import { Menu } from '../menu'
 
-import { Home, Comments, Search, Queue, Discover, About } from '.'
+import { Home, Project, About } from '.'
+
+import { projects } from '../../projects'
 
 export function Panels({ location: { pathname } }) {
 
@@ -20,10 +22,12 @@ export function Panels({ location: { pathname } }) {
       <Menu />
       <div id="Panels">
         <Home />
-        <Comments />
-        <Search />
-        <Queue />
-        <Discover />
+        {projects.map((project, i) => (
+          <Project
+            key={i}
+            {...project}
+          />
+        ))}
         <About />
       </div>
     </>

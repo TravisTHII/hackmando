@@ -1,15 +1,25 @@
 import React from 'react'
-import { FaChevronDown, FaCss3, FaNodeJs, FaReact } from 'react-icons/fa'
-import { SiGraphql, SiJavascript, SiPhp, SiRedux } from 'react-icons/si'
-import { AiFillHtml5 } from 'react-icons/ai'
+import { FaChevronDown } from 'react-icons/fa'
 
 import { useGlobalContext } from '../../context/Global'
 
-import { Card } from '../Card'
+import { BuiltWith } from '../BuiltWith'
 
 export function Home() {
 
   const { state: { panels: { home } }, updatePanel } = useGlobalContext()
+
+  const skills = [
+    'HTML',
+    'CSS',
+    'Javascript',
+    'PHP',
+    'React',
+    'Redux',
+    'Node.js',
+    'GraphQL',
+    'Typescript',
+  ]
 
   const seeProjects = () => {
     window.history.pushState({ panel: 'comments' }, '', '/projects/comments')
@@ -21,7 +31,7 @@ export function Home() {
     <div className={`home panel${home.state ? '' : ' hide_panel'}`}>
       <div className="container flex_ui">
 
-        <Card inverted={false}>
+        <div className="card grid_normal">
 
           <div className="grid_one card_ui">
             <div className="content_header">
@@ -56,20 +66,13 @@ export function Home() {
                   I love how programming enables me to solve problems.
                 </p>
               </div>
-              <div className="card_tech flex_ui">
-                <AiFillHtml5 className="skill_icon" title="HTML" />
-                <FaCss3 className="skill_icon" title="CSS" />
-                <SiJavascript className="skill_icon" title="Javascript" />
-                <SiPhp className="skill_icon" title="PHP" />
-                <FaReact className="skill_icon" title="React" />
-                <SiRedux className="skill_icon" title="Redux" />
-                <FaNodeJs className="skill_icon" title="Node.js" />
-                <SiGraphql className="skill_icon" title="GraphQL" />
+              <div className="card_tech">
+                <BuiltWith builtWith={skills} />
               </div>
             </div>
           </div>
 
-        </Card>
+        </div>
 
         <div className="show_projects flex_ui">
           <button

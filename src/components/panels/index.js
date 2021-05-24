@@ -1,7 +1,4 @@
 export { Panels } from './Panels'
 export { Home } from './Home'
-export { Comments } from './Comments'
-export { Search } from './Search'
-export { Queue } from './Queue'
-export { Discover } from './Discover'
+export { Project } from './Project'
 export { About } from './About'
