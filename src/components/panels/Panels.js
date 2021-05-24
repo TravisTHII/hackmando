@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 import { useGlobalContext } from '../../context/Global'
 
-import { Menu } from '../menu'
+import { Menu } from '../Menu'
 
 import { Home, Project, About } from '.'
 
