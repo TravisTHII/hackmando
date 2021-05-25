@@ -4,21 +4,21 @@ export const generatePanels = (main: string[], projects: Project[]) => {
 
   const copy = [...main]
 
-  let y: string[] = []
+  const a: string[] = []
 
-  let h: Panels = {}
+  for (const i of projects)
+    a.push(i.panel)
 
-  for (const i of projects) y.push(i.panel)
+  copy.splice(1, 0, ...a)
 
-  copy.splice(1, 0, ...y)
+  const length = copy.length
 
-  const l = copy.length
+  const range = [...Array(length).keys()].reverse()
 
-  let r = [...Array(l).keys()].reverse()
+  const o: Panels = {}
 
-  for (const [i, v] of copy.entries()) {
-    h[v] = { stack: r[i] + 1, state: true }
-  }
+  for (const [i, v] of copy.entries())
+    o[v] = { stack: range[i] + 1, state: true }
 
-  return h
+  return o
 }
