@@ -3,14 +3,15 @@ import React, { useEffect } from 'react'
 import { useGlobalContext } from '../../context/Global'
 
 import { Menu } from '../Menu'
+import { Home, Project, About } from '../Panes'
 
-import { Home, Project, About } from '.'
+import { PanelsProps } from '../Panes/types'
 
 import { projects } from '../../projects'
 
-export function Panels({ location: { pathname } }) {
+export function Panels({ location: { pathname } }: PanelsProps) {
 
-  const { state: { currentPanel }, opderPanels } = useGlobalContext()
+  const { currentPanel, opderPanels } = useGlobalContext()
 
   useEffect(() => {
     opderPanels()

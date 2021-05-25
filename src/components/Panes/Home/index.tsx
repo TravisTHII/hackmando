@@ -1,28 +1,25 @@
 import React from 'react'
 import { FaChevronDown } from 'react-icons/fa'
+import { useHistory } from 'react-router'
 
-import { useGlobalContext } from '../../context/Global'
+import { useGlobalContext } from '../../../context/Global'
 
-import { BuiltWith } from '../BuiltWith'
+import { BuiltWith } from '../../BuiltWith'
 
 export function Home() {
 
-  const { state: { panels: { home } }, updatePanel } = useGlobalContext()
+  const { panels: { home }, updatePanel } = useGlobalContext()
+
+  const history = useHistory()
 
   const skills = [
-    'HTML',
-    'CSS',
-    'Javascript',
-    'PHP',
-    'React',
-    'Redux',
-    'Node.js',
-    'GraphQL',
-    'Typescript',
+    'HTML', 'CSS', 'Javascript',
+    'PHP', 'React', 'Redux',
+    'Node.js', 'GraphQL', 'Typescript',
   ]
 
   const seeProjects = () => {
-    window.history.pushState({ panel: 'comments' }, '', '/projects/comments')
+    history.push('/projects/comments')
 
     updatePanel('comments')
   }
@@ -77,7 +74,7 @@ export function Home() {
         <div className="show_projects flex_ui">
           <button
             className="projects_btn"
-            onClick={() => seeProjects()}
+            onClick={seeProjects}
           >
             See projects
             <FaChevronDown />

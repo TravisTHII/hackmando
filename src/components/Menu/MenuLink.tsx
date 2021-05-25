@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom'
 
 import { useGlobalContext } from '../../context/Global'
 
-export function MenuLink({ name, slug, url, active }) {
+import { Props } from './types'
 
-  const { state: { currentPanel }, updatePanel } = useGlobalContext()
+export function MenuLink({ name, slug, url, active }: Props) {
 
-  const newPanel = (e) => {
+  const { currentPanel, updatePanel } = useGlobalContext()
+
+  const newPanel = (e: React.MouseEvent) => {
     const r = new RegExp(`${url}`)
 
-    if (r.test(window.location.pathname))
-      e.preventDefault()
+    if (r.test(window.location.pathname)) e.preventDefault()
 
     updatePanel(slug)
   }

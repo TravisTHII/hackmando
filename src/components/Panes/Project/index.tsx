@@ -1,8 +1,10 @@
 import React from 'react'
 
-import { useGlobalContext } from '../../context/Global'
+import { useGlobalContext } from '../../../context/Global'
 
-import { BuiltWith } from '../BuiltWith'
+import { BuiltWith } from '../../BuiltWith'
+
+import { ProjectProps } from '../types'
 
 export function Project({
   panel,
@@ -14,9 +16,9 @@ export function Project({
   reversed,
   image,
   builtWith
-}) {
+}: ProjectProps) {
 
-  const { state: { panels } } = useGlobalContext()
+  const { panels } = useGlobalContext()
 
   return (
     <div className={`${panel} panel${panels[panel].state ? '' : ' hide_panel'}`}>

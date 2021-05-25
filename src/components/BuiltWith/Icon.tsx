@@ -3,7 +3,9 @@ import { SiMongodb, SiTypescript } from 'react-icons/si'
 import { SiGraphql, SiJavascript, SiPhp, SiRedux } from 'react-icons/si'
 import { AiFillHtml5 } from 'react-icons/ai'
 
-export function Icon({ name }) {
+import { IconProps } from './types'
+
+export function Icon({ name }: IconProps) {
 
   let icon
 

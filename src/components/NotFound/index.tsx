@@ -6,9 +6,9 @@ export function NotFound() {
   useEffect(() => {
     const x = document.querySelector('.header')
 
-    x.classList.add('is_not_found')
+    x?.classList.add('is_not_found')
 
-    return () => x.classList.remove('is_not_found')
+    return () => x?.classList.remove('is_not_found')
   }, [])
 
   return (

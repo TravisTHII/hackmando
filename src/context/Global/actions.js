@@ -1,4 +1,0 @@
-export const GLOBAL = {
-  ORDER_PANELS: 'ORDER_PANELS',
-  UPDATE_PANEL: 'UPDATE_PANEL'
-}

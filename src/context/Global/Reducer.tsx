@@ -1,9 +1,9 @@
-import { GLOBAL } from './actions'
+import { DispatchName, State, Action } from './types'
 
-export const GlobalReducer = (state, action) => {
+export const GlobalReducer = (state: State, action: Action) => {
   const { type, payload } = action
 
-  if (type === GLOBAL.ORDER_PANELS) {
+  if (type === DispatchName.ORDER_PANELS) {
     const panels = { ...state.panels }
 
     const s = panels[state.currentPanel].stack
@@ -19,7 +19,7 @@ export const GlobalReducer = (state, action) => {
     }
   }
 
-  if (type === GLOBAL.UPDATE_PANEL) {
+  if (type === DispatchName.UPDATE_PANEL) {
     return {
       ...state,
       currentPanel: payload.panel

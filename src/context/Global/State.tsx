@@ -1,10 +1,10 @@
 import React, { createContext, useContext, useReducer } from 'react'
 
-import { GlobalReducer } from './GlobalReducer'
+import { GlobalReducer } from './Reducer'
 
-import { GLOBAL } from './actions'
+import { DispatchName, InitialStateType, State } from './types'
 
-const initialState = {
+const initialState: State = {
   currentPanel: 'home',
   panels: {
     home: { state: true, stack: 9 },
@@ -16,11 +16,11 @@ const initialState = {
   }
 }
 
-export const GlobalContext = createContext(initialState)
+export const Context = createContext({} as InitialStateType)
 
-export const useGlobalContext = () => useContext(GlobalContext)
+export const useGlobalContext = () => useContext(Context)
 
-export const GlobalProvider = ({ children }) => {
+export const Provider: React.FC = ({ children }) => {
 
   const [state, dispatch] = useReducer(GlobalReducer, initialState)
 
@@ -54,16 +54,16 @@ export const GlobalProvider = ({ children }) => {
     }
 
     dispatch({
-      type: GLOBAL.ORDER_PANELS,
+      type: DispatchName.ORDER_PANELS,
       payload: {
         panel
       }
     })
   }
 
-  const updatePanel = (panel) => {
+  const updatePanel = (panel: string) => {
     dispatch({
-      type: GLOBAL.UPDATE_PANEL,
+      type: DispatchName.UPDATE_PANEL,
       payload: {
         panel
       }
@@ -71,12 +71,12 @@ export const GlobalProvider = ({ children }) => {
   }
 
   return (
-    <GlobalContext.Provider value={{
-      state,
+    <Context.Provider value={{
+      ...state,
       opderPanels,
       updatePanel
     }}>
       {children}
-    </GlobalContext.Provider>
+    </Context.Provider>
   )
 }
