@@ -1,4 +1,12 @@
-export const projects = [
+import { generatePanels } from '../../utils'
+import { Project } from './types'
+
+const main = [
+  'home',
+  'about'
+]
+
+export const projects: Project[] = [
   {
     panel: 'comments',
     title: 'React Comments',
@@ -20,7 +28,12 @@ export const projects = [
       'React',
       'MongoDB',
       'Node.js',
-    ]
+    ],
+    clientLink: {
+      name: 'Comments',
+      slug: 'comments',
+      url: '/projects/comments'
+    }
   },
   {
     panel: 'search',
@@ -39,6 +52,13 @@ export const projects = [
       'React',
       'Typescript',
       'Node.js',
-    ]
-  },
+    ],
+    clientLink: {
+      name: 'Search',
+      slug: 'search',
+      url: '/projects/search'
+    }
+  }
 ]
+
+export const panels = generatePanels(main, projects)

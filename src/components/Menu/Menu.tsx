@@ -1,15 +1,18 @@
 import React from 'react'
 
+import { useGlobalContext, ClientLink } from '../../context/Global'
+
 import { MenuLink } from './MenuLink'
 
 export function Menu() {
 
-  const sub = [
-    { name: "Comments", slug: "comments", url: "/projects/comments" },
-    { name: "Search", slug: "search", url: "/projects/search" },
-    { name: "Queue", slug: "queue", url: "/projects/queue" },
-    { name: "Discover", slug: "discover", url: "/projects/discover" }
-  ]
+  const { projects } = useGlobalContext()
+
+  const subMenu: ClientLink[] = []
+
+  projects.forEach(p => {
+    subMenu.push(p.clientLink)
+  })
 
   const w = /\/projects\/(\w+)/.test(window.location.pathname)
 
@@ -31,19 +34,19 @@ export function Menu() {
             <span>
               <MenuLink
                 name="Projects"
-                slug="comments"
-                url="/projects/comments"
+                slug={subMenu[0].slug}
+                url={`/projects/${subMenu[0].slug}`}
                 active={w}
               />
             </span>
 
             <ul className="projects_list sub_list">
-              {sub.map((s, i) => (
+              {subMenu.map(({ name, slug, url }, i) => (
                 <li key={i} className="menu_link-sub">
                   <MenuLink
-                    name={s.name}
-                    slug={s.slug}
-                    url={s.url}
+                    name={name}
+                    slug={slug}
+                    url={url}
                   />
                 </li>
               ))}

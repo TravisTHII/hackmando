@@ -184,7 +184,6 @@ Panels
 
 .home {
   background-color: var(--blue);
-  z-index: 9;
 }
 
 .card_tech {
@@ -214,27 +213,22 @@ Panels
 
 .comments {
   background-color: var(--purple);
-  z-index: 8;
 }
 
 .search {
   background-color: var(--pink);
-  z-index: 7;
 }
 
 .queue {
   background-color: var(--orange);
-  z-index: 6;
 }
 
 .discover {
   background-color: var(--red);
-  z-index: 5;
 }
 
 .about {
   background-color: var(--gray);
-  z-index: 4;
 }
 
 .about_panel {

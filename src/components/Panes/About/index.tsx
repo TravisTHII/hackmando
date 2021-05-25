@@ -9,7 +9,10 @@ export function About() {
   const { panels: { about } } = useGlobalContext()
 
   return (
-    <div className={`about panel${about.state ? '' : ' hide_panel'}`}>
+    <div
+      className={`about panel${about.state ? '' : ' hide_panel'}`}
+      style={{ zIndex: about.stack }}
+    >
       <div className="container flex_ui">
 
         <div className="about_panel flex_ui">

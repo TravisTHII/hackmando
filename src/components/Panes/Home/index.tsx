@@ -25,7 +25,10 @@ export function Home() {
   }
 
   return (
-    <div className={`home panel${home.state ? '' : ' hide_panel'}`}>
+    <div
+      className={`home panel${home.state ? '' : ' hide_panel'}`}
+      style={{ zIndex: home.stack }}
+    >
       <div className="container flex_ui">
 
         <div className="card grid_normal">

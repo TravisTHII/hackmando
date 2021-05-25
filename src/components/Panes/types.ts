@@ -6,7 +6,7 @@ export interface PanelsProps {
 
 export interface ProjectProps {
   panel: string
-  title: string
+  title?: string
   subTitle: string
   description: string
   bulletPoints: string[]

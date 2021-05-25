@@ -3,15 +3,36 @@ export type InitialStateType = {
   updatePanel: (panel: string) => void
 } & State
 
-
 export type State = {
   currentPanel: string
-  panels: {
-    [key: string]: {
-      state: boolean
-      stack: number
-    }
+  panels: Panels
+  projects: Project[]
+}
+
+export type Panels = {
+  [key: string]: {
+    state: boolean
+    stack: number
   }
+}
+
+export type Project = {
+  panel: string
+  title: string
+  subTitle: string
+  description: string
+  bulletPoints: string[]
+  projectUrl: string
+  reversed: boolean
+  image: string
+  builtWith: string[]
+  clientLink: ClientLink
+}
+
+export type ClientLink = {
+  name: string
+  slug: string
+  url: string
 }
 
 export enum DispatchName {

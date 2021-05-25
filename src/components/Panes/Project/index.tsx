@@ -21,7 +21,10 @@ export function Project({
   const { panels } = useGlobalContext()
 
   return (
-    <div className={`${panel} panel${panels[panel].state ? '' : ' hide_panel'}`}>
+    <div
+      className={`${panel} panel${panels[panel].state ? '' : ' hide_panel'}`}
+      style={{ zIndex: panels[panel].stack }}
+    >
       <div className="container flex_ui">
 
         <div className={`card ${reversed ? 'grid_reverse' : 'grid_normal'}`}>

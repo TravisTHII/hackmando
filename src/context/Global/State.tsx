@@ -4,16 +4,12 @@ import { GlobalReducer } from './Reducer'
 
 import { DispatchName, InitialStateType, State } from './types'
 
+import { panels, projects } from './data'
+
 const initialState: State = {
   currentPanel: 'home',
-  panels: {
-    home: { state: true, stack: 9 },
-    comments: { state: true, stack: 8 },
-    search: { state: true, stack: 7 },
-    queue: { state: true, stack: 6 },
-    discover: { state: true, stack: 5 },
-    about: { state: true, stack: 4 },
-  }
+  panels,
+  projects
 }
 
 export const Context = createContext({} as InitialStateType)

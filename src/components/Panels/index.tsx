@@ -7,11 +7,9 @@ import { Home, Project, About } from '../Panes'
 
 import { PanelsProps } from '../Panes/types'
 
-import { projects } from '../../projects'
-
 export function Panels({ location: { pathname } }: PanelsProps) {
 
-  const { currentPanel, opderPanels } = useGlobalContext()
+  const { projects, currentPanel, opderPanels } = useGlobalContext()
 
   useEffect(() => {
     opderPanels()
