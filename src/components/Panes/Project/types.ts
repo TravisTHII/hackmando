@@ -1,10 +1,4 @@
-export interface PanelsProps {
-  location: {
-    pathname: string
-  }
-}
-
-export interface ProjectProps {
+export interface Props {
   panel: string
   title?: string
   subTitle: string

@@ -5,9 +5,9 @@ import { useGlobalContext } from '../../context/Global'
 import { Menu } from '../Menu'
 import { Home, Project, About } from '../Panes'
 
-import { PanelsProps } from '../Panes/types'
+import { Props } from './types'
 
-export function Panels({ location: { pathname } }: PanelsProps) {
+export function Panels({ location: { pathname } }: Props) {
 
   const { projects, currentPanel, opderPanels } = useGlobalContext()
 

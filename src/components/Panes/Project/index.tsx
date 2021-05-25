@@ -4,7 +4,7 @@ import { useGlobalContext } from '../../../context/Global'
 
 import { BuiltWith } from '../../BuiltWith'
 
-import { ProjectProps } from '../types'
+import { Props } from './types'
 
 export function Project({
   panel,
@@ -16,7 +16,7 @@ export function Project({
   reversed,
   image,
   builtWith
-}: ProjectProps) {
+}: Props) {
 
   const { panels } = useGlobalContext()
 
