@@ -31,7 +31,7 @@ export function Menu() {
           </li>
 
           <li className="menu_item sub_menu">
-            <span>
+            <span className="menu_item">
               <MenuLink
                 name="Projects"
                 slug={subMenu[0].slug}

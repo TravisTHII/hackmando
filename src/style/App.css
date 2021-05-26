@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
   --blue: #007ee4;
   --purple: #6100b1;
@@ -8,8 +10,6 @@
   --gray: #1a1a1a;
   --white: #fff;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
   margin: 0;
@@ -145,7 +145,7 @@ Menu
 }
 .menu_link-sub .menu_link{
   line-height: 25px;
-  width: 80px;
+  min-width: 80px;
 }
 .menu_active,
 .menu_link:hover {
