@@ -151,25 +151,36 @@ Panels
 }
 
 .home_card {
-  width: 470px;
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-column-gap: 50px;
+  height: 500px;
 }
-.home_card > div:not(:last-child) {
-  margin-bottom: 15px;
+.home_card > div {
+  padding: 15px;
 }
-.home_card .card_header h2 {
-  text-align: left;
+.home_header {
+  text-align: center;
 }
-.home_card .home_content {
-  text-align: left;
-  font-size: 20px;
+.content_image {
+  padding: 30px;
 }
-.home_card .home_content > p:not(:last-child) {
+.content_picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.portfolio >div:not(:last-child) {
+  margin-bottom: 20px;
+}
+.portfolio_content {
+  font-size: 1.25em;
+}
+.portfolio_content > p:not(:last-child) {
   margin-bottom: 10px;
 }
-
 .card_tech {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .show_projects {
@@ -229,7 +240,6 @@ Card
   width: 1050px;
   height: 500px;
 }
-
 .grid_normal {
   grid-template-areas: 'col1 col2'
 }
@@ -242,20 +252,10 @@ Card
 .grid_two {
   grid-area: col2;
 }
-
 .card_ui {
   padding: 15px;
   box-sizing: border-box;
   text-align: center;
-}
-.content_image {
-  padding: 30px;
-}
-.content_picture {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  overflow: hidden;
 }
 .card_header {
   margin-bottom: 15px;
@@ -282,7 +282,6 @@ Card
 .content_list ul li:not(:last-child) {
   margin-bottom: 5px;
 }
-
 .project_image {
   overflow: hidden;
   height: 500px;
@@ -323,8 +322,8 @@ Common classes
 
 .flex_ui {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .tech_icon {
