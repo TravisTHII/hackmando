@@ -5,6 +5,7 @@ import { useHistory } from 'react-router'
 import { useGlobalContext } from '../../../context/Global'
 
 import { BuiltWith } from '../../BuiltWith'
+import { Pane } from '../Includes'
 
 export function Home() {
 
@@ -25,10 +26,7 @@ export function Home() {
   }
 
   return (
-    <div
-      className={`home panel${home.state ? '' : ' hide_panel'}`}
-      style={{ zIndex: home.stack }}
-    >
+    <Pane panel={home}>
       <div className="container flex_ui">
 
         <div className="card grid_normal">
@@ -85,6 +83,6 @@ export function Home() {
         </div>
 
       </div>
-    </div>
+    </Pane>
   )
 }

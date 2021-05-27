@@ -13,7 +13,13 @@ export type Panels = {
   [key: string]: {
     state: boolean
     stack: number
+    color: string
   }
+}
+
+export type Main = {
+  panel: string
+  color: string
 }
 
 export type Project = {
@@ -25,6 +31,7 @@ export type Project = {
   projectUrl: string
   reversed: boolean
   image: string
+  color: string
   builtWith: string[]
   clientLink: ClientLink
 }

@@ -12,15 +12,13 @@ import '../../style/App.css'
 export function App() {
   return (
     <GlobalProvider>
-      <div className="App">
-        <Router>
-          <Header />
-          <Switch>
-            <Route path="/" component={Panels} />
-            <Route component={NotFound} />
-          </Switch>
-        </Router>
-      </div>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" component={Panels} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
     </GlobalProvider>
   )
 }

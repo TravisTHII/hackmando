@@ -1,15 +1,10 @@
-import { Panels, Project } from "../context/Global"
+import { Main, Panels, Project } from "../context/Global"
 
-export const generatePanels = (main: string[], projects: Project[]) => {
+export const generatePanels = (main: Main[], projects: Project[]) => {
 
   const copy = [...main]
 
-  const a: string[] = []
-
-  for (const i of projects)
-    a.push(i.panel)
-
-  copy.splice(1, 0, ...a)
+  copy.splice(1, 0, ...projects)
 
   const length = copy.length
 
@@ -18,7 +13,11 @@ export const generatePanels = (main: string[], projects: Project[]) => {
   const panels: Panels = {}
 
   for (const [i, v] of copy.entries())
-    panels[v] = { stack: range[i] + 1, state: true }
+    panels[v.panel] = {
+      stack: range[i] + 1,
+      state: true,
+      color: v.color
+    }
 
   return panels
 }

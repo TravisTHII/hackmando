@@ -2,8 +2,14 @@ import { generatePanels } from '../../utils'
 import { Project } from './types'
 
 const main = [
-  'home',
-  'about'
+  {
+    panel: 'home',
+    color: '#007ee4'
+  },
+  {
+    panel: 'about',
+    color: 'var(--gray)'
+  }
 ]
 
 export const projects: Project[] = [
@@ -24,6 +30,7 @@ export const projects: Project[] = [
     projectUrl: 'https://react-comments.netlify.app',
     reversed: false,
     image: 'comments',
+    color: '#6100b1',
     builtWith: [
       'React',
       'MongoDB',
@@ -48,6 +55,7 @@ export const projects: Project[] = [
     projectUrl: 'https://pocketmonsters-search.netlify.app',
     reversed: true,
     image: 'pokesearch',
+    color: '#bf0069',
     builtWith: [
       'React',
       'Typescript',

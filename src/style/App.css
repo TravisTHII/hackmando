@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --blue: #007ee4;
-  --purple: #6100b1;
-  --green: #0cc02a;
-  --pink: #bf0069;
-  --red: #9a0909;
-  --orange: #d67500;
   --gray: #1a1a1a;
   --white: #fff;
 }
@@ -49,36 +43,6 @@ img {
 
 *:focus {
   outline-color: var(--white);
-}
-
-.App {
-  width: 100%;
-  height: 100vh;
-  background-color:var(--gray);
-}
-
-#Panels {
-  width: inherit;
-  height: inherit;
-  position: relative;
-}
-
-.panel {
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: top .9s cubic-bezier(0.825, 0, 0.5, 1);
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.hide_panel {
-  top: -100%;
 }
 
 /*
@@ -169,8 +133,38 @@ Panels
 ===============
 */
 
-.home {
-  background-color: var(--blue);
+.panel {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: top .9s cubic-bezier(0.825, 0, 0.5, 1);
+  background-color: var(--gray);
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.hide_panel {
+  top: -100%;
+}
+
+.home_card {
+  width: 470px;
+}
+.home_card > div:not(:last-child) {
+  margin-bottom: 15px;
+}
+.home_card .card_header h2 {
+  text-align: left;
+}
+.home_card .home_content {
+  text-align: left;
+  font-size: 20px;
+}
+.home_card .home_content > p:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .card_tech {
@@ -198,26 +192,6 @@ Panels
   font-weight: 700;
 }
 
-.comments {
-  background-color: var(--purple);
-}
-
-.search {
-  background-color: var(--pink);
-}
-
-.queue {
-  background-color: var(--orange);
-}
-
-.discover {
-  background-color: var(--red);
-}
-
-.about {
-  background-color: var(--gray);
-}
-
 .about_panel {
   width: 900px;
   height: 500px;
@@ -240,30 +214,6 @@ Panels
 .tag-line {
   color: var(--white);
   margin-top: 50px;
-}
-
-/*
-===============
-Not found page
-===============
-*/
-
-#not_found {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.not_found_message {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.go_home {
-  color: var(--red);
-}
-.is_not_found {
-  position: absolute !important;
-  background-color: transparent !important;
 }
 
 /*
@@ -343,25 +293,26 @@ Card
 
 /*
 ===============
-Individual cards
+Not found page
 ===============
 */
 
-.home_card {
-  width: 470px;
+#not_found {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.home_card > div:not(:last-child) {
-  margin-bottom: 15px;
+.not_found_message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-.home_card .card_header h2 {
-  text-align: left;
+.go_home {
+  color: var(--red);
 }
-.home_card .home_content {
-  text-align: left;
-  font-size: 20px;
-}
-.home_card .home_content > p:not(:last-child) {
-  margin-bottom: 10px;
+.is_not_found {
+  position: absolute !important;
+  background-color: transparent !important;
 }
 
 /*
@@ -424,22 +375,10 @@ Responsiveness
 }
 
 @media only screen and (min-width: 1920px) {
-  #HackManDo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: var(--gray);
-  }
-
-  .App {
-    position: relative;
-    background-color: var(--gray);
-  }
-
   #Panels {
-    height: 100%;
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color:var(--gray);
   }
 }
 
@@ -522,7 +461,7 @@ Responsiveness
 @media only screen and (max-width: 1550px) {
   .header {
     position: initial;
-    background-color: var(--blue);
+    background-color: #007ee4;
   }
 
   .menu {

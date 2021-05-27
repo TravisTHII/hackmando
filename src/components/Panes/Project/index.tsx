@@ -3,6 +3,7 @@ import React from 'react'
 import { useGlobalContext } from '../../../context/Global'
 
 import { BuiltWith } from '../../BuiltWith'
+import { Pane } from '../Includes'
 
 import { Props } from './types'
 
@@ -21,10 +22,7 @@ export function Project({
   const { panels } = useGlobalContext()
 
   return (
-    <div
-      className={`${panel} panel${panels[panel].state ? '' : ' hide_panel'}`}
-      style={{ zIndex: panels[panel].stack }}
-    >
+    <Pane panel={panels[panel]}>
       <div className="container flex_ui">
 
         <div className={`card ${reversed ? 'grid_reverse' : 'grid_normal'}`}>
@@ -66,6 +64,6 @@ export function Project({
         </div>
 
       </div>
-    </div>
+    </Pane>
   )
 }
