@@ -129,50 +129,37 @@ Menu
   top: 30%;
   left: 0;
   z-index: 10;
-}
-.menu .menu_container {
   color: rgba(255, 255, 255, .5);
   font-size: 2rem;
 }
 .menu_list {
   padding-left: 35px;
 }
-.menu_item {
-  display: flex;
-  align-items: center;
-  min-height: 40px;
-  text-align: left;
+.menu_list > li:not(:last-child) {
+  margin-bottom: 10px;
 }
-.menu_link-sub .menu_link{
-  line-height: 25px;
-  min-width: 80px;
+.menu_item,
+.sub_menu_item {
+  line-height: 40px;
 }
 .menu_active,
 .menu_link:hover {
   color: var(--white);
 }
-.menu_item:not(:last-child) {
-  margin-bottom: 9px;
-}
 .sub_menu {
   display: block;
 }
-.sub_menu > span {
-  display: block;
+.sub_menu_item {
   margin-bottom: 5px;
 }
-.projects_list {
+.sub_menu_list {
+  font-size: 1rem;
   padding-left: 15px;
 }
-.sub_list {
-  font-size: 1rem;
+.sub_menu_list > li {
+  line-height: 30px;
 }
-.sub_list > li {
-  height: 30px;
-  display: flex;
-  align-items: center;
-}
-.sub_list > li:not(:last-child) {
+.sub_menu_list > li:not(:last-child) {
   margin-bottom: 5px;
 }
 

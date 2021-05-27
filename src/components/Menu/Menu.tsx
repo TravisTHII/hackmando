@@ -1,69 +1,31 @@
 import React from 'react'
 
-import { useGlobalContext, ClientLink } from '../../context/Global'
-
 import { MenuLink } from './MenuLink'
+import { SubMenu } from './SubMenu'
 
-export function Menu() {
+export const Menu = () =>
+  <div className="menu">
 
-  const { projects } = useGlobalContext()
+    <ul className="menu_list">
 
-  const subMenu: ClientLink[] = []
+      <li className="menu_item">
+        <MenuLink
+          name="Home"
+          slug="home"
+          url="/home"
+        />
+      </li>
 
-  projects.forEach(p => {
-    subMenu.push(p.clientLink)
-  })
+      <SubMenu />
 
-  const w = /\/projects\/(\w+)/.test(window.location.pathname)
+      <li className="menu_item">
+        <MenuLink
+          name="About"
+          slug="about"
+          url="/about"
+        />
+      </li>
 
-  return (
-    <div className="menu">
-      <div className="menu_container">
+    </ul>
 
-        <ul className="menu_list">
-
-          <li className="menu_item">
-            <MenuLink
-              name="Home"
-              slug="home"
-              url="/home"
-            />
-          </li>
-
-          <li className="menu_item sub_menu">
-            <span className="menu_item">
-              <MenuLink
-                name="Projects"
-                slug={subMenu[0].slug}
-                url={`/projects/${subMenu[0].slug}`}
-                active={w}
-              />
-            </span>
-
-            <ul className="projects_list sub_list">
-              {subMenu.map(({ name, slug, url }, i) => (
-                <li key={i} className="menu_link-sub">
-                  <MenuLink
-                    name={name}
-                    slug={slug}
-                    url={url}
-                  />
-                </li>
-              ))}
-            </ul>
-          </li>
-
-          <li className="menu_item">
-            <MenuLink
-              name="About"
-              slug="about"
-              url="/about"
-            />
-          </li>
-
-        </ul>
-
-      </div>
-    </div>
-  )
-}
+  </div>

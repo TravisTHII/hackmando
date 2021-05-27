@@ -15,10 +15,10 @@ export const generatePanels = (main: string[], projects: Project[]) => {
 
   const range = [...Array(length).keys()].reverse()
 
-  const o: Panels = {}
+  const panels: Panels = {}
 
   for (const [i, v] of copy.entries())
-    o[v] = { stack: range[i] + 1, state: true }
+    panels[v] = { stack: range[i] + 1, state: true }
 
-  return o
+  return panels
 }
