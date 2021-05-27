@@ -1,4 +1,4 @@
-import { Main, Panels, Project } from "../context/Global"
+import { Main, Panels, Project } from '../../context/Global'
 
 export const generatePanels = (main: Main[], projects: Project[]) => {
 

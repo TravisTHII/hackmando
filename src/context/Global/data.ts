@@ -1,4 +1,4 @@
-import { generatePanels } from '../../utils'
+import { generatePanels } from '../../utils/generatePanels'
 import { Project } from './types'
 
 const main = [

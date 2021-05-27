@@ -3,13 +3,13 @@ import React, { useEffect } from 'react'
 import { useGlobalContext } from '../../context/Global'
 
 import { Menu } from '../Menu'
-import { Home, Project, About } from '../Panes'
+import { Home, Project, About, Pane } from '../Panes'
 
 import { Props } from './types'
 
 export function Panels({ location: { pathname } }: Props) {
 
-  const { projects, currentPanel, opderPanels } = useGlobalContext()
+  const { panels, projects, currentPanel, opderPanels } = useGlobalContext()
 
   useEffect(() => {
     opderPanels()
@@ -20,14 +20,17 @@ export function Panels({ location: { pathname } }: Props) {
     <>
       <Menu />
       <div id="Panels">
-        <Home />
+        <Pane panel={panels['home']}>
+          <Home />
+        </Pane>
         {projects.map((project, i) => (
-          <Project
-            key={i}
-            {...project}
-          />
+          <Pane key={i} panel={panels[project.panel]}>
+            <Project {...project} />
+          </Pane>
         ))}
-        <About />
+        <Pane panel={panels['about']}>
+          <About />
+        </Pane>
       </div>
     </>
   )
