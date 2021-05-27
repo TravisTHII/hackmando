@@ -4,7 +4,9 @@ import { GlobalReducer } from './Reducer'
 
 import { DispatchName, InitialStateType, State } from './types'
 
-import { panels, projects } from './data'
+import { panels, main, projects } from './data'
+
+import { matchString } from '../../utils/matchString'
 
 const initialState: State = {
   currentPanel: 'home',
@@ -25,7 +27,7 @@ export const Provider: React.FC = ({ children }) => {
     let panel
 
     const location = window.location.pathname
-    const path = location.match(/home|projects|about/)
+    const path = location.match(matchString(main, 'projects'))
 
     if (path) {
 
@@ -33,7 +35,7 @@ export const Provider: React.FC = ({ children }) => {
 
       if (panel === 'projects') {
 
-        const x = location.match(/comments|search|queue|discover/)
+        const x = location.match(matchString(projects))
 
         if (x) {
 
