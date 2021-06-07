@@ -48,16 +48,18 @@ export const projects: Project[] = [
     panel: 'pokesearch',
     title: 'Pokésearch',
     subTitle: 'Pokémon search app',
-    description: 'Search & discover over 800 pokémon. powered by PokéAPI.',
+    description: 'Search & discover over 800 pokémon, powered by PokéAPI. Gotta Search ‘Em All!',
     bulletPoints: [
+      'Learn about your favorite pokémon',
       'Search by ID or Name',
       'Randomize pokémon to simplify discovery',
-      'Beautiful responsive design'
+      'Beautiful responsive design',
+      'React Query for simple data fetching logic',
     ],
     projectUrl: 'https://pocketmonsters-search.netlify.app',
     reversed: true,
     image: 'pokesearch',
-    color: '#bf0069',
+    color: '#ffcb05',
     builtWith: [
       'React',
       'Typescript',
