@@ -1,6 +1,6 @@
 import { DispatchName, State, Action } from './types'
 
-export const GlobalReducer = (state: State, action: Action) => {
+export const reducer = (state: State, action: Action) => {
   const { type, payload } = action
 
   if (type === DispatchName.ORDER_PANELS) {

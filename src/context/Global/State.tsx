@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useReducer } from 'react'
 
-import { GlobalReducer } from './Reducer'
+import { reducer } from './reducer'
 
 import { DispatchName, InitialStateType, State } from './types'
 
-import { panels, main, projects } from './data'
+import { panels, main, projects } from '../../data'
 
-import { matchString } from '../../utils/matchString'
+import { matchString } from '../../utils'
 
 const initialState: State = {
   currentPanel: 'home',
@@ -20,7 +20,7 @@ export const useGlobalContext = () => useContext(Context)
 
 export const Provider: React.FC = ({ children }) => {
 
-  const [state, dispatch] = useReducer(GlobalReducer, initialState)
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   const opderPanels = () => {
 

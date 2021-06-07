@@ -1,5 +1,6 @@
-import { generatePanels } from '../../utils/generatePanels'
-import { Project } from './types'
+import { generatePanels } from '../utils'
+
+import { Project } from '../types'
 
 export const main = [
   {
@@ -14,7 +15,7 @@ export const main = [
 
 export const projects: Project[] = [
   {
-    panel: 'comments',
+    panel: 'react-comments',
     title: 'React Comments',
     subTitle: 'Dynamic commenting application',
     description: 'Simple, Fully featured, comments built with react. engage with users, comment on posts and enjoy fun conversations.',
@@ -38,13 +39,13 @@ export const projects: Project[] = [
       'Node.js',
     ],
     clientLink: {
-      name: 'Comments',
-      slug: 'comments',
-      url: '/projects/comments'
+      name: 'React comments',
+      slug: 'react-comments',
+      url: '/projects/react-comments'
     }
   },
   {
-    panel: 'search',
+    panel: 'pokesearch',
     title: 'Pokésearch',
     subTitle: 'Pokémon search app',
     description: 'Search & discover over 800 pokémon. powered by PokéAPI.',
@@ -63,9 +64,9 @@ export const projects: Project[] = [
       'Node.js',
     ],
     clientLink: {
-      name: 'Search',
-      slug: 'search',
-      url: '/projects/search'
+      name: 'Pokésearch',
+      slug: 'pokesearch',
+      url: '/projects/pokesearch'
     }
   }
 ]

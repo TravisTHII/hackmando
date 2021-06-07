@@ -2,13 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { GlobalProvider } from '../../context/Global'
-import { main, projects } from '../../context/Global/data'
+import { main, projects } from '../../data'
 
 import { Header } from '../Header'
 import { Panels } from '../Panels'
 import { NotFound } from '../NotFound'
 
-import { matchString } from '../../utils/matchString'
+import { matchString } from '../../utils'
 
 import '../../style/App.css'
 

@@ -1,8 +1,10 @@
 import React from 'react'
 
-import { useGlobalContext, ClientLink } from '../../context/Global'
+import { useGlobalContext } from '../../context/Global'
 
 import { MenuLink } from './MenuLink'
+
+import { ClientLink } from '../../types'
 
 export function SubMenu() {
 
