@@ -1,7 +1,5 @@
-# HackManDo
-My personal portfolio 
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ae7e49f8-a0d3-4e56-bc9e-d1a07e049c0e/deploy-status)](https://hackmando.netlify.app)
+# HackManDo [![Netlify Status](https://api.netlify.com/api/v1/badges/ae7e49f8-a0d3-4e56-bc9e-d1a07e049c0e/deploy-status)](https://hackmando.netlify.app)
+My personal portfolio
 
 ## Installation
 
