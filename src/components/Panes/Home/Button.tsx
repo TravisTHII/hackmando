@@ -25,7 +25,7 @@ export function Button() {
         className="projects_btn"
         onClick={seeProjects}
       >
-        See projects
+        see projects
             <FaChevronDown />
       </button>
     </div>
