@@ -6,14 +6,17 @@ import { useGlobalContext } from '../../../context/Global'
 
 export function Button() {
 
-  const { updatePanel } = useGlobalContext()
+  const { updatePanel, projects } = useGlobalContext()
 
   const history = useHistory()
 
   const seeProjects = () => {
-    history.push('/projects/comments')
 
-    updatePanel('comments')
+    const firstProject = projects[0]
+
+    history.push(firstProject.clientLink.url)
+
+    updatePanel(firstProject.clientLink.slug)
   }
 
   return (

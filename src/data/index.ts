@@ -15,7 +15,7 @@ export const main = [
 
 export const projects: Project[] = [
   {
-    panel: 'react-comments',
+    panel: 'comments',
     title: 'React Comments',
     subTitle: 'Dynamic commenting application',
     description: 'Simple, Fully featured, comments built with react. engage with users, comment on posts and enjoy fun conversations.',
@@ -39,13 +39,13 @@ export const projects: Project[] = [
       'Node.js',
     ],
     clientLink: {
-      name: 'React comments',
-      slug: 'react-comments',
-      url: '/projects/react-comments'
+      name: 'Comments',
+      slug: 'comments',
+      url: '/projects/comments'
     }
   },
   {
-    panel: 'pokesearch',
+    panel: 'search',
     title: 'Pokésearch',
     subTitle: 'Pokémon search app',
     description: 'Search & discover over 800 pokémon, powered by PokéAPI. Gotta Search ‘Em All!',
@@ -66,9 +66,9 @@ export const projects: Project[] = [
       'Node.js',
     ],
     clientLink: {
-      name: 'Pokésearch',
-      slug: 'pokesearch',
-      url: '/projects/pokesearch'
+      name: 'Search',
+      slug: 'search',
+      url: '/projects/search'
     }
   }
 ]
