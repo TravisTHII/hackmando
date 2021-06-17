@@ -11,17 +11,17 @@ export type State = {
   projects: Project[]
 }
 
-export enum DispatchName {
+export enum Dispatch {
   ORDER_PANELS = 'ORDER_PANELS',
   UPDATE_PANEL = 'UPDATE_PANEL'
 }
 
 export type Action =
   | {
-    type: DispatchName.ORDER_PANELS
+    type: Dispatch.ORDER_PANELS
     payload: { panel: string }
   }
   | {
-    type: DispatchName.UPDATE_PANEL
+    type: Dispatch.UPDATE_PANEL
     payload: { panel: string }
   }

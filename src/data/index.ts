@@ -1,8 +1,8 @@
 import { generatePanels } from '../utils'
 
-import { Project } from '../types'
+import { Main, Project } from '../types'
 
-export const main = [
+export const main: Main[] = [
   {
     panel: 'home',
     color: '#007ee4'

@@ -1,25 +1,18 @@
-import { DispatchName, State, Action } from './types'
+import { Dispatch, State, Action } from './types'
+import { stackPanels } from '../../utils'
 
 export const reducer = (state: State, action: Action) => {
   const { type, payload } = action
 
-  if (type === DispatchName.ORDER_PANELS) {
-    const panels = { ...state.panels }
-
-    const s = panels[state.currentPanel].stack
-
-    for (const i of Object.values(panels)) {
-      i.state = (i.stack === s || i.stack < s) ? true : false
-    }
-
+  if (type === Dispatch.ORDER_PANELS) {
     return {
       ...state,
       currentPanel: payload.panel,
-      panels
+      panels: stackPanels(state.panels, state.currentPanel)
     }
   }
 
-  if (type === DispatchName.UPDATE_PANEL) {
+  if (type === Dispatch.UPDATE_PANEL) {
     return {
       ...state,
       currentPanel: payload.panel
