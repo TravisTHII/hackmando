@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 import { useGlobalContext } from '../../context/Global'
 
-import { Props } from './types'
+import { MenuLinkProps } from './types'
 
-export function MenuLink({ name, slug, url, active }: Props) {
+export function MenuLink({ name, slug, url, active }: MenuLinkProps) {
 
   const { currentPanel, updatePanel } = useGlobalContext()
 

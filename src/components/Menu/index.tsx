@@ -3,8 +3,10 @@ import React from 'react'
 import { MenuLink } from './MenuLink'
 import { SubMenu } from './SubMenu'
 
-export const Menu = () =>
-  <div className="menu">
+import { MenuProps } from './types'
+
+export const Menu = ({ isMobileMenu }: MenuProps) =>
+  <div className={`${isMobileMenu ? 'mobile_menu' : 'menu'}`}>
 
     <ul className="menu_list">
 

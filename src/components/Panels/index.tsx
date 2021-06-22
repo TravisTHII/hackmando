@@ -9,7 +9,7 @@ import { Props } from './types'
 
 export function Panels({ location: { pathname } }: Props) {
 
-  const { panels, projects, currentPanel, opderPanels } = useGlobalContext()
+  const { panels, projects, currentPanel, modelOpen, opderPanels } = useGlobalContext()
 
   useEffect(() => {
     opderPanels()
@@ -18,7 +18,7 @@ export function Panels({ location: { pathname } }: Props) {
 
   return (
     <>
-      <Menu />
+      <Menu isMobileMenu={false} />
       <div id="Panels">
         <Pane panel={panels['home']}>
           <Home />
@@ -31,6 +31,11 @@ export function Panels({ location: { pathname } }: Props) {
         <Pane panel={panels['about']}>
           <About />
         </Pane>
+      </div>
+      <div className={`menu_model ${modelOpen ? 'menu_open' : ''}`}>
+        <div className="menu_model_container flex_ui">
+          <Menu isMobileMenu={true} />
+        </div>
       </div>
     </>
   )

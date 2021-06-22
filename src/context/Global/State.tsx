@@ -11,7 +11,8 @@ import { getCurrentPanel } from '../../utils'
 const initialState: State = {
   currentPanel: 'home',
   panels,
-  projects
+  projects,
+  modelOpen: false
 }
 
 export const Context = createContext({} as InitialStateType)
@@ -40,11 +41,21 @@ export const Provider: React.FC = ({ children }) => {
     })
   }
 
+  const openMenu = () => {
+    dispatch({
+      type: Dispatch.OPEN_MENU,
+      payload: {
+        modelOpen: !state.modelOpen
+      }
+    })
+  }
+
   return (
     <Context.Provider value={{
       ...state,
       opderPanels,
-      updatePanel
+      updatePanel,
+      openMenu
     }}>
       {children}
     </Context.Provider>

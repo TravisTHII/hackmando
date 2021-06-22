@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import { FaCode, FaGithub } from 'react-icons/fa'
+
+import { HamburgerMenu } from './HamburgerMenu'
 
 export const Header = () =>
   <header className="header">
@@ -29,5 +30,6 @@ export const Header = () =>
           <FaCode />
         </a>
       </div>
+      <HamburgerMenu />
     </div>
   </header>
