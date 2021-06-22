@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer } from 'react'
 
 import { reducer } from './reducer'
 
-import { Dispatch, InitialStateType, State } from './types'
+import { InitialStateType, State } from './types'
 
 import { panels, main, projects } from '../../data'
 
@@ -25,7 +25,7 @@ export const Provider: React.FC = ({ children }) => {
 
   const opderPanels = () => {
     dispatch({
-      type: Dispatch.ORDER_PANELS,
+      type: 'ORDER_PANELS',
       payload: {
         panel: getCurrentPanel(main, projects)
       }
@@ -34,7 +34,7 @@ export const Provider: React.FC = ({ children }) => {
 
   const updatePanel = (panel: string) => {
     dispatch({
-      type: Dispatch.UPDATE_PANEL,
+      type: 'UPDATE_PANEL',
       payload: {
         panel
       }
@@ -43,7 +43,7 @@ export const Provider: React.FC = ({ children }) => {
 
   const openMenu = () => {
     dispatch({
-      type: Dispatch.OPEN_MENU,
+      type: 'OPEN_MENU',
       payload: {
         modelOpen: !state.modelOpen
       }

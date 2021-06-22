@@ -1,9 +1,9 @@
-import { Dispatch, State, Action } from './types'
+import { State, Action } from './types'
 import { stackPanels } from '../../utils'
 
 export const reducer = (state: State, action: Action) => {
 
-  if (action.type === Dispatch.ORDER_PANELS) {
+  if (action.type === 'ORDER_PANELS') {
     return {
       ...state,
       currentPanel: action.payload.panel,
@@ -11,14 +11,14 @@ export const reducer = (state: State, action: Action) => {
     }
   }
 
-  if (action.type === Dispatch.UPDATE_PANEL) {
+  if (action.type === 'UPDATE_PANEL') {
     return {
       ...state,
       currentPanel: action.payload.panel
     }
   }
 
-  if (action.type === Dispatch.OPEN_MENU) {
+  if (action.type === 'OPEN_MENU') {
     return {
       ...state,
       modelOpen: action.payload.modelOpen
