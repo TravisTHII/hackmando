@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from 'react'
+import React, { createContext, useContext, useReducer, useCallback } from 'react'
 
 import { reducer } from './reducer'
 
@@ -23,14 +23,13 @@ export const Provider: React.FC = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  const opderPanels = () => {
+  const orderPanels = useCallback(() =>
     dispatch({
       type: 'ORDER_PANELS',
       payload: {
         panel: getCurrentPanel(main, projects)
       }
-    })
-  }
+    }), [])
 
   const updatePanel = (panel: string) => {
     dispatch({
@@ -53,7 +52,7 @@ export const Provider: React.FC = ({ children }) => {
   return (
     <Context.Provider value={{
       ...state,
-      opderPanels,
+      orderPanels,
       updatePanel,
       openMenu
     }}>

@@ -22,7 +22,7 @@ export const generatePanels = (main: Main[], projects: Project[]) => {
   return panels
 }
 
-export const matchString = (array: { panel: string }[], d = '') => {
+export const unionString = (array: { panel: string }[], d = '') => {
   const a: string[] = []
 
   if (d) a.push(d)
@@ -44,10 +44,11 @@ export const stackPanels = (panels: Panels, currentPanel: string) => {
 }
 
 export const getCurrentPanel = (main: Main[], projects: Project[]) => {
-  let panel
+  let panel: string
 
   const location = window.location.pathname
-  const path = location.match(matchString(main, 'projects'))
+
+  const path = location.match(unionString(main, 'projects'))
 
   if (path) {
 
@@ -55,19 +56,15 @@ export const getCurrentPanel = (main: Main[], projects: Project[]) => {
 
     if (panel === 'projects') {
 
-      const x = location.match(matchString(projects))
+      const p = location.match(unionString(projects))
 
-      if (x) {
-
-        panel = x[0]
-
-      }
+      if (p) panel = p[0]
 
     }
 
   } else {
 
-    panel = 'home'
+    panel = main[0].panel
 
   }
 

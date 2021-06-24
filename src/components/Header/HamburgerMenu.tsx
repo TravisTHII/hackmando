@@ -8,10 +8,10 @@ export const HamburgerMenu = () => {
   const { openMenu } = useGlobalContext()
 
   return (
-    <div className="hamburger_menu">
+    <div className="icon flex_ui hamburger_menu">
       <button
         className="menu_button flex_ui"
-        onClick={() => openMenu()}
+        onClick={openMenu}
       >
         <FiMenu />
       </button>

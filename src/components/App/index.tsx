@@ -8,7 +8,7 @@ import { Header } from '../Header'
 import { Panels } from '../Panels'
 import { NotFound } from '../NotFound'
 
-import { matchString } from '../../utils'
+import { unionString } from '../../utils'
 
 import '../../style/App.css'
 
@@ -17,8 +17,8 @@ export const App = () =>
     <Router>
       <Header />
       <Switch>
-        <Route path={`/(|${matchString(main)})`} component={Panels} />
-        <Route path={`/projects/(${matchString(projects)})`} component={Panels} />
+        <Route path={`/(|${unionString(main)})`} component={Panels} />
+        <Route path={`/projects/(${unionString(projects)})`} component={Panels} />
         <Route component={NotFound} />
       </Switch>
     </Router>

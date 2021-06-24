@@ -29,7 +29,7 @@ export const Header = () =>
         >
           <FaCode />
         </a>
+        <HamburgerMenu />
       </div>
-      <HamburgerMenu />
     </div>
   </header>

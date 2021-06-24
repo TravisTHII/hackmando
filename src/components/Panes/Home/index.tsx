@@ -6,7 +6,7 @@ import { Button } from './Button'
 import { skills } from './skills'
 
 export const Home = () =>
-  <div className="container flex_ui">
+  <div className="home_card_container container flex_ui">
 
     <div className="home_card">
 

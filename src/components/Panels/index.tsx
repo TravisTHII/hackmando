@@ -9,12 +9,11 @@ import { Props } from './types'
 
 export function Panels({ location: { pathname } }: Props) {
 
-  const { panels, projects, currentPanel, modelOpen, opderPanels } = useGlobalContext()
+  const { panels, projects, currentPanel, modelOpen, orderPanels } = useGlobalContext()
 
   useEffect(() => {
-    opderPanels()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentPanel, pathname])
+    orderPanels()
+  }, [currentPanel, pathname, orderPanels])
 
   return (
     <>
@@ -32,11 +31,13 @@ export function Panels({ location: { pathname } }: Props) {
           <About />
         </Pane>
       </div>
-      <div className={`menu_model ${modelOpen ? 'menu_open' : ''}`}>
-        <div className="menu_model_container flex_ui">
-          <Menu isMobileMenu={true} />
+      {modelOpen &&
+        <div className="menu_model">
+          <div className="menu_model_container flex_ui">
+            <Menu isMobileMenu={true} />
+          </div>
         </div>
-      </div>
+      }
     </>
   )
 }

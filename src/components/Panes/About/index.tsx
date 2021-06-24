@@ -26,12 +26,6 @@ export const About = () =>
         </a>
       </div>
 
-      <div className="tag-line">
-        <p title="HackManDo, portfolio">
-          {`HackManDo © ${new Date().getFullYear()}`}
-        </p>
-      </div>
-
     </div>
 
   </div>

@@ -1,7 +1,7 @@
 import { Panels, Project } from '../../types'
 
 export type InitialStateType = {
-  opderPanels: () => void
+  orderPanels: () => void
   updatePanel: (panel: string) => void
   openMenu: () => void
 } & State
