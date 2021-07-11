@@ -10,7 +10,7 @@ export const Home = () =>
 
     <div className="home_card">
 
-      <div>
+      <div className="developer">
         <div className="home_header">
           <h1>Travis Hackney</h1>
           <p>Web Developer</p>
@@ -42,7 +42,7 @@ export const Home = () =>
             I love how programming enables me to solve problems.
           </p>
         </div>
-        <div className="card_tech flex_ui">
+        <div className="card_tech">
           <BuiltWith builtWith={skills} />
         </div>
       </div>

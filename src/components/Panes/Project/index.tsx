@@ -19,7 +19,7 @@ export const Project = ({
 
     <div className={`card ${reversed ? 'grid_reverse' : 'grid_normal'}`}>
 
-      <div className="grid_one card_ui flex-column">
+      <div className="grid_one card_ui flex_column">
         <div className="content_header">
           <h1>{title}</h1>
           <p>{subTitle}</p>

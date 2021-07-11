@@ -137,6 +137,9 @@ Menu
   color: rgba(255, 255, 255, .5);
   font-size: 2rem;
 }
+.mobile_menu > ul {
+  padding-left: unset;
+}
 
 .menu_model {
   display: block;
@@ -144,7 +147,7 @@ Menu
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 26, 26, .7);
+  background-color: rgba(26, 26, 26, .9);
   z-index: 998;
 }
 .menu_model .menu_model_container {
@@ -162,7 +165,6 @@ Panels
   height: 100vh;
   position: relative;
 }
-
 .panel {
   top: 0;
   width: 100%;
@@ -172,7 +174,6 @@ Panels
   background-color: var(--gray);
 }
 .container {
-  width: 100%;
   height: 100%;
 }
 .hide_panel {
@@ -184,12 +185,16 @@ Panels
 }
 .home_card {
   display: grid;
+  grid-template-areas: 'col1 col2';
   grid-template-columns: repeat(2, 500px);
-  grid-column-gap: 50px;
+  grid-gap: 50px;
   height: 500px;
 }
 .home_card > div {
   padding: 15px;
+}
+.home_card .developer {
+  grid-area: col1;
 }
 .home_header {
   text-align: center;
@@ -203,7 +208,10 @@ Panels
   border-radius: 100%;
   overflow: hidden;
 }
-.portfolio >div:not(:last-child) {
+.portfolio {
+  grid-area: col2;
+}
+.portfolio > div:not(:last-child) {
   margin-bottom: 20px;
 }
 .portfolio_content {
@@ -214,6 +222,7 @@ Panels
 }
 .card_tech {
   justify-content: space-between;
+  text-align: center;
 }
 .show_projects {
   width: 100%;
@@ -236,14 +245,20 @@ Panels
 }
 
 .about_panel {
-  width: 900px;
-  height: 500px;
+  height: 100%;
 }
 .about_content {
   display: grid;
   justify-content: center;
+  grid-template-areas: 'col1 col2';
   grid-template-columns: repeat(2, 200px);
   grid-gap: 50px;
+}
+.about_content .abt_col1 {
+  grid-area: col1;
+}
+.about_content .abt_col2 {
+  grid-area: col2;
 }
 .about_content a {
   color: var(--white);
@@ -263,7 +278,7 @@ Card
 .card {
   display: grid;
   grid-template-columns: repeat(2, 500px);
-  grid-column-gap: 50px;
+  grid-gap: 50px;
   width: 1050px;
   height: 500px;
 }
@@ -352,6 +367,12 @@ Common classes
   justify-content: center;
 }
 
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .tech_icon {
   color: var(--white);
   font-size: 3rem;
@@ -359,6 +380,7 @@ Common classes
   height: 50px;
   padding: 5px;
   box-sizing: border-box;
+  display: inline-flex;
 }
 
 .text_ui {
@@ -379,12 +401,6 @@ Common classes
   color: #0a0a0a; 
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 /*
 ===============
 Responsiveness
@@ -392,46 +408,71 @@ Responsiveness
 */
 
 /* Smaller than */
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1550px) {
   .menu {
     display: none;
   }
+}
 
-  .container {
-    overflow-y: scroll;
+@media only screen and (max-width: 1050px) {
+  .panel {
     padding-top: 90px;
     box-sizing: border-box;
   }
 
-  .home_card_container {
-    flex-direction: column;
-  }
   .home_card {
-    height: unset;
     width: 500px;
-    grid-template-rows: repeat(2, auto);
+    height: 1050px;
+    grid-template-areas: 'col1' 'col2';
     grid-template-columns: unset;
+    grid-template-rows: .5fr 1fr;
   }
   .show_projects {
-    position: unset;
+    display: none;
+  }
+
+  .container {
+    align-items: unset;
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: scroll;
+  }
+
+  .card {
+    width: 500px;
+    height: 1050px;
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 2fr;
+    margin-bottom: 50px;
+  }
+
+  .grid_normal {
+    grid-template-areas: 'col1' 'col2'
+  }
+  .grid_reverse {
+    grid-template-areas: 'col2' 'col1'
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .about_content {
-    grid-template-columns: unset;
-    grid-template-rows: repeat(2, auto);
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+  .header .icons_container .icon {
+    width: 50px;
+    font-size: 1.5rem;
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .home_card {
-    width: 100%;
+@media only screen and (max-width: 450px) {
+  .about_content {
+    grid-template-columns: unset;
+    grid-template-areas: 'col1' 'col2';
   }
 }
 
 /* Larger than */
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1550px) { 
   .hamburger_menu {
     display: none;
   }

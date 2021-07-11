@@ -12,6 +12,7 @@ export const About = () =>
           href="https://www.linkedin.com/in/travis-hackney-8b7805207/"
           target="_blank"
           rel="noopener noreferrer"
+          className="abt_col1"
         >
           <FaLinkedin />
           <p>LinkedIn</p>
@@ -20,6 +21,7 @@ export const About = () =>
           href="https://www.linkedin.com/in/travis-hackney-8b7805207/"
           target="_blank"
           rel="noopener noreferrer"
+          className="abt_col2"
         >
           <ImFileText2 />
           <p>Resume</p>

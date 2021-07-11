@@ -9,7 +9,7 @@ import { Props } from './types'
 
 export function Panels({ location: { pathname } }: Props) {
 
-  const { panels, projects, currentPanel, modelOpen, orderPanels } = useGlobalContext()
+  const { panels, projects, currentPanel, modelOpen, orderPanels, openMenu } = useGlobalContext()
 
   useEffect(() => {
     orderPanels()
@@ -32,7 +32,10 @@ export function Panels({ location: { pathname } }: Props) {
         </Pane>
       </div>
       {modelOpen &&
-        <div className="menu_model">
+        <div
+          className="menu_model"
+          onClick={openMenu}
+        >
           <div className="menu_model_container flex_ui">
             <Menu isMobileMenu={true} />
           </div>
