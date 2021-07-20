@@ -10,7 +10,7 @@ export type State = {
   currentPanel: string
   panels: Panels
   projects: Project[]
-  modelOpen: boolean
+  modalOpen: boolean
 }
 
 export type Action =
@@ -24,5 +24,5 @@ export type Action =
   }
   | {
     type: 'OPEN_MENU'
-    payload: { modelOpen: boolean }
+    payload: { modalOpen: boolean }
   }

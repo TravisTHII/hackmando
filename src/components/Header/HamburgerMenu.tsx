@@ -8,13 +8,13 @@ export const HamburgerMenu = () => {
   const { openMenu } = useGlobalContext()
 
   return (
-    <div className="icon flex_ui hamburger_menu">
-      <button
-        className="menu_button flex_ui"
-        onClick={openMenu}
-      >
+    <button
+      className="icon hamburger_menu"
+      onClick={openMenu}
+    >
+      <div className="flex_ui">
         <FiMenu />
-      </button>
-    </div>
+      </div>
+    </button>
   )
 }

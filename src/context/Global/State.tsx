@@ -12,7 +12,7 @@ const initialState: State = {
   currentPanel: 'home',
   panels,
   projects,
-  modelOpen: false
+  modalOpen: false
 }
 
 export const Context = createContext({} as InitialStateType)
@@ -44,7 +44,7 @@ export const Provider: React.FC = ({ children }) => {
     dispatch({
       type: 'OPEN_MENU',
       payload: {
-        modelOpen: !state.modelOpen
+        modalOpen: !state.modalOpen
       }
     })
   }

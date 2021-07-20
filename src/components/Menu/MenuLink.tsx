@@ -10,7 +10,7 @@ export function MenuLink({ name, slug, url, active }: MenuLinkProps) {
   const { currentPanel, updatePanel } = useGlobalContext()
 
   const newPanel = (e: React.MouseEvent) => {
-    const r = new RegExp(`${url}`)
+    const r = new RegExp(/^`${url}`$/)
 
     if (r.test(window.location.pathname)) e.preventDefault()
 

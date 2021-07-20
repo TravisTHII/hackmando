@@ -21,7 +21,7 @@ export const reducer = (state: State, action: Action) => {
   if (action.type === 'OPEN_MENU') {
     return {
       ...state,
-      modelOpen: action.payload.modelOpen
+      modalOpen: action.payload.modalOpen
     }
   }
 
