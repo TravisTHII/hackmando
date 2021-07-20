@@ -317,6 +317,12 @@ Card
 .grid_two {
   grid-area: col2;
 }
+.white_border {
+  border: 2px solid #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  max-height: 500px;
+}
 .card_header {
   margin-bottom: 15px;
 }
@@ -343,8 +349,8 @@ Card
   margin-bottom: 5px;
 }
 .project_image {
-  height: 500px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
 }
 
 /*
@@ -456,7 +462,7 @@ Responsiveness
 
   .card {
     width: 500px;
-    height:fit-content;
+    height: auto;
     grid-template-columns: unset;
     margin-bottom: 50px;
   }
@@ -480,11 +486,6 @@ Responsiveness
   .card {
     width: 100%;
   }
-
-  .project_image {
-    width: 100%;
-    height: fit-content;
-  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -493,7 +494,7 @@ Responsiveness
   }
 
   .grid_one {
-    height: fit-content;
+    height: auto;
   }
   .grid_one > div:not(:last-child) {
     margin-bottom: 25px;

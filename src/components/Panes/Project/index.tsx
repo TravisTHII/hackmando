@@ -43,7 +43,7 @@ export const Project = ({
           </div>
         </div>
 
-        <div className="grid_two">
+        <div className="grid_two white_border">
           <a
             href={projectUrl}
             target="_blank"
