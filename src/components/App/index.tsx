@@ -12,14 +12,18 @@ import { unionString } from '../../utils'
 
 import '../../style/App.css'
 
-export const App = () =>
+export const App = () => (
   <GlobalProvider>
     <Router>
       <Header />
       <Switch>
         <Route path={`/(|${unionString(main)})`} component={Panels} />
-        <Route path={`/projects/(${unionString(projects)})`} component={Panels} />
+        <Route
+          path={`/projects/(${unionString(projects)})`}
+          component={Panels}
+        />
         <Route component={NotFound} />
       </Switch>
     </Router>
   </GlobalProvider>
+)

@@ -13,15 +13,12 @@ export const Project = ({
   projectUrl,
   reversed,
   image,
-  builtWith
-}: Props) =>
+  builtWith,
+}: Props) => (
   <div className="panel_container">
-
     <div className="panel_content flex_ui">
-
-      <div className={`card ${reversed ? 'grid_reverse' : 'grid_normal'}`}>
-
-        <div className="grid_one flex_column">
+      <div className={`card ${reversed ? 'flex_reverse' : 'flex_normal'}`}>
+        <div className="card_one flex_column">
           <div className="content_header">
             <h1>{title}</h1>
             <p>{subTitle}</p>
@@ -43,20 +40,17 @@ export const Project = ({
           </div>
         </div>
 
-        <div className="grid_two white_border">
-          <a
-            href={projectUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className="card_two white_border">
+          <a href={projectUrl} target="_blank" rel="noopener noreferrer">
             <div className="project_image">
-              <img src={`../images/${image}.png`} alt={`react ${panel} project`} />
+              <img
+                src={`../images/${image}.png`}
+                alt={`react ${panel} project`}
+              />
             </div>
           </a>
         </div>
-
       </div>
-
     </div>
-
   </div>
+)
