@@ -8,7 +8,6 @@ import { HamburgerMenu } from './HamburgerMenu'
 import { MenuModal } from '../Menu'
 
 export function Header() {
-
   const { modalOpen } = useGlobalContext()
 
   return (
@@ -16,7 +15,7 @@ export function Header() {
       <header className="header">
         <div className="header_container flex_ui">
           <div className="logo">
-            <Link to="/">
+            <Link to="/" replace>
               <h1>HackManDo</h1>
             </Link>
           </div>

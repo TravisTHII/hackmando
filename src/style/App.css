@@ -137,7 +137,7 @@ Menu
 .mobile_menu {
   z-index: 999;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .mobile_menu > ul {
   padding-left: unset;
@@ -263,26 +263,24 @@ About Panel
 ===============
 */
 
-.about_panel {
-  height: 100%;
-}
 .about_content {
-  display: grid;
-  justify-content: center;
-  grid-template-areas: 'col1 col2';
-  grid-template-columns: repeat(2, 200px);
-  grid-gap: 50px;
-}
-.about_content .abt_col1 {
-  grid-area: col1;
-}
-.about_content .abt_col2 {
-  grid-area: col2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
 }
 .about_content a {
-  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 150px;
+  height: 200px;
   text-align: center;
   font-size: 9rem;
+  color: var(--white);
+}
+.about_content a span {
+  height: 150px;
 }
 .about_content p {
   font-size: 1.5rem;
@@ -465,6 +463,10 @@ Responsiveness
     margin-bottom: 50px;
     flex-direction: column;
   }
+
+  .about_panel {
+    height: 500px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -498,6 +500,15 @@ Responsiveness
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .about_content {
+    flex-direction: column;
+  }
+  .about_content > :first-child {
+    margin-bottom: 50px;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .content {
     font-size: 1rem;
@@ -508,10 +519,10 @@ Responsiveness
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 388px) {
+  .about_panel,
   .about_content {
-    grid-template-columns: unset;
-    grid-template-areas: 'col1' 'col2';
+    width: 100%;
   }
 }
 
