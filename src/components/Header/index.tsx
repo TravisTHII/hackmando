@@ -23,6 +23,7 @@ export function Header() {
             <a
               className="icon flex_ui"
               href="https://github.com/TravisTHII"
+              title="GitHub"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -31,6 +32,7 @@ export function Header() {
             <a
               className="icon flex_ui"
               href="https://github.com/TravisTHII/hackmando"
+              title="Project Code"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -44,8 +44,10 @@ export const Project = ({
           <a href={projectUrl} target="_blank" rel="noopener noreferrer">
             <div className="project_image">
               <img
-                src={`../images/${image}.png`}
+                src={image}
                 alt={`react ${panel} project`}
+                width="500"
+                height="500"
               />
             </div>
           </a>

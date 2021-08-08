@@ -31,7 +31,7 @@ export const projects: Project[] = [
     ],
     projectUrl: 'https://react-comments.netlify.app',
     reversed: false,
-    image: 'comments',
+    image: '/images/comments.jpg',
     color: '#6100b1',
     builtWith: ['React', 'Typescript', 'MongoDB', 'Node.js'],
     clientLink: {
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     ],
     projectUrl: 'https://pocketmonsters-search.netlify.app',
     reversed: true,
-    image: 'pokesearch',
+    image: '/images/pokesearch.jpg',
     color: '#ffcb05',
     builtWith: ['React', 'Typescript', 'Node.js'],
     clientLink: {
