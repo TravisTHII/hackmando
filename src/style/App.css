@@ -234,7 +234,14 @@ Home Panel
 .content > p:not(:last-child) {
   margin-bottom: 10px;
 }
-.tech_stack {
+.skills_header {
+  margin-bottom: 5px;
+}
+.skills_header p {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+.skills_list {
   text-align: center;
 }
 .show_projects {

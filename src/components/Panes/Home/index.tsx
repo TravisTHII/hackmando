@@ -40,8 +40,13 @@ export const Home = () => (
             </p>
             <p>I love how programming enables me to solve problems.</p>
           </div>
-          <div className="tech_stack">
-            <BuiltWith builtWith={skills} />
+          <div className="skills">
+            <div className="skills_header">
+              <p>Prominent skills</p>
+            </div>
+            <div className="skills_list">
+              <BuiltWith builtWith={skills} />
+            </div>
           </div>
         </div>
       </div>
