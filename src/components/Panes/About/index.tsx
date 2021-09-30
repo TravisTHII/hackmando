@@ -17,11 +17,7 @@ export const About = () => (
             </span>
             <p>LinkedIn</p>
           </a>
-          <a
-            href="https://www.linkedin.com/in/travis-hackney-8b7805207/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             <span className="flex_ui">
               <ImFileText2 />
             </span>
