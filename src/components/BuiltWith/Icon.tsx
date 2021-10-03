@@ -6,56 +6,22 @@ import { AiFillHtml5 } from 'react-icons/ai'
 import { IconProps } from './types'
 
 export function Icon({ name }: IconProps) {
-
   let icon
 
-  switch (name) {
-    case 'React':
-      icon =
-        <FaReact className="tech_icon" title={name} />
-      break
-    case 'Node.js':
-      icon =
-        <FaNodeJs className="tech_icon" title={name} />
-      break
-    case 'MongoDB':
-      icon =
-        <SiMongodb className="tech_icon" title={name} />
-      break
-    case 'Typescript':
-      icon =
-        <SiTypescript className="tech_icon" title={name} />
-      break
-    case 'HTML':
-      icon =
-        <AiFillHtml5 className="tech_icon" title={name} />
-      break
-    case 'CSS':
-      icon =
-        <FaCss3 className="tech_icon" title={name} />
-      break
-    case 'Javascript':
-      icon =
-        <SiJavascript className="tech_icon" title={name} />
-      break
-    case 'PHP':
-      icon =
-        <SiPhp className="tech_icon" title={name} />
-      break
-    case 'Redux':
-      icon =
-        <SiRedux className="tech_icon" title={name} />
-      break
-    case 'GraphQL':
-      icon =
-        <SiGraphql className="tech_icon" title={name} />
-      break
-    default: break
-  }
+  if (name === 'React') icon = <FaReact className="tech_icon" title={name} />
+  if (name === 'Node.js') icon = <FaNodeJs className="tech_icon" title={name} />
+  if (name === 'MongoDB')
+    icon = <SiMongodb className="tech_icon" title={name} />
+  if (name === 'Typescript')
+    icon = <SiTypescript className="tech_icon" title={name} />
+  if (name === 'HTML') icon = <AiFillHtml5 className="tech_icon" title={name} />
+  if (name === 'CSS') icon = <FaCss3 className="tech_icon" title={name} />
+  if (name === 'Javascript')
+    icon = <SiJavascript className="tech_icon" title={name} />
+  if (name === 'PHP') icon = <SiPhp className="tech_icon" title={name} />
+  if (name === 'Redux') icon = <SiRedux className="tech_icon" title={name} />
+  if (name === 'GraphQL')
+    icon = <SiGraphql className="tech_icon" title={name} />
 
-  return (
-    <>
-      {icon}
-    </>
-  )
+  return <>{icon}</>
 }
