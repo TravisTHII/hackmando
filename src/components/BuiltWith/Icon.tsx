@@ -1,6 +1,11 @@
 import { FaNodeJs, FaReact, FaCss3 } from 'react-icons/fa'
-import { SiMongodb, SiTypescript } from 'react-icons/si'
-import { SiGraphql, SiJavascript, SiPhp, SiRedux } from 'react-icons/si'
+import {
+  SiMongodb,
+  SiTypescript,
+  SiJavascript,
+  SiPhp,
+  SiPython,
+} from 'react-icons/si'
 import { AiFillHtml5 } from 'react-icons/ai'
 
 import { IconProps } from './types'
@@ -19,9 +24,7 @@ export function Icon({ name }: IconProps) {
   if (name === 'Javascript')
     icon = <SiJavascript className="tech_icon" title={name} />
   if (name === 'PHP') icon = <SiPhp className="tech_icon" title={name} />
-  if (name === 'Redux') icon = <SiRedux className="tech_icon" title={name} />
-  if (name === 'GraphQL')
-    icon = <SiGraphql className="tech_icon" title={name} />
+  if (name === 'Python') icon = <SiPython className="tech_icon" title={name} />
 
   return <>{icon}</>
 }

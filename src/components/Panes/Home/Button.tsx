@@ -5,13 +5,11 @@ import { FaChevronDown } from 'react-icons/fa'
 import { useGlobalContext } from '../../../context/Global'
 
 export function Button() {
-
   const { updatePanel, projects } = useGlobalContext()
 
   const history = useHistory()
 
   const seeProjects = () => {
-
     const firstProject = projects[0]
 
     history.push(firstProject.clientLink.url)
@@ -21,12 +19,9 @@ export function Button() {
 
   return (
     <div className="show_projects flex_ui">
-      <button
-        className="projects_btn"
-        onClick={seeProjects}
-      >
+      <button className="projects_btn" onClick={seeProjects}>
         see projects
-            <FaChevronDown />
+        <FaChevronDown />
       </button>
     </div>
   )
