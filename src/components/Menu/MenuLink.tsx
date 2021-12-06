@@ -1,19 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { useGlobalContext } from '../../context/Global'
 
 import { MenuLinkProps } from './types'
 
 export function MenuLink({ name, slug, url, active }: MenuLinkProps) {
-
   const { currentPanel, updatePanel } = useGlobalContext()
 
-  const newPanel = (e: React.MouseEvent) => {
+  const location = useLocation()
 
+  const newPanel = (e: React.MouseEvent) => {
     const r = new RegExp(url)
 
-    if (r.test(window.location.pathname)) e.preventDefault()
+    if (r.test(location.pathname)) e.preventDefault()
 
     updatePanel(slug)
   }
@@ -21,7 +21,9 @@ export function MenuLink({ name, slug, url, active }: MenuLinkProps) {
   return (
     <Link
       to={url}
-      className={`menu_link${(currentPanel === slug || active) ? ' menu_active' : ''}`}
+      className={`menu_link${
+        currentPanel === slug || active ? ' menu_active' : ''
+      }`}
       onClick={newPanel}
     >
       {name}

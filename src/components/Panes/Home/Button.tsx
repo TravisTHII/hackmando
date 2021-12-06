@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 import { FaChevronDown } from 'react-icons/fa'
 
 import { useGlobalContext } from '../../../context/Global'
@@ -7,12 +7,12 @@ import { useGlobalContext } from '../../../context/Global'
 export function Button() {
   const { updatePanel, projects } = useGlobalContext()
 
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const seeProjects = () => {
     const firstProject = projects[0]
 
-    history.push(firstProject.clientLink.url)
+    navigate(firstProject.clientLink.url)
 
     updatePanel(firstProject.clientLink.slug)
   }

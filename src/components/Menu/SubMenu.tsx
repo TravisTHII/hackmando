@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 import { useGlobalContext } from '../../context/Global'
 
@@ -7,16 +8,17 @@ import { MenuLink } from './MenuLink'
 import { ClientLink } from '../../types'
 
 export function SubMenu() {
-
   const { projects } = useGlobalContext()
+
+  const location = useLocation()
 
   const subMenu: ClientLink[] = []
 
-  projects.forEach(p => {
+  projects.forEach((p) => {
     subMenu.push(p.clientLink)
   })
 
-  const w = /\/projects\/(\w+)/.test(window.location.pathname)
+  const w = /\/projects\/(\w+)/.test(location.pathname)
 
   return (
     <li className="sub_menu">
@@ -32,11 +34,7 @@ export function SubMenu() {
       <ul className="sub_menu_list">
         {subMenu.map(({ name, slug, url }, i) => (
           <li key={i}>
-            <MenuLink
-              name={name}
-              slug={slug}
-              url={url}
-            />
+            <MenuLink name={name} slug={slug} url={url} />
           </li>
         ))}
       </ul>

@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import { useGlobalContext } from '../../context/Global'
 
 import { Menu } from '../Menu'
 import { Home, Project, About, Pane } from '../Panes'
 
-import { Props } from './types'
-
-export function Panels({ location: { pathname } }: Props) {
-
+export function Panels() {
   const { panels, projects, currentPanel, orderPanels } = useGlobalContext()
+
+  const { pathname } = useLocation()
 
   useEffect(() => {
     orderPanels()

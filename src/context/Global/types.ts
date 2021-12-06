@@ -15,14 +15,14 @@ export type State = {
 
 export type Action =
   | {
-    type: 'ORDER_PANELS'
-    payload: { panel: string }
-  }
+      type: 'ORDER_PANELS'
+      payload: { panel: string }
+    }
   | {
-    type: 'UPDATE_PANEL'
-    payload: { panel: string }
-  }
+      type: 'UPDATE_PANEL'
+      payload: { panel: string }
+    }
   | {
-    type: 'OPEN_MENU'
-    payload: { modalOpen: boolean }
-  }
+      type: 'OPEN_MENU'
+      payload: { modalOpen: boolean }
+    }
