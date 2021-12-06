@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --gray: #1a1a1a;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  color: var(--white);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+===============
+Header
+===============
+*/
+
+#header {
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+#header .header_container {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  flex-direction: column;
+}
+#header .header_container > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+}
+.logo {
+  font-weight: 500;
+}
+#header .header_container .header_icons_container {
+  display: flex;
+}
+#header .header_container .header_icon {
+  width: 90px;
+  height: 100%;
+}
+.stroke_small {
+  stroke-width: 0.07em;
+}
+
+#header nav ul {
+  display: flex;
+  justify-content: center;
+}
+#header nav ul li {
+  width: 100px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+#header nav ul li {
+  color: rgba(255, 255, 255, 0.5);
+}
+#header nav ul li a {
+  display: block;
+}
+#header nav ul li:hover,
+.link_active {
+  color: var(--white);
+}
+
+/*
+===============
+Slider
+===============
+*/
+
+#slider {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.panel {
+  min-width: 100%;
+  height: 100%;
+  display: block;
+}
+.home {
+  background-color: #007ee4;
+}
+.projects {
+  background-color: orange;
+}
+.about {
+  background-color: var(--gray);
+}
+
+/*
+===============
+Global
+===============
+*/
+
+.flex_ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
