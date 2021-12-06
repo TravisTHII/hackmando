@@ -4,9 +4,10 @@ export type InitialStateType = {
 
 export type State = {
   currentPanel: string
+  move: string
 }
 
 export type Action = {
   type: 'UPDATE_PANEL'
-  payload: { panel: string }
+  payload: { panel: string; move: string }
 }

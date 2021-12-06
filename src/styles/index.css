@@ -60,7 +60,7 @@ Header
 #header .header_container .header_icons_container {
   display: flex;
 }
-#header .header_container .header_icon {
+#header .header_container .header_icons_container .header_icon {
   width: 90px;
   height: 100%;
 }

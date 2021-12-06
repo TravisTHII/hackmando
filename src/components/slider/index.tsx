@@ -1,39 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import { useTransition, animated } from 'react-spring'
+import React from 'react'
+import { useSpring, animated } from 'react-spring'
 
 import { useGlobalContext } from '../../context/global'
 
 export const Slider = () => {
-  const [move, setMove] = useState('')
+  const { move } = useGlobalContext()
 
-  const { currentPanel } = useGlobalContext()
+  const [styles, api] = useSpring(() => ({
+    transform: `translate3d(0%, 0, 0)`,
+  }))
 
-  useEffect(() => {
-    switch (currentPanel) {
-      case 'home':
-        setMove('0%')
-        break
-      case 'projects':
-        setMove('-100%')
-        break
-      case 'about':
-        setMove('-200%')
-        break
-    }
+  // Update spring with new props
+  api.start({ transform: `translate3d(${move}, 0, 0)` })
 
-    return () => setMove('')
-  }, [currentPanel])
-
-  const transition = useTransition(move, {
-    from: { transform: `translate3d(${move}, 0, 0)` },
-    // leave: { transform: `translate3d(-100%, 0, 0)` },
-  })
-
-  return transition((style) => (
-    <animated.div id="slider" style={{ ...style }}>
+  return (
+    <animated.div id="slider" style={styles}>
       <div id="home" className="panel home"></div>
       <div id="projects" className="panel projects"></div>
       <div id="about" className="panel about"></div>
     </animated.div>
-  ))
+  )
 }

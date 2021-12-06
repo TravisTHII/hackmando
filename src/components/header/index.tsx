@@ -22,7 +22,11 @@ export const Header = () => {
           </div>
           <div className="header_icons_container">
             <IconContext.Provider
-              value={{ color: '#fff', size: '2rem', className: 'stroke_small' }}
+              value={{
+                color: '#fff',
+                size: '2rem',
+                className: 'stroke_small',
+              }}
             >
               <a
                 className="header_icon flex_ui"
