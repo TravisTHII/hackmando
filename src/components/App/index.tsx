@@ -9,6 +9,7 @@ import { NotFound } from '../NotFound'
 
 import '../../style/App.css'
 
+// HackmanDo v2
 export const App = () => (
   <GlobalProvider>
     <Router>
