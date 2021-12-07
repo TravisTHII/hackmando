@@ -2,8 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { GlobalProvider } from '../../context/global'
 
-import { Header } from '../header'
-import { Slider } from '../slider'
+import { Header, Slider, NotFound } from '../'
 
 export const App = () => (
   <GlobalProvider>
@@ -15,6 +14,7 @@ export const App = () => (
           <Route path="projects" element={<Slider />}></Route>
           <Route path="contact" element={<Slider />}></Route>
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   </GlobalProvider>
