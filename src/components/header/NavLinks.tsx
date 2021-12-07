@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useGlobalContext } from '../../context/global'
 
-import { linkSlugs } from './links'
+import { calcMove } from '../../utils'
 
 interface Props {
   link: {
@@ -15,13 +15,8 @@ interface Props {
 export const NavLinks = ({ link: { to, text, slug } }: Props) => {
   const { updatePanel } = useGlobalContext()
 
-  const setPanel = () => {
-    const move = `-${linkSlugs.indexOf(slug) * 100}%`
-    updatePanel(slug, move)
-  }
-
   return (
-    <li onClick={setPanel}>
+    <li onClick={() => updatePanel(slug, calcMove(slug))}>
       <NavLink
         to={to}
         className={({ isActive }) => (isActive ? 'link_active' : '')}

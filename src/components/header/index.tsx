@@ -4,7 +4,7 @@ import { IconContext } from 'react-icons'
 import { FiCode, FiGithub } from 'react-icons/fi'
 import { NavLinks } from './NavLinks'
 
-import { links } from './links'
+import { links } from '../../data'
 
 export const Header = () => (
   <header id="header">
@@ -48,7 +48,7 @@ export const Header = () => (
       <nav>
         <ul>
           {links.map((link, i) => (
-            <NavLinks key={i} link={{ ...link }} />
+            <NavLinks key={i} link={link} />
           ))}
         </ul>
       </nav>

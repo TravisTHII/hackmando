@@ -1,4 +1,9 @@
-import React, { createContext, useContext, useReducer } from 'react'
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useReducer,
+} from 'react'
 
 import { reducer } from './reducer'
 
@@ -16,14 +21,17 @@ export const useGlobalContext = () => useContext(Context)
 export const Provider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  const updatePanel = (panel: string, move: string) =>
-    dispatch({
-      type: 'UPDATE_PANEL',
-      payload: {
-        panel,
-        move,
-      },
-    })
+  const updatePanel = useCallback(
+    (panel: string, move: string) =>
+      dispatch({
+        type: 'UPDATE_PANEL',
+        payload: {
+          panel,
+          move,
+        },
+      }),
+    []
+  )
 
   return (
     <Context.Provider

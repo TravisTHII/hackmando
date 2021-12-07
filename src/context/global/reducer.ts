@@ -7,7 +7,7 @@ export const reducer = (state: State, action: Action) => {
     return {
       ...state,
       currentPanel: panel,
-      move: move,
+      move,
     }
   }
 
