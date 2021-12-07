@@ -13,6 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  color: var(--white);
 }
 
 a {
@@ -21,13 +22,24 @@ a {
 }
 
 h1 {
-  color: var(--white);
+  margin: 0;
+  padding: 0;
 }
 
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+img {
+  width: inherit;
+  height: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -54,8 +66,12 @@ Header
   justify-content: space-between;
   height: 90px;
 }
-.logo {
+.logo_container a {
+  display: block;
+}
+.logo_container .logo {
   font-weight: 500;
+  line-height: 90px;
 }
 #header .header_container .header_icons_container {
   display: flex;
@@ -77,8 +93,6 @@ Header
   text-align: center;
   line-height: 30px;
   cursor: pointer;
-}
-#header nav ul li {
   color: rgba(255, 255, 255, 0.5);
 }
 #header nav ul li a {
@@ -106,14 +120,57 @@ Slider
   min-width: 100%;
   height: 100%;
   display: block;
+  padding-top: 130px;
+  box-sizing: border-box;
 }
-.home {
+.panel_container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.about {
   background-color: #007ee4;
 }
+.about .about_me {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  padding: initial;
+}
+.about .about_me > :not(:last-child) {
+  margin-bottom: 15px;
+}
+.about .about_me .am_header {
+  text-align: center;
+}
+.about .about_me .am_picture {
+  width: 100px;
+}
+.about .about_me .am_summary {
+  padding: 15px;
+}
+.about .about_me .am_summary p {
+  white-space: pre-line;
+  word-break: break-word;
+}
+.about .about_me .am_skills {
+  display: flex;
+}
+.about .about_me .am_skills .skill_icon {
+  padding: 5px;
+}
+
 .projects {
   background-color: orange;
 }
-.about {
+.contact {
   background-color: var(--gray);
 }
 
@@ -127,4 +184,24 @@ Global
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.white_border {
+  border: 2px solid #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* text select color */
+::selection {
+  background-color: var(--white);
+  color: #0a0a0a;
+}
+::-moz-selection {
+  background-color: var(--white);
+  color: #0a0a0a;
+}
+::-webkit-selection {
+  background-color: var(--white);
+  color: #0a0a0a;
 }

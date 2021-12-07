@@ -7,7 +7,7 @@ interface Props {
   text: string
 }
 
-export const NavItems = ({ to, text }: Props) => {
+export const NavLinks = ({ to, text }: Props) => {
   const { updatePanel } = useGlobalContext()
 
   return (

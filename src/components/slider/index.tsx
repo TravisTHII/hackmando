@@ -3,6 +3,8 @@ import { useSpring, animated } from 'react-spring'
 
 import { useGlobalContext } from '../../context/global'
 
+import { About, Contact, Projects } from './slides'
+
 export const Slider = () => {
   const { move } = useGlobalContext()
 
@@ -15,9 +17,9 @@ export const Slider = () => {
 
   return (
     <animated.div id="slider" style={styles}>
-      <div id="home" className="panel home"></div>
-      <div id="projects" className="panel projects"></div>
-      <div id="about" className="panel about"></div>
+      <About />
+      <Projects />
+      <Contact />
     </animated.div>
   )
 }

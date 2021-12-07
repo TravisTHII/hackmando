@@ -5,7 +5,7 @@ import { reducer } from './reducer'
 import { InitialStateType, State } from './types'
 
 const initialState: State = {
-  currentPanel: 'home',
+  currentPanel: 'about',
   move: '0%',
 }
 
@@ -17,8 +17,7 @@ export const Provider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const updatePanel = (panel: string) => {
-    const p = ['home', 'projects', 'about']
-    const move = `-${p.indexOf(panel) * 100}%`
+    const move = `-${['about', 'projects', 'contact'].indexOf(panel) * 100}%`
 
     dispatch({
       type: 'UPDATE_PANEL',
