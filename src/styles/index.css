@@ -152,6 +152,7 @@ Slider
 }
 .about .about_me .am_picture {
   width: 100px;
+  height: 100px;
 }
 .about .about_me .am_summary {
   padding: 15px;

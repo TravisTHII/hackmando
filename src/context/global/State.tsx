@@ -16,9 +16,7 @@ export const useGlobalContext = () => useContext(Context)
 export const Provider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  const updatePanel = (panel: string) => {
-    const move = `-${['about', 'projects', 'contact'].indexOf(panel) * 100}%`
-
+  const updatePanel = (panel: string, move: string) =>
     dispatch({
       type: 'UPDATE_PANEL',
       payload: {
@@ -26,7 +24,6 @@ export const Provider: React.FC = ({ children }) => {
         move,
       },
     })
-  }
 
   return (
     <Context.Provider
