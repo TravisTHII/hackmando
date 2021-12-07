@@ -4,7 +4,7 @@ import { IconContext } from 'react-icons'
 import { FiCode, FiGithub } from 'react-icons/fi'
 import { NavLinks } from './NavLinks'
 
-import { links } from '../../data'
+import { links } from './links'
 
 export const Header = () => (
   <header id="header">
