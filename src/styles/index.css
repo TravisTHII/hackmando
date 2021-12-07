@@ -185,8 +185,38 @@ Global
 #not_found {
   height: 100vh;
 }
-#not_found .container {
+#not_found .not_found_container {
   display: flex;
+  justify-content: center;
+  padding-top: 150px;
+}
+.not_found_message {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 400px;
+}
+.not_found_message .not_found_header {
+  text-align: center;
+  position: absolute;
+  bottom: 35px;
+  text-shadow: 0 0 5px var(--gray);
+}
+.not_found_header .blue_highlight {
+  color: #007ee4;
+}
+.not_found_image {
+  width: 500px;
+}
+.not_found_image img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 /*
