@@ -22,7 +22,8 @@ a {
   color: inherit;
 }
 
-h1 {
+h1,
+p {
   margin: 0;
   padding: 0;
 }
@@ -36,11 +37,6 @@ ul {
 img {
   width: inherit;
   height: 100%;
-}
-
-p {
-  margin: 0;
-  padding: 0;
 }
 
 /*
@@ -111,38 +107,28 @@ Slider
 */
 
 #slider {
-  position: absolute;
   display: flex;
   height: 100vh;
   width: 100vw;
 }
 
-.panel {
+.slide {
   min-width: 100%;
-  height: 100%;
-  display: block;
-  padding-top: 130px;
-  box-sizing: border-box;
 }
-.panel_container {
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
+.slide_container {
+  padding-top: 120px;
 }
 
 .about {
   background-color: #007ee4;
 }
+.about .about_me_container {
+  padding-top: 50px;
+}
 .about .about_me {
   width: 500px;
   height: 500px;
-  margin: 0 auto;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: 50px;
   padding: initial;
 }
 .about .about_me > :not(:last-child) {
@@ -172,13 +158,45 @@ Slider
 .projects {
   background-color: orange;
 }
+
 .contact {
   background-color: var(--gray);
+}
+.contact .contact_container {
+  padding-top: 150px;
+}
+.contact_list {
+  display: flex;
+}
+.contact_list li:not(:last-child) {
+  margin-right: 30px;
+}
+.contact_list .contact_item {
+  width: 200px;
+  height: 250px;
+  padding: initial;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.contact_item:hover {
+  border-color: initial;
+}
+.contact_list .contact_item a {
+  width: 100%;
+  height: 100%;
+}
+.contact_item_container {
+  flex-direction: column;
+}
+.contact_icons {
+  vertical-align: bottom;
+}
+.contact_item_container .contact_p {
+  line-height: 30px;
 }
 
 /*
 ===============
-Global
+NotFound Page
 ===============
 */
 
