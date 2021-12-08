@@ -165,37 +165,38 @@ Slider
   width: 1050px;
 }
 .projects_controller {
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
-  justify-content: flex-end !important;
   margin-bottom: 15px;
-}
-.projects_controller ul li {
-  padding: 5px;
-  border-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
 }
 .projects_controller ul li:not(:last-child) {
   margin-right: 5px;
 }
-.projects_controller ul li:hover .controller_icon,
-.projects_controller ul li:hover {
-  color: var(--white);
-  border-color: var(--white);
+.controller_btn {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
 }
 .controller_icon {
   vertical-align: bottom;
-  color: rgba(255, 255, 255, 0.5);
+  color: inherit;
 }
 .view_active,
-.view_active .controller_icon {
+.controller_btn:hover {
   color: var(--white);
-  border-color: var(--white) !important;
+  border-color: var(--white);
 }
 
 .project_card {
+  display: flex;
+  justify-content: space-between;
   width: 1050px;
   height: 500px;
-  justify-content: space-between !important;
 }
 .project_card > div {
   width: 500px;

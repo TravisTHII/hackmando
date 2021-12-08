@@ -14,7 +14,7 @@ export const Card = ({
   image,
   techStack,
 }: Project) => (
-  <div className={`project_card flex_ui${reversed ? ' flex_reserve' : ''}`}>
+  <div className={`project_card ${reversed ? ' flex_reserve' : ''}`}>
     <div className="project_info">
       <div>
         <div className="pi_header">

@@ -4,29 +4,40 @@ import { FaThLarge, FaList } from 'react-icons/fa'
 
 import { useProjectsContext } from '../../../../context/projects'
 
-export const Controller = () => {
+interface Props {
+  viewName: string
+}
+
+const ViewButton: React.FC<Props> = ({ children, viewName }) => {
   const { view, changeView } = useProjectsContext()
 
   return (
-    <div className="projects_controller flex_ui">
-      <IconContext.Provider
-        value={{ size: '1.625em', className: 'controller_icon' }}
+    <li>
+      <button
+        className={`controller_btn ${
+          view === `${viewName}` ? ' view_active' : ''
+        }`}
+        onClick={() => changeView(viewName)}
       >
-        <ul className="flex_ui">
-          <li
-            className={`white_border${view === 'grid' ? ' view_active' : ''}`}
-            onClick={() => changeView('grid')}
-          >
-            <FaThLarge />
-          </li>
-          <li
-            className={`white_border${view === 'list' ? ' view_active' : ''}`}
-            onClick={() => changeView('list')}
-          >
-            <FaList />
-          </li>
-        </ul>
-      </IconContext.Provider>
-    </div>
+        {children}
+      </button>
+    </li>
   )
 }
+
+export const Controller = () => (
+  <div className="projects_controller">
+    <ul className="flex_ui">
+      <IconContext.Provider
+        value={{ size: '1.5em', className: 'controller_icon' }}
+      >
+        <ViewButton viewName="grid">
+          <FaThLarge />
+        </ViewButton>
+        <ViewButton viewName="list">
+          <FaList />
+        </ViewButton>
+      </IconContext.Provider>
+    </ul>
+  </div>
+)
