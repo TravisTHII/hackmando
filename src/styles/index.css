@@ -220,8 +220,8 @@ NotFound Page
   bottom: 35px;
   text-shadow: 0 0 5px var(--gray);
 }
-.not_found_header .blue_highlight {
-  color: #007ee4;
+.not_found_header .underline {
+  border-bottom: 2px solid #fff;
 }
 .not_found_image {
   width: 500px;

@@ -8,13 +8,11 @@ export const NotFound = () => (
     <div className="not_found_container">
       <div className="not_found_message">
         <div className="not_found_header">
-          <h1>
-            <span className="blue_highlight">404</span> Not Found
-          </h1>
+          <h1>404 Not Found</h1>
           <p>
-            The page you are looking for does not exist{' '}
-            <Link to="/" className="blue_highlight">
-              Go Home.
+            The page you are looking for does not exist,{' '}
+            <Link to="/" className="underline">
+              Go Home
             </Link>
           </p>
         </div>

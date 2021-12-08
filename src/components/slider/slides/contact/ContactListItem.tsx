@@ -1,11 +1,11 @@
 import React from 'react'
 
 interface Props {
-  name: string
+  title: string
   link: string
 }
 
-export const ContactListItem: React.FC<Props> = ({ children, name, link }) => (
+export const ContactListItem: React.FC<Props> = ({ children, title, link }) => (
   <li className="contact_item white_border">
     <a
       href={link}
@@ -16,7 +16,7 @@ export const ContactListItem: React.FC<Props> = ({ children, name, link }) => (
       <div className="contact_item_container flex_ui">
         <div>{children}</div>
         <div className="contact_p">
-          <p>{name}</p>
+          <p>{title}</p>
         </div>
       </div>
     </a>

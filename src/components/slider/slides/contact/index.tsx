@@ -14,11 +14,11 @@ export const Contact = () => (
           <ul className="contact_list">
             <ContactListItem
               link="https://www.linkedin.com/in/travis-hackney-8b7805207/"
-              name="LinkedIn"
+              title="LinkedIn"
             >
               <RiLinkedinBoxFill />
             </ContactListItem>
-            <ContactListItem link="/resume.pdf" name="Resume">
+            <ContactListItem link="/resume.pdf" title="Resume">
               <RiFileList3Line />
             </ContactListItem>
           </ul>
