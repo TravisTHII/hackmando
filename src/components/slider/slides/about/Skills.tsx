@@ -1,17 +1,17 @@
 import React from 'react'
 import { IconContext } from 'react-icons'
 
-import { Icons } from './Icons'
+import { Icon } from '../../../Icon'
 
 const skills = [
-  'HTML',
-  'CSS',
-  'Javascript',
-  'Typescript',
-  'PHP',
-  'Python',
-  'React',
-  'Node.js',
+  'html',
+  'css',
+  'javascript',
+  'typescript',
+  'php',
+  'python',
+  'react',
+  'nodejs',
 ]
 
 export const Skills = () => (
@@ -19,7 +19,7 @@ export const Skills = () => (
     value={{ color: '#fff', size: '2em', className: 'skill_icon' }}
   >
     {skills.map((t, i) => (
-      <Icons key={i} name={t} />
+      <Icon key={i} name={t} />
     ))}
   </IconContext.Provider>
 )

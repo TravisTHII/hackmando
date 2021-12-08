@@ -7,11 +7,15 @@ import { ContactListItem } from './ContactListItem'
 export const Contact = () => (
   <div id="contact" className="slide contact">
     <div className="slide_container">
-      <IconContext.Provider
-        value={{ color: '#fff', size: '9.375em', className: 'contact_icons' }}
-      >
-        <div className="contact_container flex_ui">
-          <ul className="contact_list">
+      <div className="contact_container flex_ui">
+        <ul className="contact_list">
+          <IconContext.Provider
+            value={{
+              color: '#fff',
+              size: '9.375em',
+              className: 'contact_icons',
+            }}
+          >
             <ContactListItem
               link="https://www.linkedin.com/in/travis-hackney-8b7805207/"
               title="LinkedIn"
@@ -21,9 +25,9 @@ export const Contact = () => (
             <ContactListItem link="/resume.pdf" title="Resume">
               <RiFileList3Line />
             </ContactListItem>
-          </ul>
-        </div>
-      </IconContext.Provider>
+          </IconContext.Provider>
+        </ul>
+      </div>
     </div>
   </div>
 )
