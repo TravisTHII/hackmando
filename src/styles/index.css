@@ -159,8 +159,34 @@ Slider
   background-color: orange;
 }
 .projects .projects_container {
-  padding-top: 100px;
+  padding-top: 50px;
 }
+.projects .projects_content {
+  flex-direction: column;
+}
+.projects_controller {
+  width: 100%;
+  justify-content: flex-end !important;
+  margin-bottom: 15px;
+}
+.projects_controller ul li {
+  padding: 5px;
+  border-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.projects_controller ul li:not(:last-child) {
+  margin-right: 5px;
+}
+.projects_controller ul li:hover .controller_icon,
+.projects_controller ul li:hover {
+  color: var(--white);
+  border-color: var(--white);
+}
+.controller_icon {
+  vertical-align: bottom;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .project_card {
   width: 1050px;
   height: 500px;
