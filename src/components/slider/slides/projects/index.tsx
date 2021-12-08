@@ -3,7 +3,7 @@ import React from 'react'
 import { ProjectsProvider } from '../../../../context/projects'
 
 import { Controller } from './Controller'
-import { View } from './View'
+import { View } from './view'
 
 export const Projects = () => {
   return (

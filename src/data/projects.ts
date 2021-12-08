@@ -15,9 +15,11 @@ export const projects = [
     ],
     url: 'https://react-comments.netlify.app',
     reversed: false,
-    image: '/images/comments.jpg',
+    image: '/images/react-comments.jpg',
+    icon: '/images/react-comments-icon.png',
     color: '#6100b1',
     techStack: ['react', 'typescript', 'mongodb', 'nodejs'],
+    year: '2020',
   },
   {
     title: 'Pokésearch',
@@ -34,7 +36,9 @@ export const projects = [
     url: 'https://pocketmonsters-search.netlify.app',
     reversed: true,
     image: '/images/pokesearch.jpg',
+    icon: '/images/pokesearch-icon.svg',
     color: '#ffcb05',
     techStack: ['react', 'typescript', 'nodejs'],
+    year: '2020',
   },
 ]

@@ -112,7 +112,6 @@ Slider
   height: 100vh;
   width: 100vw;
 }
-
 .slide {
   min-width: 100%;
 }
@@ -156,13 +155,14 @@ Slider
 }
 
 .projects {
-  background-color: orange;
+  background-color: #6100b1;
 }
 .projects .projects_container {
   padding-top: 50px;
 }
 .projects .projects_content {
   flex-direction: column;
+  width: 1050px;
 }
 .projects_controller {
   width: 100%;
@@ -185,6 +185,11 @@ Slider
 .controller_icon {
   vertical-align: bottom;
   color: rgba(255, 255, 255, 0.5);
+}
+.view_active,
+.view_active .controller_icon {
+  color: var(--white);
+  border-color: var(--white) !important;
 }
 
 .project_card {
@@ -241,6 +246,49 @@ Slider
 .project_image .project_picture {
   width: inherit;
   height: inherit;
+}
+
+.projects_list .projects_list_item {
+  display: flex;
+  padding: 5px;
+  width: 500px;
+  box-sizing: border-box;
+}
+.pl_icon {
+  width: 60px;
+  height: 60px;
+}
+.projects_list .projects_list_item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.projects_list .pl_info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  text-align: center;
+  width: 100%;
+}
+.projects_list .pl_info > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+.pli_header {
+  display: flex;
+  justify-content: space-between;
+}
+.pli_header h2 {
+  font-weight: normal;
+  font-size: 1em;
+}
+.pli_sub_header {
+  text-align: left;
+  font-size: 0.9em;
+}
+.pli_tech_stack {
+  display: flex;
+  justify-content: flex-end;
+}
+.pli_tech_stack li:not(:last-child) {
+  margin-right: 5px;
 }
 
 .contact {

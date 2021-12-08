@@ -5,12 +5,11 @@ import { Icon } from '../../../Icon'
 
 interface Props {
   techStack: string[]
+  size: string
 }
 
-export const TechStack = ({ techStack }: Props) => (
-  <IconContext.Provider
-    value={{ color: '#fff', size: '3.125em', className: 'tech_icon' }}
-  >
+export const TechStack = ({ techStack, size }: Props) => (
+  <IconContext.Provider value={{ color: '#fff', size, className: 'tech_icon' }}>
     {techStack.map((icon, i) => (
       <li key={i}>
         <Icon name={icon} />
