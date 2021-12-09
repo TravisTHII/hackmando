@@ -10,7 +10,7 @@ export const reducer = (state: State, action: Action) => {
     }
   }
 
-  if (action.type === 'MOVE') {
+  if (action.type === 'TRAVERSE_CAROUSEL') {
     const { page } = action.payload
 
     return {
@@ -25,8 +25,18 @@ export const reducer = (state: State, action: Action) => {
 
     return {
       ...state,
+      color: state.projects[0].color,
       page,
       offset,
+    }
+  }
+
+  if (action.type === 'CHANGE_COLOR') {
+    const { color } = action.payload
+
+    return {
+      ...state,
+      color,
     }
   }
 

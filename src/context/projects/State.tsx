@@ -14,6 +14,7 @@ import { projects } from '../../data'
 const initialState: State = {
   view: 'grid',
   projects,
+  color: projects[0].color,
   page: 1,
   last: Math.ceil(projects.length / 1),
   move: 1050,
@@ -38,7 +39,7 @@ export const Provider: React.FC = ({ children }) => {
   const traverseCarousel = (page: number) => {
     if (state.page !== page) {
       dispatch({
-        type: 'MOVE',
+        type: 'TRAVERSE_CAROUSEL',
         payload: {
           page,
         },
@@ -58,6 +59,14 @@ export const Provider: React.FC = ({ children }) => {
     []
   )
 
+  const changeColor = (color: string) =>
+    dispatch({
+      type: 'CHANGE_COLOR',
+      payload: {
+        color,
+      },
+    })
+
   return (
     <Context.Provider
       value={{
@@ -65,6 +74,7 @@ export const Provider: React.FC = ({ children }) => {
         changeView,
         traverseCarousel,
         resetCarousel,
+        changeColor,
       }}
     >
       {children}

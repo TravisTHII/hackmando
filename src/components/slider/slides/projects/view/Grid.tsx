@@ -4,16 +4,10 @@ import { useSpring, animated } from 'react-spring'
 import { useProjectsContext } from '../../../../../context/projects'
 
 import { Card } from './Card'
+import { Controller } from './Controller'
 
 export const Grid = () => {
-  const { projects, page, offset, last, traverseCarousel, resetCarousel } =
-    useProjectsContext()
-
-  const links = []
-
-  for (let i = 1; i < last + 1; i++) {
-    links.push(i)
-  }
+  const { projects, offset, resetCarousel } = useProjectsContext()
 
   useEffect(() => {
     return () => resetCarousel()
@@ -41,16 +35,7 @@ export const Grid = () => {
           ))}
         </animated.div>
       </div>
-      <ul className="carousel_buttons">
-        {links.map((n, i) => (
-          <li key={i}>
-            <button
-              className={`carousel_button${page === n ? ' cb_active' : ''}`}
-              onClick={() => traverseCarousel(n)}
-            ></button>
-          </li>
-        ))}
-      </ul>
+      <Controller />
     </div>
   )
 }

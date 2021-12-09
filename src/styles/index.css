@@ -215,7 +215,7 @@ Projects Page
 .project_carousel {
   display: flex;
   flex-direction: column;
-  width: 1050px;
+  width: 100%;
   overflow: hidden;
 }
 .project_carousel > .project_carousel_container {
@@ -227,20 +227,20 @@ Projects Page
 .project_carousel .carousel .project_card:not(:last-child) {
   margin-right: 50px;
 }
-.project_carousel .carousel_buttons {
+.project_carousel .carousel_controller {
   display: flex;
   justify-content: center;
 }
-.project_carousel .carousel_buttons li:not(:last-child) {
+.project_carousel .carousel_controller li:not(:last-child) {
   margin-right: 5px;
 }
-.carousel_buttons .carousel_button {
+.carousel_controller .carousel_button {
   width: 20px;
   height: 20px;
   border: 2px solid var(--white-light);
   vertical-align: bottom;
 }
-.carousel_buttons .carousel_button:hover,
+.carousel_controller .carousel_button:hover,
 .carousel_button.cb_active {
   border-color: var(--white);
 }
@@ -302,10 +302,13 @@ Projects Page
   height: inherit;
 }
 
+.projects_list {
+  width: 500px;
+}
 .projects_list .projects_list_item {
   display: flex;
   padding: 5px;
-  width: 500px;
+  width: 100%;
   box-sizing: border-box;
 }
 .pl_icon {

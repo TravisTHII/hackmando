@@ -7,6 +7,7 @@ export type Project = {
   reversed: boolean
   image: string
   icon: string
+  color: string
   techStack: string[]
   year: string
 }
