@@ -20,11 +20,11 @@ export const Header = () => (
             value={{
               color: '#fff',
               size: '2rem',
-              className: 'stroke_small',
+              className: 'header_icon',
             }}
           >
             <a
-              className="header_icon flex_ui"
+              className="header_link flex_ui"
               href="https://github.com/TravisTHII/hackmando"
               target="_blank"
               rel="noopener noreferrer"
@@ -33,7 +33,7 @@ export const Header = () => (
               <FiCode />
             </a>
             <a
-              className="header_icon flex_ui"
+              className="header_link flex_ui"
               href="https://github.com/TravisTHII"
               target="_blank"
               rel="noopener noreferrer"

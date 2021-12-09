@@ -23,9 +23,9 @@ export const About = () => (
               industry that encompasses it.
             </p>
           </div>
-          <div className="am_skills">
+          <ul className="am_skills">
             <Skills />
-          </div>
+          </ul>
         </div>
       </div>
     </div>

@@ -19,7 +19,9 @@ export const Skills = () => (
     value={{ color: '#fff', size: '2em', className: 'skill_icon' }}
   >
     {skills.map((t, i) => (
-      <Icon key={i} name={t} />
+      <li key={i}>
+        <Icon name={t} />
+      </li>
     ))}
   </IconContext.Provider>
 )

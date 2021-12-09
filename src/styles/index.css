@@ -81,12 +81,14 @@ Header
 }
 #header .header_container .header_icons_container {
   display: flex;
+  justify-content: space-between;
+  width: 200px;
 }
-#header .header_container .header_icons_container .header_icon {
+#header .header_container .header_icons_container .header_link {
   width: 90px;
   height: 100%;
 }
-.stroke_small {
+.header_icon {
   stroke-width: 0.07em;
 }
 
@@ -144,9 +146,11 @@ About Page
   padding-top: 50px;
 }
 .about .about_me {
-  width: 500px;
-  height: 500px;
+  width: 80%;
+  min-height: 500px;
+  padding: 30px;
   flex-direction: column;
+  box-sizing: border-box;
 }
 .about .about_me > :not(:last-child) {
   margin-bottom: 15px;
@@ -165,8 +169,9 @@ About Page
   white-space: pre-line;
   word-break: break-word;
 }
-.about .about_me .am_skills {
-  display: flex;
+.about .about_me .am_skills li {
+  display: inline-flex;
+  vertical-align: bottom;
 }
 .about .about_me .am_skills .skill_icon {
   padding: 5px;
@@ -467,4 +472,18 @@ Misc Styles
 ::-webkit-selection {
   background-color: var(--white);
   color: #0a0a0a;
+}
+
+/*
+===============
+Style breakpoints
+===============
+*/
+
+/* Larger than */
+@media only screen and (min-width: 600px) {
+  .about .about_me {
+    width: 500px;
+    padding: 0;
+  }
 }
