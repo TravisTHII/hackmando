@@ -11,7 +11,7 @@ import { InitialStateType, State } from './types'
 
 const initialState: State = {
   currentPanel: 'about',
-  move: '0%',
+  move: 0,
 }
 
 export const Context = createContext({} as InitialStateType)
@@ -22,7 +22,7 @@ export const Provider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const updatePanel = useCallback(
-    (panel: string, move: string) =>
+    (panel: string, move: number) =>
       dispatch({
         type: 'UPDATE_PANEL',
         payload: {

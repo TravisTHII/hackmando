@@ -25,7 +25,7 @@ export const Slider = () => {
   }))
 
   // Update spring with new props
-  api.start({ transform: `translate3d(${move}, 0, 0)` })
+  api.start({ transform: `translate3d(${move}%, 0, 0)` })
 
   return (
     <animated.div id="slider" style={styles}>
