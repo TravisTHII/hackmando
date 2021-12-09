@@ -8,10 +8,12 @@ export const List = () => {
   const { projects } = useProjectsContext()
 
   return (
-    <ul className="projects_list">
-      {projects.map((project, i) => (
-        <ListItem key={i} {...project} />
-      ))}
-    </ul>
+    <div className="projects_list_container flex_ui">
+      <ul className="projects_list">
+        {projects.map((project, i) => (
+          <ListItem key={i} {...project} />
+        ))}
+      </ul>
+    </div>
   )
 }

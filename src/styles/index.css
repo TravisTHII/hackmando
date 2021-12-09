@@ -302,7 +302,10 @@ Projects Page
   height: inherit;
 }
 
-.projects_list {
+.projects_list_container {
+  width: 100%;
+}
+.projects_list_container .projects_list {
   width: 500px;
 }
 .projects_list .projects_list_item {
@@ -333,7 +336,6 @@ Projects Page
   justify-content: space-between;
 }
 .pli_header h2 {
-  font-weight: normal;
   font-size: 1em;
 }
 .pli_sub_header {
