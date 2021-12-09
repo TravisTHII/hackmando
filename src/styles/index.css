@@ -218,9 +218,11 @@ Projects Page
   width: 1050px;
   overflow: hidden;
 }
+.project_carousel > .project_carousel_container {
+  margin-bottom: 30px;
+}
 .project_carousel .carousel {
   display: flex;
-  margin-bottom: 15px;
 }
 .project_carousel .carousel .project_card:not(:last-child) {
   margin-right: 50px;

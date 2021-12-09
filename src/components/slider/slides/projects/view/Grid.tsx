@@ -28,17 +28,19 @@ export const Grid = () => {
 
   return (
     <div className="project_carousel">
-      <animated.div
-        className="carousel"
-        style={{
-          width: `${1050 * projects.length + (projects.length - 1) * 50}px`,
-          ...styles,
-        }}
-      >
-        {projects.map((project, i) => (
-          <Card key={i} {...project} />
-        ))}
-      </animated.div>
+      <div className="project_carousel_container">
+        <animated.div
+          className="carousel"
+          style={{
+            width: `${1050 * projects.length + (projects.length - 1) * 50}px`,
+            ...styles,
+          }}
+        >
+          {projects.map((project, i) => (
+            <Card key={i} {...project} />
+          ))}
+        </animated.div>
+      </div>
       <ul className="carousel_buttons">
         {links.map((n, i) => (
           <li key={i}>

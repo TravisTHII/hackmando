@@ -20,7 +20,11 @@ export const ListItem = ({
     </a>
     <div className="pl_info">
       <div className="pli_header">
-        <h2>{title}</h2>
+        <h2>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+        </h2>
         <p>{year}</p>
       </div>
       <div className="pli_sub_header">
