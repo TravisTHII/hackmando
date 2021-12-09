@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSpring, animated } from 'react-spring'
 
-import { useProjectsContext } from '../../../../../context/projects'
+import { useProjectsContext } from '../../../../../../context/projects'
 
 import { Card } from './Card'
 import { Controller } from './Controller'

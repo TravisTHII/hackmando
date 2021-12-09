@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { TechStack } from '../TechStack'
+import { TechStack } from '../../TechStack'
 
-import { Project } from '../types'
+import { Project } from '../../types'
 
 export const Card = ({
   title,

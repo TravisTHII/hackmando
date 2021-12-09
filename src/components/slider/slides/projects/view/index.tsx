@@ -2,8 +2,8 @@ import React from 'react'
 
 import { useProjectsContext } from '../../../../../context/projects'
 
-import { Grid } from './Grid'
-import { List } from './List'
+import { Grid } from './grid'
+import { List } from './list'
 
 export const View = () => {
   const { view } = useProjectsContext()
