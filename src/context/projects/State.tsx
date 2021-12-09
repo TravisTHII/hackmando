@@ -1,4 +1,9 @@
-import React, { createContext, useContext, useReducer } from 'react'
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useReducer,
+} from 'react'
 
 import { reducer } from './reducer'
 
@@ -9,6 +14,10 @@ import { projects } from '../../data'
 const initialState: State = {
   view: 'grid',
   projects,
+  page: 1,
+  last: Math.ceil(projects.length / 1),
+  move: 1050,
+  offset: 0,
 }
 
 export const Context = createContext({} as InitialStateType)
@@ -26,11 +35,36 @@ export const Provider: React.FC = ({ children }) => {
       },
     })
 
+  const traverseCarousel = (page: number) => {
+    if (state.page !== page) {
+      dispatch({
+        type: 'MOVE',
+        payload: {
+          page,
+        },
+      })
+    }
+  }
+
+  const resetCarousel = useCallback(
+    () =>
+      dispatch({
+        type: 'RESET_CAROUSEL',
+        payload: {
+          page: 1,
+          offset: 0,
+        },
+      }),
+    []
+  )
+
   return (
     <Context.Provider
       value={{
         ...state,
         changeView,
+        traverseCarousel,
+        resetCarousel,
       }}
     >
       {children}

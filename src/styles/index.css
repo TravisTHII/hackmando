@@ -3,6 +3,7 @@
 :root {
   --gray: #1a1a1a;
   --white: #fff;
+  --white-light: #ffffff80;
 }
 
 body {
@@ -38,6 +39,13 @@ ul {
 img {
   width: inherit;
   height: 100%;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 /*
@@ -91,7 +99,7 @@ Header
   text-align: center;
   line-height: 30px;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--white-light);
 }
 #header nav ul li a {
   display: block;
@@ -118,6 +126,12 @@ Slider
 .slide_container {
   padding-top: 120px;
 }
+
+/*
+===============
+About Page
+===============
+*/
 
 .about {
   background-color: #007ee4;
@@ -154,6 +168,12 @@ Slider
   padding: 5px;
 }
 
+/*
+===============
+Projects Page
+===============
+*/
+
 .projects {
   background-color: #6100b1;
 }
@@ -174,8 +194,8 @@ Slider
   margin-right: 5px;
 }
 .controller_btn {
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--white-light);
+  color: var(--white-light);
   background-color: transparent;
   cursor: pointer;
   padding: 5px;
@@ -189,6 +209,37 @@ Slider
 .view_active,
 .controller_btn:hover {
   color: var(--white);
+  border-color: var(--white);
+}
+
+.project_carousel {
+  display: flex;
+  flex-direction: column;
+  width: 1050px;
+  overflow: hidden;
+}
+.project_carousel .carousel {
+  display: flex;
+  margin-bottom: 15px;
+}
+.project_carousel .carousel .project_card:not(:last-child) {
+  margin-right: 50px;
+}
+.project_carousel .carousel_buttons {
+  display: flex;
+  justify-content: center;
+}
+.project_carousel .carousel_buttons li:not(:last-child) {
+  margin-right: 5px;
+}
+.carousel_buttons .carousel_button {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--white-light);
+  vertical-align: bottom;
+}
+.carousel_buttons .carousel_button:hover,
+.carousel_button.cb_active {
   border-color: var(--white);
 }
 
@@ -292,6 +343,12 @@ Slider
   margin-right: 5px;
 }
 
+/*
+===============
+Contact Page
+===============
+*/
+
 .contact {
   background-color: var(--gray);
 }
@@ -307,7 +364,7 @@ Slider
 .contact_list .contact_item {
   width: 200px;
   height: 250px;
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: var(--white-light);
 }
 .contact_item:hover {
   border-color: initial;
@@ -371,7 +428,7 @@ NotFound Page
 
 /*
 ===============
-Global
+Misc Styles
 ===============
 */
 
