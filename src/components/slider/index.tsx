@@ -28,10 +28,12 @@ export const Slider = () => {
   api.start({ transform: `translate3d(${move}%, 0, 0)` })
 
   return (
-    <animated.div id="slider" style={styles}>
-      <About />
-      <Projects />
-      <Contact />
-    </animated.div>
+    <div id="slider">
+      <animated.div className="slider_container" style={styles}>
+        <About />
+        <Projects />
+        <Contact />
+      </animated.div>
+    </div>
   )
 }

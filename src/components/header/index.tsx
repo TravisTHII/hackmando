@@ -28,7 +28,7 @@ export const Header = () => (
               href="https://github.com/TravisTHII/hackmando"
               target="_blank"
               rel="noopener noreferrer"
-              title="See project code"
+              title="Project Code"
             >
               <FiCode />
             </a>
