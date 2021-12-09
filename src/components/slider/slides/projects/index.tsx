@@ -2,10 +2,10 @@ import React from 'react'
 
 import { ProjectsProvider } from '../../../../context/projects'
 
-import { ProjectsSlide } from './ProjectsSlide'
+import { Slide } from './Slide'
 
 export const Projects = () => (
   <ProjectsProvider>
-    <ProjectsSlide />
+    <Slide />
   </ProjectsProvider>
 )

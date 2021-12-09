@@ -3,10 +3,10 @@ import { useSpring, animated } from 'react-spring'
 
 import { useProjectsContext } from '../../../../context/projects'
 
-import { Controller } from './Controller'
+import { Controller } from './controller'
 import { View } from './view'
 
-export const ProjectsSlide = () => {
+export const Slide = () => {
   const { color } = useProjectsContext()
 
   const [styles, api] = useSpring(() => ({
