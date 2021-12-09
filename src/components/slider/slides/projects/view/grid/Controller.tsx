@@ -3,24 +3,19 @@ import React from 'react'
 import { useProjectsContext } from '../../../../../../context/projects'
 
 export const Controller = () => {
-  const { projects, page, last, traverseCarousel, changeColor } =
-    useProjectsContext()
+  const { projects, page, traverseCarousel, changeColor } = useProjectsContext()
 
-  const links = []
-
-  for (let i = 1; i < last + 1; i++) {
-    links.push(i)
-  }
+  const links = projects.map((_, index) => index + 1)
 
   return (
     <ul className="carousel_controller">
-      {links.map((n, i) => (
+      {links.map((link, i) => (
         <li key={i}>
           <button
-            className={`carousel_button${page === n ? ' cb_active' : ''}`}
+            className={`carousel_button${page === link ? ' cb_active' : ''}`}
             onClick={() => {
-              traverseCarousel(n)
-              changeColor(projects[n - 1].color)
+              traverseCarousel(link)
+              changeColor(projects[link - 1].color)
             }}
           ></button>
         </li>
