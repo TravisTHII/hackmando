@@ -473,6 +473,7 @@ NotFound Page
   display: flex;
   justify-content: center;
   position: relative;
+  width: 80%;
   height: 400px;
 }
 .not_found_message .not_found_header {
@@ -485,7 +486,7 @@ NotFound Page
   border-bottom: 2px solid #fff;
 }
 .not_found_image {
-  width: 500px;
+  width: 100%;
 }
 .not_found_image img {
   -webkit-user-select: none;
