@@ -13,6 +13,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
   overflow: hidden;
   color: var(--white);
   background-color: var(--gray);
@@ -56,39 +57,44 @@ Header
 
 #header {
   display: block;
-  width: 100%;
   position: fixed;
-  z-index: 999;
+  width: 100%;
+  z-index: 9;
 }
 #header .header_container {
-  display: flex;
+  display: none;
+  flex-direction: column;
   margin: 0 auto;
   width: 90%;
   height: 100%;
-  flex-direction: column;
 }
 #header .header_container > div:first-child {
   display: flex;
   justify-content: space-between;
   height: 90px;
 }
+.logo_container {
+  width: 200px;
+}
 .logo_container a {
   display: block;
 }
-.logo_container .logo {
-  font-weight: 500;
+.logo_container h1 {
   line-height: 90px;
 }
-#header .header_container .header_icons_container {
+.logo {
+  font-weight: 500;
+}
+.social_icons_container {
   display: flex;
   justify-content: space-between;
   width: 200px;
 }
-#header .header_container .header_icons_container .header_link {
+.social_link {
   width: 90px;
   height: 100%;
 }
-.header_icon {
+.social_icon {
   stroke-width: 0.07em;
 }
 
@@ -109,6 +115,50 @@ Header
 #header nav ul li:hover,
 .link_active {
   color: var(--white);
+}
+
+#header .mobile_header_container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+#header .mobile_header_container .line_menu_btn {
+  width: 50px;
+  height: 50px;
+}
+#header .mobile_header_container .line_menu_icon {
+  vertical-align: bottom;
+}
+#header .mobile_header_container .mobile_logo {
+  line-height: 50px;
+  font-size: 0.7em;
+}
+
+#mobile_menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  background-color: #262626;
+  width: 100vw;
+  height: 100vh;
+}
+#mobile_menu .mm_container {
+  flex-direction: column;
+  padding-top: 100px;
+}
+#mobile_menu .mm_container nav {
+  margin-bottom: 50px;
+}
+#mobile_menu .mm_container nav ul li {
+  font-size: 2rem;
+}
+#mobile_menu .mm_container nav ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+#mobile_menu .mm_container .social_icons_container {
+  height: 50px;
 }
 
 /*
@@ -284,7 +334,6 @@ Projects Page
   list-style: inherit;
   list-style-position: inside;
   text-align: left;
-  margin: 0 30px;
 }
 .project_info .pi_content ul li:not(:last-child) {
   margin-bottom: 5px;
@@ -482,6 +531,17 @@ Style breakpoints
 
 /* Larger than */
 @media only screen and (min-width: 600px) {
+  #header .header_container {
+    display: flex;
+  }
+  #header .mobile_header_container {
+    display: none;
+  }
+
+  #mobile_menu {
+    display: none;
+  }
+
   .about .about_me {
     width: 500px;
     padding: 0;

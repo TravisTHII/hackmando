@@ -23,11 +23,13 @@ export const Card = ({
         </div>
         <div className="pi_content">
           <p>{description}</p>
-          <ul>
-            {bulletPoints.map((point, i) => (
-              <li key={i}>{point}</li>
-            ))}
-          </ul>
+          <div className="flex_ui">
+            <ul>
+              {bulletPoints.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <ul className="pi_tech_stack flex_ui">

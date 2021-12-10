@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { IconContext } from 'react-icons'
-import { FiCode, FiGithub } from 'react-icons/fi'
-import { NavLinks } from './NavLinks'
 
-import { links } from './links'
+import { Nav } from './nav'
+import { Mobile } from './mobile'
+import { SocialLinks } from './SocialLinks'
 
 export const Header = () => (
   <header id="header">
@@ -15,43 +14,10 @@ export const Header = () => (
             <h1 className="logo">HackManDo</h1>
           </Link>
         </div>
-        <div className="header_icons_container">
-          <IconContext.Provider
-            value={{
-              color: '#fff',
-              size: '2rem',
-              className: 'header_icon',
-            }}
-          >
-            <a
-              className="header_link flex_ui"
-              href="https://github.com/TravisTHII/hackmando"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Project Code"
-            >
-              <FiCode />
-            </a>
-            <a
-              className="header_link flex_ui"
-              href="https://github.com/TravisTHII"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="My GitHub"
-            >
-              <FiGithub />
-            </a>
-          </IconContext.Provider>
-        </div>
+        <SocialLinks />
       </div>
-
-      <nav>
-        <ul>
-          {links.map((link, i) => (
-            <NavLinks key={i} link={link} />
-          ))}
-        </ul>
-      </nav>
+      <Nav />
     </div>
+    <Mobile />
   </header>
 )

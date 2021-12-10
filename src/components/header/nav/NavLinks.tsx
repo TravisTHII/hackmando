@@ -1,8 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { useGlobalContext } from '../../context/global'
 
-import { calcMove } from '../../utils'
+import { useGlobalContext } from '../../../context/global'
+
+import { calcMove } from '../../../utils'
 
 interface Props {
   link: {
