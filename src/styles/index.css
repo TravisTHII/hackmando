@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --gray: #1a1a1a;
+  --white: #fff;
+  --white-light: #ffffff80;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  overflow: hidden;
+  color: var(--white);
+  background-color: var(--gray);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: inherit;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/*
+===============
+Header
+===============
+*/
+
+#header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+#header .header_container {
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
+#header .header_container > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+}
+.logo_container {
+  width: 200px;
+}
+.logo_container a {
+  display: block;
+}
+.logo_container h1 {
+  line-height: 90px;
+}
+.logo {
+  font-weight: 500;
+}
+.social_icons_container {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+.social_link {
+  width: 90px;
+  height: 100%;
+}
+.social_icon {
+  stroke-width: 0.07em;
+}
+
+#header nav ul {
+  display: flex;
+  justify-content: center;
+}
+#header nav ul li {
+  width: 100px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  color: var(--white-light);
+}
+#header nav ul li a {
+  display: block;
+}
+#header nav ul li:hover,
+.link_active {
+  color: var(--white);
+}
+
+#header .mobile_header_container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+#header .mobile_header_container .line_menu_btn {
+  width: 50px;
+  height: 50px;
+}
+#header .mobile_header_container .line_menu_icon {
+  vertical-align: bottom;
+}
+#header .mobile_header_container .mobile_logo {
+  line-height: 50px;
+  font-size: 0.7em;
+}
+
+#mobile_menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  background-color: #262626;
+  width: 100vw;
+  height: 100vh;
+}
+#mobile_menu .mm_container {
+  flex-direction: column;
+  padding-top: 100px;
+}
+#mobile_menu .mm_container nav {
+  margin-bottom: 50px;
+}
+#mobile_menu .mm_container nav ul li {
+  font-size: 2rem;
+}
+#mobile_menu .mm_container nav ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+#mobile_menu .mm_container .social_icons_container {
+  height: 50px;
+}
+
+/*
+===============
+Slider
+===============
+*/
+
+#slider {
+  overflow: hidden;
+}
+#slider .slider_container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+.slide_container {
+  padding: 120px 0 0;
+}
+
+/*
+===============
+About Page
+===============
+*/
+
+.about {
+  background-color: #007ee4;
+}
+.about .about_me_container {
+  padding: 50px 0 0;
+}
+.about .about_me {
+  width: 80%;
+  min-height: 500px;
+  padding: 30px;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.about .about_me > :not(:last-child) {
+  margin-bottom: 15px;
+}
+.about .about_me .am_header {
+  text-align: center;
+}
+.about .about_me .am_picture {
+  width: 100px;
+  height: 100px;
+}
+.about .about_me .am_summary {
+  padding: 15px;
+}
+.about .about_me .am_summary h2 {
+  font-weight: normal;
+  font-size: 1.3em;
+}
+.about .about_me .am_summary p {
+  white-space: pre-line;
+  word-break: break-word;
+}
+.about .about_me .am_skills li {
+  display: inline-flex;
+  vertical-align: bottom;
+}
+.about .about_me .am_skills .skill_icon {
+  padding: 5px;
+}
+
+/*
+===============
+Projects Page
+===============
+*/
+
+.projects .projects_container {
+  padding-top: 50px;
+}
+.projects .projects_content {
+  display: none;
+  flex-direction: column;
+  width: 1050px;
+}
+.projects_controller {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.projects_controller ul {
+  justify-content: space-between;
+  width: 75px;
+}
+.controller_btn {
+  border: 2px solid var(--white-light);
+  color: var(--white-light);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+}
+.controller_icon {
+  vertical-align: bottom;
+  color: inherit;
+}
+.view_active,
+.controller_btn:hover {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.project_carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+.project_carousel .carousel {
+  display: flex;
+}
+.project_carousel .carousel .project_card:not(:last-child) {
+  margin-right: 50px;
+}
+.project_carousel .carousel_controller {
+  display: flex;
+  justify-content: center;
+}
+.project_carousel .carousel_controller li:not(:last-child) {
+  margin-right: 5px;
+}
+.carousel_controller .carousel_button {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--white-light);
+  vertical-align: bottom;
+}
+.carousel_controller .carousel_button:hover,
+.carousel_button.cb_active {
+  border-color: var(--white);
+  background-color: var(--white);
+}
+
+.project_card {
+  display: flex;
+  justify-content: space-between;
+  width: 1050px;
+  height: 500px;
+}
+.project_card > div {
+  width: 500px;
+  height: 500px;
+}
+.project_card .project_info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.project_info > div:first-child {
+  flex: 1;
+}
+.project_info .pi_header {
+  margin-bottom: 25px;
+}
+.project_info .pi_header h2 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+.project_info .pi_content p {
+  margin-bottom: 25px;
+}
+.project_info .pi_content ul {
+  list-style: inherit;
+  list-style-position: inside;
+  text-align: left;
+}
+.project_info .pi_content ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.project_info .pi_tech_stack li {
+  padding: 5px;
+}
+.tech_icon {
+  vertical-align: bottom;
+}
+.project_card .project_image {
+  padding: 5px;
+  box-sizing: border-box;
+}
+.project_image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.project_image .project_picture {
+  width: inherit;
+  height: inherit;
+}
+
+.projects_list_container {
+  width: 100%;
+}
+.projects_list_container .projects_list {
+  width: 500px;
+}
+.projects_list .projects_list_item {
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.pl_icon {
+  width: 60px;
+  height: 60px;
+}
+.projects_list .projects_list_item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.projects_list .pl_info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  text-align: center;
+  width: 100%;
+}
+.projects_list .pl_info > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+.pli_header {
+  display: flex;
+  justify-content: space-between;
+}
+.pli_header h2 {
+  font-size: 1em;
+}
+.pli_sub_header {
+  text-align: left;
+  font-size: 0.9em;
+}
+.pli_tech_stack {
+  display: flex;
+  justify-content: flex-end;
+}
+.pli_tech_stack li:not(:last-child) {
+  margin-right: 5px;
+}
+
+.mobile_projects_list {
+  width: 90%;
+  padding: 50px 0 50px;
+}
+
+/*
+===============
+Contact Page
+===============
+*/
+
+.contact {
+  background-color: var(--gray);
+}
+.contact .contact_container {
+  padding: 100px 0 50px;
+}
+.contact_list {
+  display: flex;
+  justify-content: space-between;
+}
+.contact_list .contact_item {
+  width: 200px;
+  height: 250px;
+  border-color: var(--white-light);
+  box-sizing: border-box;
+}
+.contact_item:hover {
+  border-color: initial;
+}
+.contact_list .contact_item a {
+  width: 100%;
+  height: 100%;
+}
+.contact_item_container {
+  flex-direction: column;
+}
+.contact_icons {
+  vertical-align: bottom;
+}
+.contact_item_container .contact_p {
+  line-height: 30px;
+}
+
+/*
+===============
+NotFound Page
+===============
+*/
+
+#not_found {
+  height: 100vh;
+}
+#not_found .not_found_container {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+}
+.not_found_message {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 400px;
+}
+.not_found_message .not_found_header {
+  text-align: center;
+  position: absolute;
+  bottom: 35px;
+  text-shadow: 0 0 5px var(--gray);
+}
+.not_found_header .underline {
+  border-bottom: 2px solid #fff;
+}
+.not_found_image {
+  width: 500px;
+}
+.not_found_image img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/*
+===============
+Misc Styles
+===============
+*/
+
+.flex_ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white_border {
+  border: 2px solid var(--white);
+}
+
+.flex_reserve {
+  flex-direction: row-reverse;
+}
+
+/* text select color */
+::selection {
+  background-color: var(--white);
+  color: #0a0a0a;
+}
+::-moz-selection {
+  background-color: var(--white);
+  color: #0a0a0a;
+}
+::-webkit-selection {
+  background-color: var(--white);
+  color: #0a0a0a;
+}
+
+/*
+===============
+Style breakpoints
+===============
+*/
+
+/* smaller than */
+@media only screen and (max-width: 600px) {
+  .slide_container {
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .about .about_me_container {
+    padding: 100px 0 50px;
+  }
+
+  .contact_list {
+    flex-direction: column;
+    height: 550px;
+  }
+}
+
+/* Larger than */
+@media only screen and (min-width: 601px) {
+  #header .header_container {
+    display: flex;
+  }
+  #header .mobile_header_container {
+    display: none;
+  }
+
+  #mobile_menu {
+    display: none;
+  }
+
+  .about .about_me {
+    width: 500px;
+    padding: 0;
+  }
+
+  .contact .contact_container {
+    padding: 150px 0 0;
+  }
+  .contact_list {
+    width: 450px;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .projects .projects_content {
+    display: block;
+  }
+
+  .mobile_projects_list {
+    display: none;
+  }
+}
