@@ -180,7 +180,7 @@ Slider
   height: 100%;
 }
 .slide_container {
-  padding-top: 120px;
+  padding: 120px 0 0;
 }
 
 /*
@@ -193,7 +193,7 @@ About Page
   background-color: #007ee4;
 }
 .about .about_me_container {
-  padding-top: 50px;
+  padding: 50px 0 0;
 }
 .about .about_me {
   width: 80%;
@@ -214,6 +214,10 @@ About Page
 }
 .about .about_me .am_summary {
   padding: 15px;
+}
+.about .about_me .am_summary h2 {
+  font-weight: normal;
+  font-size: 1.3em;
 }
 .about .about_me .am_summary p {
   white-space: pre-line;
@@ -237,6 +241,7 @@ Projects Page
   padding-top: 50px;
 }
 .projects .projects_content {
+  display: none;
   flex-direction: column;
   width: 1050px;
 }
@@ -246,8 +251,9 @@ Projects Page
   width: 100%;
   margin-bottom: 15px;
 }
-.projects_controller ul li:not(:last-child) {
-  margin-right: 5px;
+.projects_controller ul {
+  justify-content: space-between;
+  width: 75px;
 }
 .controller_btn {
   border: 2px solid var(--white-light);
@@ -271,11 +277,10 @@ Projects Page
 .project_carousel {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+  height: 550px;
   overflow: hidden;
-}
-.project_carousel > .project_carousel_container {
-  margin-bottom: 30px;
 }
 .project_carousel .carousel {
   display: flex;
@@ -406,6 +411,11 @@ Projects Page
   margin-right: 5px;
 }
 
+.mobile_projects_list {
+  width: 90%;
+  padding: 50px 0 50px;
+}
+
 /*
 ===============
 Contact Page
@@ -416,18 +426,17 @@ Contact Page
   background-color: var(--gray);
 }
 .contact .contact_container {
-  padding-top: 150px;
+  padding: 100px 0 50px;
 }
 .contact_list {
   display: flex;
-}
-.contact_list li:not(:last-child) {
-  margin-right: 30px;
+  justify-content: space-between;
 }
 .contact_list .contact_item {
   width: 200px;
   height: 250px;
   border-color: var(--white-light);
+  box-sizing: border-box;
 }
 .contact_item:hover {
   border-color: initial;
@@ -529,8 +538,26 @@ Style breakpoints
 ===============
 */
 
+/* smaller than */
+@media only screen and (max-width: 600px) {
+  .slide_container {
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .about .about_me_container {
+    padding: 100px 0 50px;
+  }
+
+  .contact_list {
+    flex-direction: column;
+    height: 550px;
+  }
+}
+
 /* Larger than */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
   #header .header_container {
     display: flex;
   }
@@ -545,5 +572,22 @@ Style breakpoints
   .about .about_me {
     width: 500px;
     padding: 0;
+  }
+
+  .contact .contact_container {
+    padding: 150px 0 0;
+  }
+  .contact_list {
+    width: 450px;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .projects .projects_content {
+    display: block;
+  }
+
+  .mobile_projects_list {
+    display: none;
   }
 }

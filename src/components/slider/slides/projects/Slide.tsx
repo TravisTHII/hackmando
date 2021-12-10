@@ -5,6 +5,7 @@ import { useProjectsContext } from '../../../../context/projects'
 
 import { Controller } from './controller'
 import { View } from './view'
+import { List } from './view/list'
 
 export const Slide = () => {
   const { color } = useProjectsContext()
@@ -26,6 +27,9 @@ export const Slide = () => {
           <div className="projects_content flex_ui">
             <Controller />
             <View />
+          </div>
+          <div className="mobile_projects_list flex_ui">
+            <List />
           </div>
         </div>
       </div>

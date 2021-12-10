@@ -15,6 +15,7 @@ export const About = () => (
             <img src="images/dev.png" alt="web developer" />
           </div>
           <div className="am_summary">
+            <h2>Hello</h2>
             <p>
               As a web developer since 2015, I'm a natural self-starter.
               Initially starting out with the PHP server-side programming
