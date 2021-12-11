@@ -17,11 +17,10 @@ export const About = () => (
           <div className="am_summary">
             <h2>Hello</h2>
             <p>
-              As a web developer since 2015, I'm a natural self-starter.
-              Initially starting out with the PHP server-side programming
-              language before embracing more contemporary technologies, I am
-              constantly expanding my knowledge of programming as well as the
-              industry that encompasses it.
+              I'm a full stack web developer. I have been developing
+              applications since 2015, Implementing various technologies and
+              philosophies, adapting new technologies as necessary as well as
+              identifying, diagnosing and solving technical challenges.
             </p>
           </div>
           <ul className="am_skills">

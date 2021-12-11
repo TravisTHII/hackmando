@@ -217,7 +217,8 @@ About Page
 }
 .about .about_me .am_summary h2 {
   font-weight: normal;
-  font-size: 1.3em;
+  font-size: 1em;
+  margin-bottom: 5px;
 }
 .about .about_me .am_summary p {
   white-space: pre-line;
