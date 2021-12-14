@@ -1,7 +1,7 @@
 import React from 'react'
 import { IconContext } from 'react-icons'
 
-import { Icon } from '../../../Icon'
+import { Icon } from '../../../icon'
 
 interface Props {
   techStack: string[]
