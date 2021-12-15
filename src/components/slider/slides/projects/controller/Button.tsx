@@ -15,6 +15,7 @@ export const Button: React.FC<Props> = ({ children, viewName }) => {
         className={`controller_btn ${
           view === `${viewName}` ? ' view_active' : ''
         }`}
+        aria-label={`${viewName} view`}
         onClick={() => changeView(viewName)}
       >
         {children}

@@ -13,6 +13,7 @@ export const Controller = () => {
         <li key={i}>
           <button
             className={`carousel_button${page === link ? ' cb_active' : ''}`}
+            aria-label="carousel button"
             onClick={() => {
               traverseCarousel(link)
               changeColor(projects[link - 1].color)
