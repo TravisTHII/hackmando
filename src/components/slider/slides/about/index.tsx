@@ -9,7 +9,7 @@ export const About = () => (
         <div className="about_me flex_ui white_border">
           <div className="am_header">
             <h1>Travis Hackney</h1>
-            <p>Web Developer</p>
+            <p>Software Engineer</p>
           </div>
           <div className="am_picture">
             <img src="images/dev.png" alt="web developer" />
