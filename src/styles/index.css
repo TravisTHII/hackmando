@@ -371,7 +371,6 @@ Projects Page
   width: 500px;
 }
 .projects_list .projects_list_item {
-  display: flex;
   padding: 5px;
   width: 100%;
   box-sizing: border-box;
@@ -380,7 +379,7 @@ Projects Page
   width: 60px;
   height: 60px;
 }
-.projects_list .projects_list_item:not(:last-child) {
+.projects_list > li:not(:last-child) {
   margin-bottom: 15px;
 }
 .projects_list .pl_info {
